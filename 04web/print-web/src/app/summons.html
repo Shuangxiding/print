@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div id="company"></div>
+    <div id="company" style="border:10px"></div>
     <p id="name">传&nbsp;&nbsp;&nbsp;&nbsp;票</p>
 
     <table border="1" cellpadding="10px" cellspacing="0" align="center">
@@ -68,7 +68,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <p>注意事项: </p>
+                <p id="care">注意事项: </p>
                 <div class="p123">
                     <p>1.被传唤人必须准时到达应到住所；</p>
                     <p>2.本传票由被传唤人携带来院报到；</p>
@@ -78,12 +78,14 @@
                 <div class="p1234">
                     <p>审判员：<span id="judge"></span></p>
                     <p>书记员：<span id="clerk"></span></p>
-                    <p>
-                        <span id="callYear"></span> 年
-                        <span id="callMonth"></span> 月
-                        <span id="callDay"></span> 日
-                    </p>
-                    <p>（院印）</p>
+                    <div class="time">
+                        <p>
+                            <span id="callYear"></span> 年
+                            <span id="callMonth"></span> 月
+                            <span id="callDay"></span> 日
+                        </p>
+                        <p>（院印）</p>
+                    </div>
                 </div>
 
             </td>
