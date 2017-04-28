@@ -85,11 +85,11 @@ public class PrintSummonsController {
             renderer.createPDF(os);
 
             // 调用打印机进行打印
-            printService.print(outputFile);
-            return new Result(Result.ReturnValue.SUCCESS, "打印成功！");
+            //printService.print(outputFile);
+            return new Result(Result.ReturnValue.SUCCESS, "转换完成！");
         } catch (Exception e) {
             e.printStackTrace();
-            return new Result(Result.ReturnValue.FAILURE, "打印失败！");
+            return new Result(Result.ReturnValue.FAILURE, "转换失败！");
         } finally {
             // 关闭流
             if (out != null) {
