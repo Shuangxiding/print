@@ -9,6 +9,7 @@
     </style>
     <!--引入js-->
     <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/summons.js"></script>
     <script type="text/javascript">
         function printpage() {
             var tit = document.title;
@@ -91,6 +92,7 @@
     <p id="end">本联送到被传唤人</p>
     <div id="print" style="text-align: center;">
         <input type="button" value="打印" onclick="printpage()" />
+        <input type="button" value="转为PDF版本" onclick="HtmlToPdf()" />
     </div>
     <script>
         $(function () {
