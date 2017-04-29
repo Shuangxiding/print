@@ -1,4 +1,5 @@
     #company {
+        padding-top: 60px;
         text-align: center;
         font-size: 22px;
     }
@@ -24,6 +25,10 @@
 
     .td1 {
         width: 200px;
+        text-align: center;
+        text-align: justify;
+        text-justify: distribute-all-lines;
+        text-align-last: justify;
     }
 
     .td2 {
@@ -36,10 +41,20 @@
 
     .p123 {
         text-align: left;
-        padding-left: 50px;
+        padding-left: 100px;
     }
 
     .p1234 {
         text-align: left;
-        padding-left: 450px;
+        padding-left: 400px;
+        padding-top: 20px;
+    }
+
+    #care {
+        padding-top: 10px;
+        padding-left: 50px;
+    }
+
+    .time {
+        padding-left: 400px；
     }
