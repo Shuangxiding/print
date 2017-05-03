@@ -11,7 +11,7 @@
     <script src="lib/js/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
-    
+
     <script>
         $(function () {
             $("#model").tabs();
@@ -37,7 +37,8 @@
             <iframe src="src/app/model/model_1.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
             <div class="model_1_button">
                 <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');" />
+                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
+                />
             </div>
         </div>
         <!--模板一END-->
@@ -47,7 +48,8 @@
             <iframe id="mode1_222222" src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
             <div class="model_2_button">
                 <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_2_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');" />
+                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
+                />
             </div>
         </div>
         <!--模板二END-->
@@ -57,7 +59,8 @@
             <iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
             <div class="model_3_button">
                 <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_3_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');" />
+                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
+                />
             </div>
         </div>
         <!--模板三END-->
@@ -82,79 +85,79 @@
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="firstname" class="col-sm-3 control-label">通知单编号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="firstname" placeholder="请输入催收通知单编号">
+                                <input type="text" class="form-control" id="memo_number" placeholder="请输入催收通知单编号">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">借款单位/个人名称</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="借款单位/个人名称">
+                                <input type="text" class="form-control" id="model_borrower" placeholder="借款单位/个人名称">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">担保单位/个人名称</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="担保单位/个人名称">
+                                <input type="text" class="form-control" id="model_guarantor" placeholder="担保单位/个人名称">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款日期</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入贷款日期">
+                                <input type="text" class="form-control" id="model_loandate" placeholder="请输入贷款日期">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款金额（大写）</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入贷款金额">
+                                <input type="text" class="form-control" id="model_loadamount" placeholder="请输入贷款金额">
                             </div>
                         </div>
                         <div class="form-group model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款用途</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入贷款用途">
+                                <input type="text" class="form-control" id="model_loaduse" placeholder="请输入贷款用途">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款到期日期</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入贷款到期日期">
+                                <input type="text" class="form-control" id="model_maturity" placeholder="请输入贷款到期日期">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">至今欠款本金（大写）</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入欠款本金">
+                                <input type="text" class="form-control" id="model_principal" placeholder="请输入欠款本金">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">至今欠款利息</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入至今欠款利息">
+                                <input type="text" class="form-control" id="model_interest" placeholder="请输入至今欠款利息">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">案件编号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入案件编号">
+                                <input type="text" class="form-control" id="model_casenum" placeholder="请输入案件编号">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">催收原由</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入催收原由">
+                                <input type="text" class="form-control" id="model_reason" placeholder="请输入催收原由">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">工作单位或地址</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入工作单位或地址">
+                                <input type="text" class="form-control" id="model_address" placeholder="请输入工作单位或地址">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">联系电话</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="lastname" placeholder="请输入联系电话">
+                                <input type="text" class="form-control" id="model_phone" placeholder="请输入联系电话">
                             </div>
                         </div>
                     </form>
@@ -166,7 +169,7 @@
             </div>
         </div>
     </div>
-     <!-- 数据录入框END -->
+    <!-- 数据录入框END -->
 
     <script>
         function model_input_data(val) {
@@ -183,6 +186,7 @@
                 $(".model_3_input").show();
             }
         }
+
         function confirmAndPreview() {
             console.log("欢迎你填入数据")
         }
