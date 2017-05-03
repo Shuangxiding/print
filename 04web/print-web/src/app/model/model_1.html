@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>传票页面</title>
+
+    <!--引入样式-->
+    <style>
+        #model_1 {
+            align-content: center;
+            text-align: center;
+        }
+
+        #model_1_content {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .model_1_1 {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #model_1_number {
+            text-align: right;
+        }
+
+        #model_1_headline {
+            font-size: 30px;
+        }
+
+        #model_1_content {
+            font-size: 18px;
+        }
+
+        .model_1_table_1 {
+            text-align: left;
+            line-height: 200%;
+        }
+
+        .model_1_table_2 {
+            text-align: left;
+            padding: 20px 0px 80px 0px;
+        }
+
+        #officer {
+            padding-left: 30%;
+        }
+
+        #model_1_notic {
+            padding: 30px 0px 0px 300px;
+        }
+
+        #model_1_time1 {
+            padding: 0px 0px 0px 400px;
+        }
+
+        .seal {
+            padding-left: 120px;
+        }
+
+        .model_1_time2 {
+            padding: 0px 0px 0px 100px;
+        }
+
+        .span_unline {
+            text-decoration: underline;
+        }
+    </style>
+    <!--<link href="../css/model.css" rel="stylesheet" type="text/css" />-->
+
+    <!--引入js-->
+    <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/model.js"></script>
+</head>
+
+<body>
+    <div id="model_1">
+        <!--通知单编号START-->
+        <div class="model_1_1">
+            <p id="model_1_number">通知单编号：<span id="model_1_noticenum">________________________</span></p>
+        </div>
+        <!--通知单编号END-->
+
+        <!--标题START-->
+        <div class="model_1_1" id="model_1_headline">
+            <p><b><u>贷 后 催 收 通 知 单</u></b></p>
+        </div>
+        <!--标题END-->
+
+        <!--内容START-->
+        <div class="model_1_1" id="model_1_content">
+            <table id="model_1_table" border="1" cellpadding="10px" cellspacing="0">
+                <tr>
+                    <td colspan="2">
+                        <p class="model_1_table_1"><span class="span_unline" id="model_1_name">__________________________</span>:</p>
+                        <p class="model_1_table_1">
+                            &nbsp; &nbsp; &nbsp; &nbsp; 你（单位）于
+                            <span class="span_unline" id="model_1_byear">________</span>年
+                            <span class="span_unline" id="model_1_bmonth">________</span>月
+                            <span class="span_unline" id="model_1_bday">________</span>日在我机构贷款
+                            <span class="span_unline" id="model_1_bmoney">________________________</span>（大写）元，该笔贷款于
+                            <span class="span_unline" id="model_1_cyear">________</span>年
+                            <span class="span_unline" id="model_1_cmonth">________</span>月
+                            <span class="span_unline" id="model_1_cday">________</span>日到期，截止目前仍欠贷款本金
+                            <span class="span_unline" id="model_1_omoney">________________________</span>（大写）元，利息
+                            <span class="span_unline" id="model_1_ointerest">__________________</span>元。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。
+                        </p>
+                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 上述贷款本息，由担保人继续承担连带还款责任。</p>
+                        <p id="model_1_notic"> 特此通知！</p>
+                        <p class="model_1_table_2">&nbsp; &nbsp; &nbsp; &nbsp; 贷款人（公章）:<span id="model_1_lender"></span></p>
+                        <p class="model_1_table_2">
+                            &nbsp; &nbsp; &nbsp; &nbsp; 法人代表（签章）:<span id="model_1_rep"></span>
+                            <span id="officer"> 信贷员:</span><span id="model_1_officer"></span>
+                        </p>
+                        <p id="model_1_time1">
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                        <p class="model_1_table_2">
+                            <span>借款人: <span></span></span>
+                            <span class="seal">（公）章</span>
+                        </p>
+                        <p class="model_1_table_1">签收人:<span></span></p>
+                        <p class="model_1_time2">
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                        </p>
+                    </td>
+                    <td>
+                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                        <p class="model_1_table_2">
+                            <span>担保人: <span></span></span>
+                            <span class="seal">（公）章</span>
+                        </p>
+                        <p class="model_1_table_1">签收人:<span></span></p>
+                        <p class="model_1_time2">
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--内容END-->
+    </div>
+
+    <script>
+        $(function () {
+            if (localStorage.model_1_noticenum != null) {
+                $("#model_1_noticenum").text(localStorage.model_1_noticenum);
+            }
+            if (localStorage.model_1_name != null) {
+                $("#model_1_name").text(localStorage.model_1_name);
+            }
+            if (localStorage.model_1_byear != null) {
+                $("#model_1_byear").text(localStorage.model_1_byear);
+            }
+            if (localStorage.model_1_bmonth != null) {
+                $("#model_1_bmonth").text(localStorage.model_1_bmonth);
+            }
+            if (localStorage.model_1_bday != null) {
+                $("#model_1_bday").text(localStorage.model_1_bday);
+            }
+            if (localStorage.model_1_bmoney != null) {
+                $("#model_1_bmoney").text(localStorage.model_1_bmoney);
+            }
+            if (localStorage.model_1_cyear != null) {
+                $("#model_1_cyear").text(localStorage.model_1_cyear);
+            }
+            if (localStorage.model_1_cmonth != null) {
+                $("#model_1_cmonth").text(localStorage.model_1_cmonth);
+            }
+            if (localStorage.model_1_cday != null) {
+                $("#model_1_cday").text(localStorage.model_1_cday);
+            }
+            if (localStorage.model_1_omoney != null) {
+                $("#model_1_omoney").text(localStorage.model_1_omoney);
+            }
+            if (localStorage.model_1_ointerest != null) {
+                $("#model_1_ointerest").text(localStorage.model_1_ointerest);
+            }
+            if (localStorage.model_1_lender != null) {
+                $("#model_1_lender").text(localStorage.model_1_lender != null);
+            }
+            if (localStorage.model_1_rep != null) {
+                $("#model_1_rep").text(localStorage.model_1_rep);
+            }
+            if (localStorage.model_1_officer != null) {
+                $("#model_1_officer").text(localStorage.model_1_officer);
+            }
+            if (localStorage.model_1_dyear != null) {
+                $("#model_1_dyear").text(localStorage.model_1_dyear);
+            }
+            if (localStorage.model_1_dmonth != null) {
+                $("#model_1_dmonth").text(localStorage.model_1_dmonth);
+            }
+            if (localStorage.model_1_dday != null) {
+                $("#model_1_dday").text(localStorage.model_1_dday);
+            }
+        })
+    </script>
+</body>
+
+</html>
