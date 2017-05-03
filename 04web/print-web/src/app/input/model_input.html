@@ -1,67 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>模板预览页面</title>
-    <link rel="stylesheet" href="lib/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="src/css/index.css">
+    <title>数据录入表单</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script src="lib/js/jquery-3.2.1.min.js"></script>
-    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="lib/js/jquery-ui.min.js"></script>
-    
-    <script>
-        $(function () {
-            $("#model").tabs();
-        });
-    </script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <h2>创建模态框（Modal）</h2>
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="m1">
+	model1录入数据
+    </button>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="m2">
+	model1录入数据
+    </button>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="m3">
+	model1录入数据
+    </button>
 
-    <!--模板区START-->
-    <div id="model">
-        <ul>
-            <li><a href="#model_1">贷后催收通知单模板一</a></li>
-            <li><a href="#model_2">贷后催收通知单模板二</a></li>
-            <li><a href="#model_3">贷后催收通知单模板三</a></li>
-        </ul>
-
-        <!--模板一START-->
-        <div id="model_1">
-            <iframe src="src/app/model/model_1.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_1_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');" />
-            </div>
-        </div>
-        <!--模板一END-->
-
-        <!--模板二START-->
-        <div id="model_2">
-            <iframe id="mode1_222222" src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_2_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');" />
-            </div>
-        </div>
-        <!--模板二END-->
-
-        <!--模板三START-->
-        <div id="model_3">
-            <iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_3_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');" />
-            </div>
-        </div>
-        <!--模板三END-->
-    </div>
-    <!--模板区END-->
-
-    <!-- 数据录入框START -->
+    <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" value="案例按钮" onclick="ppppp('model_3');"
+    />
+    <!-- 模态框（Modal） -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -157,16 +121,20 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确认并预览</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+                    <button type="button" class="btn btn-primary">
+					确认并预览
+				</button>
                 </div>
             </div>
+            <!-- /.modal-content -->
         </div>
+        <!-- /.modal -->
     </div>
-     <!-- 数据录入框END -->
 
     <script>
-        function model_input_data(val) {
+        function ppppp(val) {
             $(".model_1_input").hide();
             $(".model_3_input").hide();
             $(".model_2_input").hide();
@@ -179,9 +147,10 @@
             if (val === 'model_3') {
                 $(".model_3_input").show();
             }
+
+
         }
     </script>
-
 
 </body>
 
