@@ -13,7 +13,7 @@
     <!--引入js-->
     <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-        function print() {
+        function printpage() {
             var tit = document.title;
             document.title = "";
             var print = document.getElementById("print");
@@ -96,8 +96,9 @@
         </tr>
     </table>
     <p id="end">注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
-    <div id="print" style="text-align: center;">
-        <input type="button" value="打印" onclick="print()" />
+    <div id="print" align="center">
+        <input type="button" value="打印" onclick="printpage()" />
+        <input type="button" value="转为PDF版本" onclick="HtmlToPdf()" />
     </div>
     <script>
         $(function () {

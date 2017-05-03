@@ -25,3 +25,67 @@
     padding-left: 220px;
     padding-top: 8px;
 }
+
+#tle {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px
+}
+
+#num {
+    padding-left: 150px
+}
+
+#care {
+    text-align: left;
+    padding-left: 50px
+}
+
+#date {
+    text-align: left;
+    padding-left: 300px
+}
+
+#seal {
+    text-align: left;
+    padding-left: 330px
+}
+
+#orderNumber {
+    height: 30px
+}
+
+#caseReason,
+#caseNumber {
+    height: 20px
+}
+
+#borrower {
+    height: 25px;
+    width: 100px
+}
+
+#address {
+    height: 25px;
+    width: 300px
+}
+
+#arrivalsYear,
+#arrivalsMonth,
+#arrivalsDay {
+    height: 20px;
+    width: 50px
+}
+
+#contrat,
+#phone {
+    height: 25px;
+    width: 200px
+}
+
+#callYear,
+#callMonth,
+#callDay {
+    height: 20px;
+    width: 40px
+}
