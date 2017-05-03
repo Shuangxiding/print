@@ -1,4 +1,62 @@
-#model_1 {
+ .model_model_2 {
+     align-content: center;
+     text-align: center;
+ }
+
+ .m2 {
+     width: 75%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ /*.m2_noticenum {
+     text-align: right;
+ }*/
+ /*通知标题*/
+
+ .m2_title {
+     font-size: 24px;
+     line-height: 200%;
+ }
+ /*表格中文字大小，表格的高度*/
+
+ .m2_table {
+     font-size: 16px;
+ }
+
+ #m2_table_tr {
+     height: 20px;
+ }
+ /*左右对齐*/
+
+ .m2_table_td1,
+ .m2_table_td2,
+ .m2_table_td3,
+ .m2_table_td4,
+ .m2_table_td5,
+ .m2_table_td6 {
+     width: 40%;
+     text-align: center;
+     text-align: justify;
+     text-align-last: justify;
+ }
+
+ #m2_table_tr {
+     height: 20px;
+ }
+ /*表格中文字与边框的间距*/
+ /*文本居左*/
+ /*.m2_loader,
+ .m2_p1,
+ .m2_p2,
+ .m2_lender,
+ .m2_legal,
+ .m2_confirmtext,
+ .m2_borrower,
+ .m2_guarantor,
+ .m2_signer {
+     text-align: left;
+ }*/
+ /*#model_1 {
     text-align: center;
     font-size: 16px;
 }
@@ -88,4 +146,4 @@
 #callDay {
     height: 20px;
     width: 40px
-}
+}*/

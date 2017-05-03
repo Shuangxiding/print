@@ -5,12 +5,21 @@
     <meta charset="utf-8">
     <title>模板预览页面</title>
     <link rel="stylesheet" href="lib/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="src/css/index.css">
-
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/model/model_1.css">
+    <link rel="stylesheet" href="src/css/model/model_2.css">
+    <style>
+        #m2_table_tr {
+            height: 20px;
+        }
+    </style>
+
     <script src="lib/js/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
+
 
     <script>
         $(function () {
@@ -22,46 +31,300 @@
 <body>
 
     <!--模板区START-->
-    <div id="model">
-
+    <div class="model" id="model">
         <!--导航栏START-->
         <ul>
-            <li><a href="#model_1">贷后催收通知单模板一</a></li>
-            <li><a href="#model_2">贷后催收通知单模板二</a></li>
-            <li><a href="#model_3">贷后催收通知单模板三</a></li>
+            <li><a href="#model_model_1">贷后催收通知单模板一</a></li>
+            <li><a href="#model_model_2">贷后催收通知单模板二</a></li>
+            <li><a href="#model_model_3">贷后催收通知单模板三</a></li>
         </ul>
         <!--导航栏END-->
 
         <!--模板一START-->
-        <div id="model_1">
-            <iframe src="src/app/model/model_1.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_1_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
-                />
+        <div class="model_model_1" id="model_model_1">
+            <div class="m1" id="m1">
+                <!--通知单编号START-->
+                <div class="m1_notice" id="m1_notice">
+                    <p class="m1_noticenum" id="m1_noticenum">通知单编号：
+                        <span class="m1_noticenum_span" id="m1_noticenum_span">________________________</span>
+                    </p>
+                </div>
+                <!--通知单编号END-->
+
+                <!--标题START-->
+                <div class="m1_title" id="m1_title">
+                    <b><u>贷 后 催 收 通 知 单</u></b>
+                </div>
+                <!--标题END-->
+
+                <!--内容START-->
+                <div class="m1_content" id="m1_content">
+                    <table class="m1_table" id="m1_table" border="1" cellpadding="10px" cellspacing="0">
+                        <tr>
+                            <td colspan="2">
+                                <p class="m1_loader"><span class="span_unline" id="model_1_name">__________________________</span>:</p>
+                                <p class="m1_p1">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; 你（单位）于
+                                    <span class="span_unline" id="model_1_byear">______</span>年
+                                    <span class="span_unline" id="model_1_bmonth">______</span>月
+                                    <span class="span_unline" id="model_1_bday">______</span>日在我机构贷款
+                                    <span class="span_unline" id="model_1_bmoney">___________________</span>（大写）元，该笔贷款于
+                                    <span class="span_unline" id="model_1_cyear">______</span>年
+                                    <span class="span_unline" id="model_1_cmonth">______</span>月
+                                    <span class="span_unline" id="model_1_cday">______</span>日到期，截止目前仍欠贷款本金
+                                    <span class="span_unline" id="model_1_omoney">___________________</span>（大写）元，利息
+                                    <span class="span_unline" id="model_1_ointerest">___________________</span>元。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。
+                                </p>
+                                <p class="m1_p2">&nbsp; &nbsp; &nbsp; &nbsp; 上述贷款本息，由担保人继续承担连带还款责任。</p>
+                                <p class="m1_p3"> 特此通知！</p>
+                                <p class="m1_lender">&nbsp; &nbsp; &nbsp; &nbsp; 贷款人（公章）:<span id="model_1_lender"></span></p>
+                                <p class="m1_legal">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; 法人代表（签章）:<span id="model_1_rep"></span>
+                                    <span id="officer"> 信贷员:</span><span id="model_1_officer"></span>
+                                </p>
+                                <p class="m1_date1">
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="m1_confirmtext">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                                <p class="m1_borrower">
+                                    <span>借款人: <span></span></span>
+                                    <span class="seal">（公）章</span>
+                                </p>
+                                <p class="m1_signer">签收人:<span></span></p>
+                                <p class="m1_date2">
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                                </p>
+                            </td>
+                            <td>
+                                <p class="m1_confirmtext">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                                <p class="m1_guarantor">
+                                    <span>担保人: <span></span></span>
+                                    <span class="seal">（公）章</span>
+                                </p>
+                                <p class="m1_signer">签收人:<span></span></p>
+                                <p class="m1_date3">
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                    <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--内容END-->
+
+                <!--备注区START-->
+                <div class="m1_remark">
+                    注：本通知书一式三份，借款人、担保人、贷款方各留一份。
+                </div>
+                <!--备注区END-->
+
+                <!--按钮区START-->
+                <div class="m1_button">
+                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m1_print();" />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
+                    />
+                </div>
+                <!--按钮区END-->
             </div>
+            <!--<iframe id="model_1_html" src="src/app/model/model_1.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>-->
+
         </div>
         <!--模板一END-->
 
         <!--模板二START-->
-        <div id="model_2">
-            <iframe id="mode1_222222" src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_2_button">
+        <div class="model_model_2" id="model_model_2">
+            <div class="m2" id="m2">
+
+                <!--通知单编号START-->
+                <div class="m2_notice" id="m2_notice">
+                    <p class="m2_noticenum" id="m2_noticenum">
+                        通知单编号：
+                        <span class="m2_noticenum_span" id="m2_noticenum_span"></span>
+                    </p>
+                </div>
+                <!--通知单编号END-->
+
+                <!--标题START-->
+                <div class="m2_title" id="m2_title">
+                    催收贷款通知单
+                </div>
+
+                <!--标题END-->
+                <!--<p id="tle">催收贷款通知单</p>
+                <p id=" num ">
+                    <span>通知单编号：</span>
+                    <span id="orderNumber " class="datas "></span>
+                </p>-->
+
+                <!--内容START-->
+                <div class="m2_content" id="m2_content">
+                    <table class="m2_table" border="1 " cellpadding="10px " cellspacing="0 ">
+                        <tr id="m2_table_tr">
+                            <td class="m2_table_td1 ">案件编号</td>
+                            <td class="td2 "><span id="caseNumber " class="datas "></span></td>
+                        </tr>
+                        <tr>
+                            <td class="m2_table_td2 ">催收缘由</td>
+                            <td class="td2 "><span id="caseReason " class="datas "></span></td>
+                        </tr>
+                        <tr>
+                            <td class="m2_table_td3 ">债务人</td>
+                            <td class="td2 "><span id="borrower " class="datas "></span></td>
+                        </tr>
+                        <tr>
+                            <td class="m2_table_td4 ">工作单位或地址</td>
+                            <td class="td2 "><span id="address " class="datas "></span></td>
+                        </tr>
+                        <tr>
+                            <td class="m2_table_td5 ">还款截止日期</td>
+                            <td class="td2 ">
+                                <span><span id="arrivalsYear "class="datas "></span> 年</span>
+                                <span><span id="arrivalsMonth "class="datas "></span></span> 月</span>
+                                <span><span id="arrivalsDay "class="datas "></span> 日</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="m2_table_td6 ">应还金额</td>
+                            <td class="td2 "><span id="sum " class="datas "></span>元</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2 " class="td2 ">
+                                <p id="care ">注意事项: </p>
+                                <div class="p123 ">
+                                    <p>1.请在收到此通知单后无条件按照合同约定时间履行所承担的还款/担保责任，清偿所欠本金、利息和罚息。</p>
+                                    <p>2.如不能按期支付，我公司将寻求法律途径催收解决，届时可能对您/贵公司造成不良影响；</p>
+                                    <p>3.债务人在收到催收单后，应在送达回执上签名或盖章。</p>
+                                </div>
+                                <br/>
+                                <div class="p1234 ">
+                                    <p>联系人：<span id="contrat " class="datas "></span></p>
+                                    <p>联系电话：<span id="phone " class="datas "></span></p>
+                                </div>
+                                <p id="date ">
+                                    <span id="callYear " class="datas "></span> 年
+                                    <span id="callMonth " class="datas "></span> 月
+                                    <span id="callDay " class="datas "></span> 日
+                                </p>
+                                <p id="seal ">（印章）</p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--内容END-->
+
+                <!--备注区START-->
+                <div class="m2_remark">
+                    本联送到债务人
+                </div>
+                <!--备注区END-->
+
+                <!--按钮区START-->
+                <div class="m2_button">
+                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m2_print();" />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
+                    />
+                </div>
+                <!--按钮区END-->
+            </div>
+            <!--<iframe id="mode1_222222" src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>-->
+            <!--<div class="model_2_button">
                 <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_2_print();" />
                 <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
                 />
-            </div>
+            </div>-->
         </div>
         <!--模板二END-->
 
         <!--模板三START-->
-        <div id="model_3">
-            <iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
-            <div class="model_3_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_3_print();" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
-                />
+        <div class="model_model_3" id="model_model_3">
+            <div class="m3" id="m3">
+                <table id="number">
+                    <tr>
+                        <td>
+                            通知单编号：<span id="numberLine">_________</span>
+                        </td>
+                    </tr>
+                </table>
+                <table id="tb" cellpadding="10px">
+                    <caption id="topic">
+                        <h3>
+                            <u>贷款催收通知单</u>
+                        </h3>
+                    </caption>
+                    <tr id="tr1">
+                        <td colspan="2">
+                            <div id="named">
+                                <p id="borrower1"> _________ <span>(借款人)：</span></p>
+                                <p id="surety1"> _________ <span>(担保人)：</span></p>
+                            </div>
+                            <p id="section1">
+                                借款人
+                                <span id="borrower2"> _________ </span>于
+                                <span id="borrowYear"> _________ </span>年
+                                <span id="borrowMonth"> _________ </span>月
+                                <span id="borrowDay"> _________ 日向我司借款
+                                <span id="money"> _________</span>元，用于
+                                <span id="application">_________</span>， 由担保人
+                                <span id="surety2"> _________</span>提供担保，承担担保责任。此贷款已于
+                                <span id="dueYear">_________</span>年
+                                <span id="dueMonth">_________</span>月
+                                <span id="dueDay">_________</span>日到期，现尚欠贷款本金
+                                <span id="capital">_________</span>元，利息
+                                <span id="interest">_________</span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
+                            </p>
+                            <p id="section1">特此通知。</p>
+                            <p id="section2">(公章)</p>
+                            <p></p>
+                            <div id="sign">
+                                <span id="companyYear"> _________</span>年
+                                <span id="companyMonth">_________</span>月
+                                <span id="companyDay"> _________</span>日
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="tr2">
+                        <td>
+                            <p id="section1">
+                                以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
+                            </p>
+                            <p id="section3">借款人签章:</p>
+                            <div id="sign">
+                                <span id="borrowerYear"> _________ </span>年
+                                <span id="borrowerMonth"> _________ </span>月
+                                <span id="borrowerDay"> _________ </span>日
+                            </div>
+                        </td>
+                        <td>
+                            <p id="section1">
+                                以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
+                            </p>
+                            <p id="section3">担保人签章：</p>
+                            <div id="sign">
+                                <span id="suretyYear">_________</span>年
+                                <span id="suretyMonth">_________</span>月
+                                <span id="suretyDay">_________</span>日
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <p id="end">注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
+                <div class="m3_button">
+                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m3_print();" />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
+                    />
+                </div>
             </div>
+            <!--<iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>-->
         </div>
         <!--模板三END-->
     </div>
@@ -189,6 +452,15 @@
 
         function confirmAndPreview() {
             console.log("欢迎你填入数据")
+            console.log(window.frames[0])
+            document.getElementById("model_1_html").contentWindow
+                .postMessage(
+                    "helloworld",
+                    "F:\project\print\04web\print-web\src\app\model"
+                );
+            // var test = document.getElementById("model_1_html").contentDocument.document.getElementById(
+            //     "model_1_content");
+            // console.log(test)
         }
     </script>
 

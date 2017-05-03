@@ -1,0 +1,134 @@
+        .model_model_1 {
+            align-content: center;
+            text-align: center;
+        }
+
+        .m1 {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .m1_noticenum {
+            text-align: right;
+        }
+        /*通知标题*/
+
+        .m1_title {
+            font-size: 24px;
+            line-height: 200%;
+        }
+        /*表格中文字大小，及行高*/
+
+        .m1_table,
+        .m1_noticenum {
+            font-size: 16px;
+            line-height: 200%;
+        }
+        /*表格中文字与边框的间距*/
+
+        .m1_table td {
+            padding: 20px
+        }
+        /*文本居左*/
+
+        .m1_loader,
+        .m1_p1,
+        .m1_p2,
+        .m1_lender,
+        .m1_legal,
+        .m1_confirmtext,
+        .m1_borrower,
+        .m1_guarantor,
+        .m1_signer {
+            text-align: left;
+        }
+        /*盖章区域调整*/
+
+        .m1_lender,
+        .m1_legal,
+        .m1_borrower,
+        .m1_guarantor {
+            margin-bottom: 80px;
+        }
+        /*特此通知的位置*/
+
+        .m1_p3 {
+            padding-top: 20px;
+            padding-left: 300px;
+        }
+        /*时间的位置*/
+
+        .m1_date1 {
+            padding-left: 400px;
+        }
+
+        .m1_date2,
+        .m1_date3 {
+            padding-left: 100px;
+        }
+        /*.m1_noticenum {
+            float: right;
+            margin-right: 0px;
+        }*/
+        /*#model_1_content {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .model_1_1 {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #model_1_number {
+            text-align: right;
+        }
+
+        #model_1_headline {
+            font-size: 30px;
+        }
+
+        #model_1_content {
+            font-size: 18px;
+        }
+
+        .model_1_table_1 {
+            text-align: left;
+            line-height: 200%;
+        }
+
+        .model_1_table_2 {
+            text-align: left;
+            padding: 20px 0px 80px 0px;
+        }
+
+        #officer {
+            padding-left: 30%;
+        }
+
+        #model_1_notic {
+            padding: 30px 0px 0px 300px;
+        }
+
+        #model_1_time1 {
+            padding: 0px 0px 0px 400px;
+        }
+
+        .seal {
+            padding-left: 120px;
+        }
+
+        .model_1_time2 {
+            padding: 0px 0px 0px 100px;
+        }
+
+        .span_unline {
+            text-decoration: underline;
+        }
+
+        #model_1_num {
+            margin-right: 0px;
+        }*/
