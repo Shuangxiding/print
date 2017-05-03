@@ -1,0 +1,65 @@
+#number tr td {
+    border: 0px;
+    text-align: right;
+}
+
+#number span {
+    height: 20px;
+    width: 200px;
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin: auto;
+    table-layout: fixed;
+}
+
+table tr td {
+    border: 1px solid black;
+}
+
+#named {
+    font-size: 16px;
+    text-align: left;
+}
+
+#tr1 {
+    font-size: 16px;
+    width: 300px;
+    margin: 10px;
+}
+
+#section1 {
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 200%;
+    word-wrap: break-word;
+}
+
+#section2 {
+    text-indent: 25em;
+    line-height: 400%;
+}
+
+#section3 {
+    text-indent: 6em;
+    text-align: justify;
+    line-height: 400%;
+}
+
+#sign {
+    text-align: right;
+}
+
+#tr2 {
+    font-size: 14px;
+    width: 300px;
+    margin: 10px;
+}
+
+#end {
+    text-align: center;
+    font-size: 14px;
+}
