@@ -25,40 +25,40 @@
 
 <body>
     <div id="model_1">
-        <p style="font-size: 22px;text-align:center">催收贷款通知单</p>
-        <p style="padding-left: 300px"><span>通知单编号：</span><input id="orderNumber" style="height: 30px" /></p>
+        <p id="tle">催收贷款通知单</p>
+        <p id=num><span>通知单编号：</span><input id="orderNumber" class="datas" /></p>
         <table border="1" cellpadding="10px " cellspacing="0 " align="center">
             <tr>
                 <td class="td1">案件编号</td>
-                <td class="td2"><input id="caseNumber" style="height: 20px" /></td>
+                <td class="td2"><input id="caseNumber" class="datas" /></td>
             </tr>
             <tr>
                 <td class="td1">催收缘由</td>
-                <td class="td2"><input id="caseReason" style="height: 20px" /></td>
+                <td class="td2"><input id="caseReason" class="datas" /></td>
             </tr>
             <tr>
                 <td class="td1">债务人</td>
-                <td class="td2"><input id="borrower" style="height: 25px;width: 100px" /></td>
+                <td class="td2"><input id="borrower" class="datas" /></td>
             </tr>
             <tr>
                 <td class="td1">工作单位或地址</td>
-                <td class="td2"><input id="address" style="height: 25px;width: 300px" /></td>
+                <td class="td2"><input id="address" class="datas" /></td>
             </tr>
             <tr>
                 <td class="td1">还款截止日期</td>
-                <td class="td2" style="align-items: center">
-                    <span><input id="arrivalsYear" style="height: 20px;width: 50px" /> 年</span>
-                    <span><input id="arrivalsMonth" style="height: 20px;width: 50px" />月</span>
-                    <span><input id="arrivalsDay" style="height: 20px;width: 50px" />日</span>
+                <td class="td2">
+                    <span><input id="arrivalsYear"class="datas"/> 年</span>
+                    <span><input id="arrivalsMonth" class="datas"/>月</span>
+                    <span><input id="arrivalsDay" class="datas"/>日</span>
                 </td>
             </tr>
             <tr>
                 <td class="td1">应还金额</td>
-                <td class="td2"><input id="sum" style="height: 20px;width: 100px" /><span>元</span></td>
+                <td class="td2"><input id="sum" class="datas" /><span>元</span></td>
             </tr>
             <tr>
                 <td colspan="2" class="td2">
-                    <p style="text-align: left;padding-left: 50px">注意事项: </p>
+                    <p id="care">注意事项: </p>
                     <div class="p123">
                         <p>1.请在收到此通知单后无条件按照合同约定时间履行所承担的还款/担保责任，清偿所欠本金、利息和罚息。</p>
                         <p>2.如不能按期支付，我公司将寻求法律途径催收解决，届时可能对您/贵公司造成不良影响；</p>
@@ -66,15 +66,15 @@
                     </div>
                     <br/>
                     <div class="p1234">
-                        <p>联系人：<input id="contrat" style="height: 25px;width: 100px" /></p>
-                        <p>联系电话：<input id="phone" style="height: 25px;width: 200px" /></p>
+                        <p>联系人：<input id="contrat" class="datas" /></p>
+                        <p>联系电话：<input id="phone" class="datas" /></p>
                     </div>
-                    <p style=" text-align: left;;padding-left: 300px">
-                        <input id="callYear" style="height: 20px;width: 40px" /> 年
-                        <input id="callMonth" style="height: 20px;width: 40px" />月
-                        <input id="callDay" style="height: 20px;width:40px" /> 日
+                    <p id="date">
+                        <input id="callYear" /> 年
+                        <input id="callMonth" class="datas" />月
+                        <input id="callDay" class="datas" /> 日
                     </p>
-                    <p style=" text-align: left;;padding-left: 330px">（印章）</p>
+                    <p id="seal">（印章）</p>
 
                 </td>
             </tr>
@@ -83,7 +83,6 @@
         <div id="print">
             <input type="button" value="预览" onclick="preview1()" />
         </div>
-    </div>
 </body>
 
 </html>
