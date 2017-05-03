@@ -24,6 +24,8 @@
     <script>
         $(function () {
             $("#model").tabs();
+            $("#model_loandate").datepicker();
+            $("#model_maturity").datepicker();
         });
     </script>
 </head>
@@ -454,10 +456,14 @@
 
         function m1_confirmAndPreview() {
             console.log("m1_confirmAndPreview");
+            console.log($("#model_maturity").val());
+            console.log($("#memo_number").val());
+            $("#m1_noticenum_span").text($("#memo_number").val());
         }
 
         function m2_confirmAndPreview() {
             console.log("m2_confirmAndPreview");
+            $("#m2_noticenum_span").text($("#memo_number").val());
         }
 
         function m3_confirmAndPreview() {
