@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>贷款催收通知单model_3</title>
+
+    <!--引入样式-->
+    <style type="text/css">
+        @import "../../css/model/model_3.css";
+    </style>
+
+    <!--引入js-->
+    <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <table id="number">
+        <tr>
+            <td>
+                通知单编号：<span><input id="numberLine" type="text"/></span></p>
+            </td>
+        </tr>
+    </table>
+    <table id="tb" cellpadding="10px">
+        <caption id="topic">
+            <h3>
+                <u>贷款催收通知单</u>
+            </h3>
+        </caption>
+        <tr id="tr1">
+            <td colspan="2">
+                <div id="named">
+                    <p><input id="borrower1" type="text" style="height:20px; width:150px;" />(借款人)：</p>
+                    <p><input id="surety1" type="text" style="height:20px; width:150px;" />(担保人)：</p>
+                </div>
+                <p id="section1">
+                    借款人
+                    <span> <input id="borrower2" type="text" style="width:150px;"/></span>于
+                    <span> <input id="borrowYear" type="text" style="width:80px;"/></span>年
+                    <span> <input id="borrowMonth" type="text" style="width:60px;"/></span>月
+                    <span> <input id="borrowDay" type="text" style="width:60px;"/></span>日向我司借款
+                    <span> <input id="money" type="text" style="width:60px;"/></span>元，用于
+                    <span> <input id="application" type="text" style="width:300px;"/></span>， 由担保人
+                    <span> <input id="surety2" type="text" style="width:100px;"/></span>提供担保，承担担保责任。此贷款已于
+                    <span> <input id="dueYear" type="text" style="width:80px;"/></span>年
+                    <span> <input id="dueMonth" type="text" style="width:60px;"/></span>月
+                    <span> <input id="dueDay" type="text" style="width:60px;"/></span>日到期，现尚欠贷款本金
+                    <span> <input id="capital" type="text" style="width:60px;"/></span>元，利息
+                    <span> <input id="interest" type="text" style="width:60px;"/></span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
+                </p>
+                <p id="section1">特此通知。</p>
+                <p id="section2">(公章)</p>
+                <p></p>
+                <div id="sign">
+                    <span> <input id="companyYear" type="text" style="width:60px;"/></span>年
+                    <span> <input id="companyMonth" type="text" style="width:40px;"/></span>月
+                    <span> <input id="companyDay" type="text" style="width:40px;"/></span>日
+                </div>
+            </td>
+        </tr>
+        <tr id="tr2">
+            <td>
+                <p id="section1">
+                    以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
+                </p>
+                <p id="section3">借款人签章:</p>
+                <div id="sign">
+                    <span> <input id="borrowerYear" type="text" style="width:60px;"/></span>年
+                    <span> <input id="borrowerMonth" type="text" style="width:40px;"/></span>月
+                    <span> <input id="borrowerDay" type="text" style="width:40px;"/></span>日
+                </div>
+            </td>
+            <td>
+                <p id="section1">
+                    以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
+                </p>
+                <p id="section3">担保人签章：</p>
+                <div id="sign">
+                    <span> <input id="suretyYear" type="text" style="width:60px;"/></span>年
+                    <span> <input id="suretyMonth" type="text" style="width:40px;"/></span>月
+                    <span> <input id="suretyDay" type="text" style="width:40px;"/></span>日
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p id="end">注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
+    <div id="preview" style="text-align: center;">
+        <input type="button" value="预览" onclick="preview()" />
+    </div>
+
+    <script>
+        function preview() {
+            console.log('preview()')
+            localStorage["numberLine"] = $("#numberLine").val();
+            localStorage["borrower1"] = $("#borrower1").val();
+            localStorage["surety1"] = $("#surety1").val();
+            localStorage["borrower2"] = $("#borrower2").val();
+            localStorage["borrowYear"] = $("#borrowYear").val();
+            localStorage["borrowMonth"] = $("#borrowMonth").val();
+            localStorage["borrowDay"] = $("#borrowDay").val();
+            localStorage["money"] = $("#money").val();
+            localStorage["application"] = $("#application").val();
+            localStorage["surety2"] = $("#surety2").val();
+            localStorage["dueYear"] = $("#dueYear").val();
+            localStorage["dueMonth"] = $("#dueMonth").val();
+            localStorage["dueDay"] = $("#dueDay").val();
+            localStorage["capital"] = $("#capital").val();
+            localStorage["interest"] = $("#interest").val();
+            localStorage["companyYear"] = $("#companyYear").val();
+            localStorage["companyMonth"] = $("#companyMonth").val();
+            localStorage["companyDay"] = $("#companyDay").val();
+            localStorage["borrowerYear"] = $("#borrowerYear").val();
+            localStorage["borrowerMonth"] = $("#borrowerMonth").val();
+            localStorage["borrowerDay"] = $("#borrowerDay").val();
+            localStorage["suretyYear"] = $("#suretyYear").val();
+            localStorage["suretyMonth"] = $("#suretyMonth").val();
+            localStorage["suretyDay"] = $("#suretyDay").val();
+            window.location.href = "../model/model_3.html";
+        }
+    </script>
+</body>
+
+</html>
