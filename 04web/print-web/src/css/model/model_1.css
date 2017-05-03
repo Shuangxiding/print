@@ -60,12 +60,14 @@
         /*时间的位置*/
 
         .m1_date1 {
-            padding-left: 400px;
+            text-align: right;
+            padding-right: 80px;
         }
 
         .m1_date2,
         .m1_date3 {
-            padding-left: 100px;
+            text-align: right;
+            padding-right: 80px;
         }
         /*.m1_noticenum {
             float: right;

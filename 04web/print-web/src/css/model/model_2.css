@@ -38,10 +38,34 @@
      text-align: center;
      text-align: justify;
      text-align-last: justify;
+     padding: 5px 10px 5px 10px;
  }
 
- #m2_table_tr {
-     height: 20px;
+ .m2_care {
+     text-align: left;
+     padding: 20px 0px 10px 40px;
+ }
+
+ .m2_care123 {
+     text-align: left;
+     padding: 0px 0px 0px 40px;
+     text-indent: 2em;
+ }
+
+ .m2_link {
+     text-align: right;
+     padding-right: 150px;
+ }
+
+ .m2_date {
+     text-align: right;
+     padding-right: 50px;
+ }
+
+ .m2_seal {
+     text-align: right;
+     padding-right: 70px;
+     padding-bottom: 80px;
  }
  /*表格中文字与边框的间距*/
  /*文本居左*/
