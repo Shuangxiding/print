@@ -1,0 +1,10 @@
+body {
+    align-content: center;
+    text-align: center;
+}
+
+#model {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

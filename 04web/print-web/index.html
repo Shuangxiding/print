@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>模板预览页面</title>
+    <link rel="stylesheet" href="lib/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <script src="lib/js/jquery-3.2.1.min.js"></script>
+    <script src="lib/js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#model").tabs();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--模板区START-->
+    <div id="model">
+        <ul>
+            <li><a href="#model_1">贷后催收通知单模板一</a></li>
+            <li><a href="#model_2">贷后催收通知单模板二</a></li>
+            <li><a href="#model_3">贷后催收通知单模板三</a></li>
+        </ul>
+
+        <!--模板一START-->
+        <div id="model_1">
+            <iframe src="src/app/model/model_1.html" scrolling="no" frameborder="0" height="2000px" width="1000px"></iframe>
+        </div>
+        <!--模板一END-->
+
+        <!--模板二START-->
+        <div id="model_2">
+            <iframe src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="2000px" width="1000px"></iframe>
+        </div>
+        <!--模板二END-->
+
+        <!--模板三START-->
+        <div id="model_3">
+            <iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="2000px" width="1000px"></iframe>
+        </div>
+        <!--模板三END-->
+    </div>
+    <!--模板区END-->
+
+
+</body>
+
+</html>
