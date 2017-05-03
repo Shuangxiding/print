@@ -23,11 +23,14 @@
 
     <!--模板区START-->
     <div id="model">
+
+        <!--导航栏START-->
         <ul>
             <li><a href="#model_1">贷后催收通知单模板一</a></li>
             <li><a href="#model_2">贷后催收通知单模板二</a></li>
             <li><a href="#model_3">贷后催收通知单模板三</a></li>
         </ul>
+        <!--导航栏END-->
 
         <!--模板一START-->
         <div id="model_1">
@@ -43,7 +46,7 @@
         <div id="model_2">
             <iframe id="mode1_222222" src="src/app/model/model_2.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
             <div class="model_2_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
+                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_2_print();" />
                 <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');" />
             </div>
         </div>
@@ -53,7 +56,7 @@
         <div id="model_3">
             <iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>
             <div class="model_3_button">
-                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_1_print();" />
+                <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="model_3_print();" />
                 <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');" />
             </div>
         </div>
@@ -158,7 +161,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确认并预览</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmAndPreview();" data-dismiss="modal">确认并预览</button>
                 </div>
             </div>
         </div>
@@ -179,6 +182,9 @@
             if (val === 'model_3') {
                 $(".model_3_input").show();
             }
+        }
+        function confirmAndPreview() {
+            console.log("欢迎你填入数据")
         }
     </script>
 
