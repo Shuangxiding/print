@@ -1,26 +1,32 @@
+.model_model_3 {
+    align-content: center;
+    text-align: center;
+}
+
+.m3_content {
+    margin: 0 auto;
+}
+
 .m3 {
-    width: 100%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .m3_order {
+    width: 100%;
     text-align: right;
     font-size: 16px;
 }
 
-.m3_span {
-    text-decoration: underline;
-}
-
-table {
+.m3_table {
     border-collapse: collapse;
     margin: auto;
-    width: 80%;
+    width: 100%;
     table-layout: fixed;
 }
 
-table tr td {
+.m3_table tr td {
     padding: 20px;
 }
 
@@ -31,19 +37,19 @@ table tr td {
 
 .m3_content_named {
     line-height: 300%;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
 }
 
 .m3_content_tr1 {
-    font-size: 18px;
+    font-size: 16px;
     width: 40%;
     margin: 10px;
 }
 
 #m3_content_section1 {
     text-indent: 2em;
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
     line-height: 260%;
     word-wrap: break-word;
@@ -52,6 +58,7 @@ table tr td {
 #m3_content_section2 {
     padding-left: 75%;
     line-height: 350%;
+    padding-bottom: 80px;
 }
 
 #m3_content_section3 {
