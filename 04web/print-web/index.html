@@ -4,19 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>模板预览页面</title>
+    <!--引入lib外部css样式-->
     <link rel="stylesheet" href="lib/css/jquery-ui.min.css">
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-
+    <!--引入src外部css样式-->
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/model/model_1.css">
     <link rel="stylesheet" href="src/css/model/model_2.css">
     <link rel="stylesheet" href="src/css/model/model_3.css">
-    <style>
-        #m2_table_tr {
-            height: 20px;
-        }
-    </style>
-
+    <!--引入js-->
     <script src="lib/js/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
@@ -136,8 +132,8 @@
                 <!--按钮区START-->
                 <div class="m1_button">
                     <input type="button" value="打印模板" class="btn btn-primary btn-lg m1_noprint_button" onclick="m1_print();" />
-                    <input type="button" value="填写数据" class="btn btn-primary btn-lg m1_noprint_button"data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
-                    />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg m1_noprint_button" data-toggle="modal" data-target="#myModal"
+                        onclick="model_input_data('model_1');" />
                 </div>
                 <!--按钮区END-->
             </div>
@@ -386,7 +382,7 @@
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
-                            <label for="lastname" class="col-sm-3 control-label">贷  款金额（大写）</label>
+                            <label for="lastname" class="col-sm-3 control-label">贷款金额（大写）</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="model_loadamount" placeholder="请输入贷款金额">
                             </div>
@@ -490,17 +486,6 @@
             if (val === 'model_3') {
                 $(".model_3_input").show();
             }
-        }
-
-        // function m1_confirmAndPreview() {
-        //     console.log("m1_confirmAndPreview");
-        //     console.log($("#model_maturity").val());
-        //     console.log($("#memo_number").val());
-        //     $("#m1_noticenum_span").text($("#memo_number").val());
-        // }
-
-        function m3_confirmAndPreview() {
-            console.log("m3_confirmAndPreview");
         }
     </script>
 
