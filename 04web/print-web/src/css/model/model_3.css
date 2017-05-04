@@ -79,16 +79,31 @@
 }
 
 .m3_end {
-    text-align: center;
     font-size: 14px;
+    padding-left: 20px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 @media print {
     .m3 {
         width: 100%;
     }
-    .m3_button {
+    .m3_table {
+        width: 100%;
+    }
+    /*.m3_button {
         display: none;
+    }*/
+    .m3_noprint_button {
+        display: none;
+    }
+    .m3_table_opacity {
+        border-color: transparent;
+    }
+    .m3_opacity {
+        opacity: 0.0;
     }
     /*.m3_ordernum,
     .m3_table_topic,
