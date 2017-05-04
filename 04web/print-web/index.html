@@ -21,7 +21,9 @@
     <script src="lib/js/jquery-ui.min.js"></script>
     <!--引入预览事件-->
     <script src="src/js/input/model_2_input.js"></script>
-
+    <!--引入打印事件-->
+    <script type="text/javascript" src="lib/js/jquery.PrintArea.js"></script>
+    <script src="src/js/model/model_2.js"></script>
     <script>
         $(function () {
             $("#model").tabs();
@@ -148,70 +150,69 @@
             <div class="m2" id="m2">
 
                 <!--通知单编号START-->
-                <div class="m2_notice" id="m2_notice">
+                <div class="m2_notice" id="m2_not">
                     <p class="m2_noticenum" id="m2_noticenum">
-                        通知单编号：
-                        <span class="m2_noticenum_span" id="m2_noticenum_span">________________________</span>
+                        <span class="" id="m2_num"> 通知单编号：</span>
+                        <span class="m2_noticenum_span" id="m2_noticenum_span">___________________</span>
                     </p>
                 </div>
                 <!--通知单编号END-->
 
                 <!--标题START-->
-                <div class="m2_title" id="m2_title">
+                <div class="m2_title" id="m2_tle">
                     <b><u>催 收 贷 款 通 知 单</b></u>
                 </div>
                 <!--标题END-->
                 <!--内容START-->
-                <div class="m2_content" id="m2_content">
-                    <table class="m2_table" id="m2_table" border="1" cellpadding="10px" cellspacing="0">
+                <div class="m2_content" id="m2_con">
+                    <table class="m2_table" id="m2_tab" border="1" cellpadding="10px" cellspacing="0">
                         <tr>
-                            <td class="m2_table_td1">案件编号</td>
-                            <td class="m2_td2 "><span id="m2_caseNumber_span"></span></td>
+                            <td class="m2_table_td1" id="m2_count">案件编号</td>
+                            <td class="m2_td2"><span id="m2_caseNumber_span" class=""></span></td>
                         </tr>
                         <tr>
-                            <td class="m2_table_td2">催收缘由</td>
-                            <td class="m2_td2 "><span id="m2_caseReason_span"></span></td>
+                            <td class="m2_table_td2" id="m2_why">催收原由</td>
+                            <td class="m2_td2"><span id="m2_caseReason_span" class=""></span></td>
                         </tr>
                         <tr>
-                            <td class="m2_table_td3">债务人</td>
+                            <td class="m2_table_td3" id="m2_person">债务人</td>
                             <td class="m2_td2"><span id="m2_borrower_span"></span></td>
                         </tr>
                         <tr>
-                            <td class="m2_table_td4">工作单位或地址</td>
-                            <td class="m2_td2"><span id="m2_address_span" </span></td>
+                            <td class="m2_table_td4" id="m2_place">工作单位或地址</td>
+                            <td class="m2_td2"><span id="m2_address_span" class="" </span></td>
                         </tr>
                         <tr>
-                            <td class="m2_table_td5">还款截止日期</td>
+                            <td class="m2_table_td5" id="m2_load">贷款到期日期</td>
                             <td class="m2_td2">
-                                <span id="m2_date_span"></span>
-                                <!--<span id="arrivalsYear" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 年
-                                <span id="arrivalsMonth" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 月
-                                <span id="arrivalsDay" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 日-->
+                                <span id="m2_arrivalsYear_span" class=""></span>
+                                <span id="m2_arrivalsMonth_span" class=""></span>
+                                <span id="m2_arrivalsDay_span" class=""></span>
                             </td>
                         </tr>
                         <tr>
-                            <td class="m2_table_td6">应还金额</td>
-                            <td class="m2_td2"><span id="m2_sum_span"></span>元</td>
+                            <td class="m2_table_td6" id="m2_money">应还金额</td>
+                            <td class="m2_td2"><span id="m2_sum_span" class=""></span></td>
                         </tr>
                         <tr>
                             <td colspan="2 " class="m2_td3">
-                                <p class="m2_care">注意事项: </p>
-                                <div class="m2_care123 ">
+                                <p class="m2_care" id="m2_search">注意事项: </p>
+                                <div class="m2_care123" id="m2_sea_content">
                                     <p>1.请在收到此通知单后无条件按照合同约定时间履行所承担的还款/担保责任，清偿所欠本金、利息和罚息。</p>
                                     <p>2.如不能按期支付，我公司将寻求法律途径催收解决，届时可能对您/贵公司造成不良影响；</p>
                                     <p>3.债务人在收到催收单后，应在送达回执上签名或盖章。</p>
                                 </div>
                                 <br/>
                                 <div class="m2_link">
-                                    <p>联 系 人：<span id="m2_contrat_span" class="datas"></span></p>
-                                    <p>联系电话：<span id="m2_phone_span" class="datas"></span></p>
+                                    <p class="m2_contrat"><span class="" id="m2_people">联 系 人：</span><span id="m2_contrat_span" class=""></span></p>
+                                    <p class="m2_phone"><span class="" id="m2_mobail">联系电话：</span><span id="m2_phone_span" class=""></span></p>
                                 </div>
-                                <p class="m2_date" id="date">
-                                    <span id="callYear" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 年
-                                    <span id="callMonth" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 月
-                                    <span id="callDay" class="datas"></span> &nbsp; &nbsp; &nbsp; &nbsp; 日
+                                <p class="m2_date" id="m2_date">
+                                    <span id="callYear"></span> &nbsp; &nbsp; &nbsp; &nbsp; 年
+                                    <span id="callMonth"></span> &nbsp; &nbsp; &nbsp; &nbsp; 月
+                                    <span id="callDay"></span> &nbsp; &nbsp; &nbsp; &nbsp; 日
                                 </p>
-                                <p class="m2_seal">（印章）</p>
+                                <p class="m2_seal" id="m2_seal_data">（印章）</p>
 
                             </td>
                         </tr>
@@ -220,14 +221,15 @@
                 <!--内容END-->
 
                 <!--备注区START-->
-                <div class="m2_remark">
+                <div class="m2_remark opa" id="m2_bottom_remark">
                     本联送到债务人
                 </div>
                 <!--备注区END-->
 
                 <!--按钮区START-->
                 <div class="m2_button">
-                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m2_print();" />
+                    <input type="button" value="套打数据" class="btn btn-primary btn-lg" onclick="m2_preview_all();" />
+                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m2_preview();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
                     />
                 </div>
@@ -378,7 +380,7 @@
                                 <input type="text" class="form-control" id="model_loaduse" placeholder="请输入贷款用途">
                             </div>
                         </div>
-                        <div class="form-group model_1_input model_3_input">
+                        <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款到期日期</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="model_maturity" placeholder="请输入贷款到期日期">
@@ -411,19 +413,13 @@
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">债务人</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_borrower" placeholder="请输入债务人">
+                                <input type="text" class="form-control" id="model2_borrower" placeholder="请输入债务人">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">工作单位或地址</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="model_address" placeholder="请输入工作单位或地址">
-                            </div>
-                        </div>
-                        <div class="form-group model_2_input">
-                            <label for="lastname" class="col-sm-3 control-label">还款截止日期</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_date" placeholder="请输入还款截止日期">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
