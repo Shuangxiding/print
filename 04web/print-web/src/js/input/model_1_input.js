@@ -44,6 +44,9 @@ function m1_confirmAndPreview() {
     if (model_interest != null || model_interest != '') {
         $("#m1_ointerest").text(model_interest);
     }
+
+    // 显示打印数据按钮
+    $("#m1_printdata_button").removeClass("m1_bttton_hide");
 }
 
 function m1_print_data() {

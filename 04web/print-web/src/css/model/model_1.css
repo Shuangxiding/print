@@ -91,7 +91,12 @@
         .m1_seal {
             padding-left: 120px;
         }
-
+        /*打印数据按钮隐藏*/
+        .m1_bttton_hide{
+            display: none;
+        }
+        
+        /*打印样式设置*/
         @media print {
             .m1 {
                 width: 100%;
@@ -102,14 +107,6 @@
             .m1_noprint_button {
                 display: none;
             }
-            /*.m1_table,
-            .m1_table tr,
-            .m1_table td {
-                border-color: transparent;
-            }
-            .m1_opacity {
-                opacity: 0.0;
-            }*/
             .m1_opacity {
                 opacity: 0.0;
             }
