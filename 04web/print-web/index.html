@@ -4,24 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>模板预览页面</title>
+    <!--引入lib外部css样式-->
     <link rel="stylesheet" href="lib/css/jquery-ui.min.css">
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-
+    <!--引入src外部css样式-->
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/model/model_1.css">
     <link rel="stylesheet" href="src/css/model/model_2.css">
     <link rel="stylesheet" href="src/css/model/model_3.css">
-    <style>
-        #m2_table_tr {
-            height: 20px;
-        }
-    </style>
-
+    <!--引入js-->
     <script src="lib/js/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
     <script src="lib/js/jquery.PrintArea.js"></script>
     <!--引入预览事件-->
+    <script src="src/js/input/model_1_input.js"></script>
     <script src="src/js/input/model_2_input.js"></script>
     <script src="src/js/input/model_3_input.js"></script>
 
@@ -51,7 +48,8 @@
             <div class="m1" id="m1">
                 <!--通知单编号START-->
                 <div class="m1_notice" id="m1_notice">
-                    <p class="m1_noticenum" id="m1_noticenum">通知单编号：
+                    <p class="m1_noticenum" id="m1_noticenum">
+                        <span class="" id="m1_noticenum_span1">通知单编号：</span>
                         <span class="m1_noticenum_span" id="m1_noticenum_span">________________________</span>
                     </p>
                 </div>
@@ -59,7 +57,7 @@
 
                 <!--标题START-->
                 <div class="m1_title" id="m1_title">
-                    <b><u>贷 后 催 收 通 知 单</u></b>
+                    <span class="" id="m1_title_span"><b><u>贷 后 催 收 通 知 单</u></b></span>
                 </div>
                 <!--标题END-->
 
@@ -68,27 +66,41 @@
                     <table class="m1_table" id="m1_table" border="1" cellpadding="10px" cellspacing="0">
                         <tr>
                             <td colspan="2">
-                                <p class="m1_loader"><span class="span_unline" id="model_1_name">__________________________</span>:</p>
+                                <p class="m1_loader">
+                                    <span class="m1_span_unline" id="m1_name">__________________________</span>
+                                    <span class="" id="m1_loader_span2">:</span>
+                                </p>
                                 <p class="m1_p1">
-                                    &nbsp; &nbsp; &nbsp; &nbsp; 你（单位）于
-                                    <span class="span_unline" id="model_1_byear">______</span>年
-                                    <span class="span_unline" id="model_1_bmonth">______</span>月
-                                    <span class="span_unline" id="model_1_bday">______</span>日在我机构贷款
-                                    <span class="span_unline" id="model_1_bmoney">___________________</span>（大写）元，该笔贷款于
-                                    <span class="span_unline" id="model_1_cyear">______</span>年
-                                    <span class="span_unline" id="model_1_cmonth">______</span>月
-                                    <span class="span_unline" id="model_1_cday">______</span>日到期，截止目前仍欠贷款本金
-                                    <span class="span_unline" id="model_1_omoney">___________________</span>（大写）元，利息
-                                    <span class="span_unline" id="model_1_ointerest">___________________</span>元。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。
+                                    <span class="" id="m1_p1_span1">&nbsp; &nbsp; &nbsp; &nbsp; 你（单位）于</span>
+                                    <span class="m1_span_unline" id="m1_byear">______</span>
+                                    <span class="" id="m1_p1_span3">年</span>
+                                    <span class="m1_span_unline" id="m1_bmonth">______</span>
+                                    <span class="" id="m1_p1_span5">月</span>
+                                    <span class="m1_span_unline" id="m1_bday">______</span>
+                                    <span class="" id="m1_p1_span7">日在我机构贷款</span>
+                                    <span class="m1_span_unline" id="m1_bmoney">___________________</span>
+                                    <span class="" id="m1_p1_span9">（大写）元，该笔贷款于</span>
+                                    <span class="m1_span_unline" id="m1_cyear">______</span>
+                                    <span class="" id="m1_p1_span11">年</span>
+                                    <span class="m1_span_unline" id="m1_cmonth">______</span>
+                                    <span class="" id="m1_p1_span13">月</span>
+                                    <span class="m1_span_unline" id="m1_cday">______</span>
+                                    <span class="" id="m1_p1_span15">日到期，截止目前仍欠贷款本金</span>
+                                    <span class="m1_span_unline" id="m1_omoney">___________________</span>
+                                    <span class="" id="m1_p1_span17">（大写）元，利息</span>
+                                    <span class="m1_span_unline" id="m1_ointerest">___________________</span>
+                                    <span class="" id="m1_p1_span19">元。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。</span>
                                 </p>
-                                <p class="m1_p2">&nbsp; &nbsp; &nbsp; &nbsp; 上述贷款本息，由担保人继续承担连带还款责任。</p>
-                                <p class="m1_p3"> 特此通知！</p>
-                                <p class="m1_lender">&nbsp; &nbsp; &nbsp; &nbsp; 贷款人（公章）:<span id="model_1_lender"></span></p>
-                                <p class="m1_legal">
+                                <p class="m1_p2" id="m1_p2">&nbsp; &nbsp; &nbsp; &nbsp; 上述贷款本息，由担保人继续承担连带还款责任。</p>
+                                <p class="m1_p3" id="m1_p3"> 特此通知！</p>
+                                <p class="m1_lender" id="m1_lender">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; 贷款人（公章）:
+                                    <span id="model_1_lender"></span></p>
+                                <p class="m1_legal" id="m1_legal">
                                     &nbsp; &nbsp; &nbsp; &nbsp; 法人代表（签章）:<span id="model_1_rep"></span>
-                                    <span id="officer"> 信贷员:</span><span id="model_1_officer"></span>
+                                    <span class="m1_officer"> 信贷员:</span><span id="model_1_officer"></span>
                                 </p>
-                                <p class="m1_date1">
+                                <p class="m1_date1" id="m1_date1">
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
@@ -97,26 +109,26 @@
                         </tr>
                         <tr>
                             <td>
-                                <p class="m1_confirmtext">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
-                                <p class="m1_borrower">
+                                <p class="m1_confirmtext" id="m1_confirmtext1">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                                <p class="m1_borrower" id="m1_borrower">
                                     <span>借款人: <span></span></span>
-                                    <span class="seal">（公）章</span>
+                                    <span class="m1_seal">（公）章</span>
                                 </p>
-                                <p class="m1_signer">签收人:<span></span></p>
-                                <p class="m1_date2">
+                                <p class="m1_signer" id="m1_signer1">签收人:<span></span></p>
+                                <p class="m1_date2" id="m1_date2">
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
                                 </p>
                             </td>
                             <td>
-                                <p class="m1_confirmtext">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
-                                <p class="m1_guarantor">
+                                <p class="m1_confirmtext" id="m1_confirmtext2">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
+                                <p class="m1_guarantor" id="m1_guarantor">
                                     <span>担保人: <span></span></span>
-                                    <span class="seal">（公）章</span>
+                                    <span class="m1_seal">（公）章</span>
                                 </p>
-                                <p class="m1_signer">签收人:<span></span></p>
-                                <p class="m1_date3">
+                                <p class="m1_signer" id="m1_signer2">签收人:<span></span></p>
+                                <p class="m1_date3" id="m1_date3">
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
                                     <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
@@ -128,16 +140,17 @@
                 <!--内容END-->
 
                 <!--备注区START-->
-                <div class="m1_remark">
+                <div class="m1_remark" id="m1_remark">
                     注：本通知书一式三份，借款人、担保人、贷款方各留一份。
                 </div>
                 <!--备注区END-->
 
                 <!--按钮区START-->
                 <div class="m1_button">
-                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m1_print();" />
-                    <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_1');"
-                    />
+                    <input type="button" value="打印模板" class="btn btn-primary btn-lg m1_noprint_button" onclick="m1_print();" />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg m1_noprint_button" data-toggle="modal" data-target="#myModal"
+                        onclick="model_input_data('model_1');" />
+                    <input type="button" value="打印数据" class="btn btn-primary btn-lg m1_noprint_button" onclick="m1_print_data();" />
                 </div>
                 <!--按钮区END-->
             </div>
@@ -386,7 +399,7 @@
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
-                            <label for="lastname" class="col-sm-3 control-label">贷  款金额（大写）</label>
+                            <label for="lastname" class="col-sm-3 control-label">贷款金额（大写）</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="model_loadamount" placeholder="请输入贷款金额">
                             </div>
@@ -492,14 +505,13 @@
             }
         }
 
+
         function m1_confirmAndPreview() {
             console.log("m1_confirmAndPreview");
             console.log($("#model_maturity").val());
             console.log($("#memo_number").val());
             $("#m1_noticenum_span").text($("#memo_number").val());
-        }
     </script>
-
 
 </body>
 

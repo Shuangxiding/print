@@ -21,7 +21,3 @@ function m3_confirmAndPreview() {
 function m3_print() {
     $(".m3").printArea();
 }
-
-// function m3_printdata() {
-
-// }
