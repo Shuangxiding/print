@@ -4,7 +4,7 @@
  }
 
  .m2 {
-     width: 65%;
+     width: 70%;
      margin-left: auto;
      margin-right: auto;
  }
@@ -30,6 +30,16 @@
 
  .m2_table td {
      padding: 10px
+ }
+ /*.m2_table_td1,
+ .m2_table_td2,
+ .m2_table_td3,
+ m2_table_td4,
+ .m2_table_td5,
+ m2_table_td6,*/
+
+ .m2_td2 {
+     width: 300px;
  }
 
  #m2_table_tr {
@@ -67,9 +77,19 @@
  }
 
  .m2_link {
-     text-align: right;
-     padding-right: 250px;
-     padding-top: 80px;
+     /*text-align: right;
+     padding-right: 250px;*/
+     padding-top: 80px
+ }
+
+ .m2_contrat {
+     text-align: left;
+     padding-left: 400px;
+ }
+
+ .m2_phone {
+     text-align: left;
+     padding-left: 400px;
  }
 
  .m2_date {
@@ -90,6 +110,47 @@
      padding-bottom: 30px;
      text-align: left;
      padding-left: 30px;
+ }
+
+ @media print {
+     .m2 {
+         width: 100%;
+     }
+     .m2_button {
+         display: none;
+     }
+     .m2_td2 {
+         text-align: center;
+     }
+     .opa {
+         opacity: 0.0;
+     }
+     /*.m2_table {
+         border-color: transparent;
+     }
+     .m2_table tr td {
+         border-color: transparent;
+     }*/
+     .datas {
+         opacity: 1.0;
+         color: black;
+     }
+     .m2_noticenum_span {
+         text-align: right;
+         padding-right: 60px;
+     }
+     /*.real {
+         opacity: 1.0;
+         color: black;
+         border-color: black;
+     }*/
+ }
+
+ .m2_noticenum_span1 {
+     margin: 0;
+     padding-top: 5px;
+     border-bottom: 1px solid #000000;
+     clear: both;
  }
  /*表格中文字与边框的间距*/
  /*文本居左*/
