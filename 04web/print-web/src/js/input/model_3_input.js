@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 点击打印模板事件
 function m3_print() {
     $(".m3").printArea();
@@ -41,5 +40,3 @@ function m3_print_data() {
     $(".m3_end").addClass("m3_opacity")
     $(".m3").printArea();
 }
-=======
->>>>>>> 58b3b7ad3f616f1d1f10a2f7e22dd93687f70b94
