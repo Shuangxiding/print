@@ -3,11 +3,16 @@
             text-align: center;
         }
 
+        .m1_content {
+            margin: 0 auto;
+        }
+
         .m1 {
             width: 75%;
             margin-left: auto;
             margin-right: auto;
         }
+        /*通知单编号*/
 
         .m1_noticenum {
             text-align: right;
@@ -24,6 +29,13 @@
         .m1_noticenum {
             font-size: 16px;
             line-height: 200%;
+        }
+        /*table区在div中的位置*/
+
+        .m1_table {
+            width: 100%;
+            margin: 0px;
+            margin: 0 auto;
         }
         /*表格中文字与边框的间距*/
 
@@ -54,9 +66,8 @@
         /*特此通知的位置*/
 
         .m1_p3 {
-            text-align: right;
             padding-top: 20px;
-            padding-right: 150px;
+            padding-left: 300px;
         }
         /*时间的位置*/
 
@@ -71,19 +82,39 @@
             padding-right: 80px;
         }
         /*信贷员的位置*/
-        .m1_officer{
+
+        .m1_officer {
             padding-left: 200px;
         }
         /*公章的位置*/
-        .m1_seal{
+
+        .m1_seal {
             padding-left: 120px;
         }
+
         @media print {
             .m1 {
                 width: 100%;
             }
-            .m1_noprint_button{
+            .m1_table {
+                width: 100%;
+            }
+            .m1_noprint_button {
                 display: none;
+            }
+            /*.m1_table,
+            .m1_table tr,
+            .m1_table td {
+                border-color: transparent;
+            }
+            .m1_opacity {
+                opacity: 0.0;
+            }*/
+            .m1_opacity {
+                opacity: 0.0;
+            }
+            .m1_table_opacity {
+                border-color: transparent;
             }
         }
         /*.m1_noticenum {

@@ -45,3 +45,36 @@ function m1_confirmAndPreview() {
         $("#m1_ointerest").text(model_interest);
     }
 }
+
+function m1_print_data() {
+    // 打印数据时添加class，用此class控制透明样式
+    $("#m1_noticenum_span1").addClass("m1_opacity");
+    $("#m1_title_span").addClass("m1_opacity");
+    $("#m1_loader_span2").addClass("m1_opacity");
+    $("#m1_p1_span1").addClass("m1_opacity");
+    $("#m1_p1_span3").addClass("m1_opacity");
+    $("#m1_p1_span5").addClass("m1_opacity");
+    $("#m1_p1_span7").addClass("m1_opacity");
+    $("#m1_p1_span9").addClass("m1_opacity");
+    $("#m1_p1_span11").addClass("m1_opacity");
+    $("#m1_p1_span13").addClass("m1_opacity");
+    $("#m1_p1_span15").addClass("m1_opacity");
+    $("#m1_p1_span17").addClass("m1_opacity");
+    $("#m1_p1_span19").addClass("m1_opacity");
+    $("#m1_p2").addClass("m1_opacity");
+    $("#m1_p3").addClass("m1_opacity");
+    $("#m1_lender").addClass("m1_opacity");
+    $("#m1_legal").addClass("m1_opacity");
+    $("#m1_date1").addClass("m1_opacity");
+    $("#m1_confirmtext1").addClass("m1_opacity");
+    $("#m1_borrower").addClass("m1_opacity");
+    $("#m1_signer1").addClass("m1_opacity");
+    $("#m1_date2").addClass("m1_opacity");
+    $("#m1_confirmtext2").addClass("m1_opacity");
+    $("#m1_guarantor").addClass("m1_opacity");
+    $("#m1_signer2").addClass("m1_opacity");
+    $("#m1_date3").addClass("m1_opacity");
+    $("#m1_remark").addClass("m1_opacity");
+    $("#m1_table").addClass("m1_table_opacity");
+    $(".m1").printArea();
+}
