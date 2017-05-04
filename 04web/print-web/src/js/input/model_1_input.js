@@ -1,5 +1,6 @@
 // 点击打印模板事件
 function m1_print() {
+    console.log("m1_print()");
     $(".m1").printArea();
 }
 
