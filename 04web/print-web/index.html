@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/model/model_1.css">
     <link rel="stylesheet" href="src/css/model/model_2.css">
+    <link rel="stylesheet" href="src/css/model/model_3.css">
     <style>
         #m2_table_tr {
             height: 20px;
@@ -250,87 +251,106 @@
         <!--模板三START-->
         <div class="model_model_3" id="model_model_3">
             <div class="m3" id="m3">
-                <table id="number">
-                    <tr>
-                        <td>
-                            通知单编号：<span id="numberLine">_________</span>
-                        </td>
-                    </tr>
-                </table>
-                <table id="tb" cellpadding="10px">
-                    <caption id="topic">
-                        <h3>
-                            <u>贷款催收通知单</u>
-                        </h3>
-                    </caption>
-                    <tr id="tr1">
-                        <td colspan="2">
-                            <div id="named">
-                                <p id="borrower1"> _________ <span>(借款人)：</span></p>
-                                <p id="surety1"> _________ <span>(担保人)：</span></p>
-                            </div>
-                            <p id="section1">
-                                借款人
-                                <span id="borrower2"> _________ </span>于
-                                <span id="borrowYear"> _________ </span>年
-                                <span id="borrowMonth"> _________ </span>月
-                                <span id="borrowDay"> _________ 日向我司借款
-                                <span id="money"> _________</span>元，用于
-                                <span id="application">_________</span>， 由担保人
-                                <span id="surety2"> _________</span>提供担保，承担担保责任。此贷款已于
-                                <span id="dueYear">_________</span>年
-                                <span id="dueMonth">_________</span>月
-                                <span id="dueDay">_________</span>日到期，现尚欠贷款本金
-                                <span id="capital">_________</span>元，利息
-                                <span id="interest">_________</span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
-                            </p>
-                            <p id="section1">特此通知。</p>
-                            <p id="section2">(公章)</p>
-                            <p></p>
-                            <div id="sign">
-                                <span id="companyYear"> _________</span>年
-                                <span id="companyMonth">_________</span>月
-                                <span id="companyDay"> _________</span>日
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="tr2">
-                        <td>
-                            <p id="section1">
-                                以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
-                            </p>
-                            <p id="section3">借款人签章:</p>
-                            <div id="sign">
-                                <span id="borrowerYear"> _________ </span>年
-                                <span id="borrowerMonth"> _________ </span>月
-                                <span id="borrowerDay"> _________ </span>日
-                            </div>
-                        </td>
-                        <td>
-                            <p id="section1">
-                                以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
-                            </p>
-                            <p id="section3">担保人签章：</p>
-                            <div id="sign">
-                                <span id="suretyYear">_________</span>年
-                                <span id="suretyMonth">_________</span>月
-                                <span id="suretyDay">_________</span>日
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <p id="end">注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
+
+                <!--通知单编号START-->
+                <div class="m3_order" id="m3_order">
+                    <p class="m3_ordernum" id="m3_ordernum">通知单编号：
+                        <span class="m3_ordernum_span" id="m3_ordernum_span">_________</span>
+                    </p>
+                </div>
+                <!--通知单编号END-->
+
+                <!--内容START-->
+                <div class="m3_content" id="m3_content">
+                    <table class="m3_table" id="m3_table" cellpadding="10px" border="1" cellspacing="0">
+                        <caption class="m3_table_topic" id="m3_table_topic">
+                            <h3>
+                                <u>贷款催收通知单</u>
+                            </h3>
+                        </caption>
+                        <tr id="m3_content_tr1">
+                            <td colspan="2">
+                                <div class="m3_content_named" id="m3_content_named">
+                                    <p id="borrower1"> _________ <span>(借款人)：</span></p>
+                                    <p id="surety1"> _________ <span>(担保人)：</span></p>
+                                </div>
+                                <p id="m3_content_section1">
+                                    借款人
+                                    <span id="borrower2"> _________ </span>于
+                                    <span id="borrowYear"> _________ </span>年
+                                    <span id="borrowMonth"> _________ </span>月
+                                    <span id="borrowDay"> _________ 日向我司借款
+                                    <span id="money"> _________</span>元，用于
+                                    <span id="application">_________</span>， 由担保人
+                                    <span id="surety2"> _________</span>提供担保，承担担保责任。此贷款已于
+                                    <span id="dueYear">_________</span>年
+                                    <span id="dueMonth">_________</span>月
+                                    <span id="dueDay">_________</span>日到期，现尚欠贷款本金
+                                    <span id="capital">_________</span>元，利息
+                                    <span id="interest">_________</span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
+                                </p>
+                                <p id="m3_content_section1">特此通知。</p>
+                                <p id="m3_content_section2">(公章)</p>
+                                <p></p>
+                                <div id="m3_content_sign">
+                                    <span id="companyYear"> _______</span>年
+                                    <span id="companyMonth">_______</span>月
+                                    <span id="companyDay"> _______</span>日
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="m3_content_tr2">
+                            <td>
+                                <p id="m3_content_section3">
+                                    以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
+                                </p>
+                                <p id="m3_content_section3">借款人签章:</p>
+                                <div id="m3_content_sign">
+                                    <span id="borrowerYear"> ______ </span>年
+                                    <span id="borrowerMonth"> ______ </span>月
+                                    <span id="borrowerDay"> ______ </span>日
+                                </div>
+                            </td>
+                            <td>
+                                <p id="m3_content_section3">
+                                    以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
+                                </p>
+                                <p id="m3_content_section3">担保人签章：</p>
+                                <div id="m3_content_sign">
+                                    <span id="suretyYear">______</span>年
+                                    <span id="suretyMonth">______</span>月
+                                    <span id="suretyDay">______</span>日
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--内容END-->
+
+                <!--备注区START-->
+                <div class="m3_end">
+                    注：本通知书一式三份，借款人、担保人、贷款方各留一份。
+                </div>
+                <!--备注区END-->
+
+                <!--按钮区START-->
                 <div class="m3_button">
                     <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m3_print();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
                     />
                 </div>
+                <!--按钮区END-->
             </div>
+
             <!--<iframe src="src/app/model/model_3.html" scrolling="no" frameborder="0" height="1000px" width="1000px"></iframe>-->
+
         </div>
         <!--模板三END-->
+
     </div>
     <!--模板区END-->
+
+
 
     <!-- 数据录入框START -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
