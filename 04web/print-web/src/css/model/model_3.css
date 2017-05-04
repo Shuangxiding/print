@@ -11,16 +11,27 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.m3_order {
-    width: 100%;
-    text-align: right;
     font-size: 16px;
 }
 
+
+/*标题*/
+
+.m3_title {
+    font-size: 24px;
+    line-height: 200%;
+}
+
+
+/*编号*/
+
+.m3_order {
+    width: 100%;
+    line-height: 200%;
+    text-align: right;
+}
+
 .m3_table {
-    border-collapse: collapse;
     margin: auto;
     width: 100%;
     table-layout: fixed;
@@ -30,59 +41,41 @@
     padding: 20px;
 }
 
-.m3_table_topic {
-    text-align: center;
-    font-size: 24px;
-}
-
 .m3_content_named {
-    line-height: 300%;
-    font-size: 16px;
+    line-height: 230%;
     text-align: left;
 }
 
-.m3_content_tr1 {
-    font-size: 16px;
-    width: 40%;
-    margin: 10px;
-}
 
-#m3_content_section1 {
+/*文本*/
+
+.m3_content_section1 {
     text-indent: 2em;
-    font-size: 16px;
     text-align: justify;
-    line-height: 260%;
+    line-height: 230%;
     word-wrap: break-word;
 }
 
-#m3_content_section2 {
+
+/*公章*/
+
+.m3_content_section2 {
     padding-left: 75%;
-    line-height: 350%;
     padding-bottom: 80px;
 }
 
-#m3_content_section3 {
-    font-size: 16px;
-    text-indent: 2em;
-    text-align: justify;
-    line-height: 200%;
+
+/*签章*/
+
+.m3_content_section3 {
+    padding-left: 45%;
+    line-height: 240%;
+    padding-bottom: 70px;
 }
 
-#m3_content_section4 {
-    font-size: 16px;
-    padding-left: 50%;
-    text-align: justify;
-    line-height: 200%;
-}
-
-#m3_content_sign {
+.m3_content_sign {
+    padding-right: 20px;
     text-align: right;
-}
-
-.m3_content_tr2 {
-    font-size: 16px;
-    width: 40%;
-    margin: 10px;
 }
 
 .m3_end {
