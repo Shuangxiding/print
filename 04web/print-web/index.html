@@ -20,8 +20,10 @@
     <script src="lib/js/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
+    <script src="lib/js/jquery.PrintArea.js"></script>
     <!--引入预览事件-->
     <script src="src/js/input/model_2_input.js"></script>
+    <script src="src/js/input/model_3_input.js"></script>
 
     <script>
         $(function () {
@@ -249,9 +251,8 @@
 
                 <!--通知单编号START-->
                 <div class="m3_order" id="m3_order">
-                    <p class="m3_ordernum" id="m3_ordernum">通知单编号：
-                        <span class="m3_ordernum_span" id="m3_ordernum_span">_________</span>
-                    </p>
+                    <span class="m3_ordernum" id="m3_ordernum">通知单编号：</span>
+                    <span class="m3_span" id="m3_ordernum_span">____________________</span>
                 </div>
                 <!--通知单编号END-->
 
@@ -259,62 +260,62 @@
                 <div class="m3_content" id="m3_content">
                     <table class="m3_table" id="m3_table" cellpadding="10px" border="1" cellspacing="0">
                         <caption class="m3_table_topic" id="m3_table_topic">
-                            <h3>
-                                <u>贷款催收通知单</u>
-                            </h3>
+                            <u> 贷 款 催 收 通 知 单</u>
                         </caption>
                         <tr id="m3_content_tr1">
                             <td colspan="2">
                                 <div class="m3_content_named" id="m3_content_named">
-                                    <p id="borrower1"> _________ <span>(借款人)：</span></p>
-                                    <p id="surety1"> _________ <span>(担保人)：</span></p>
+                                    <span class="m3_span" id="m3_borrower1">_________</span> <span class="m3_unpri"> (借款人)：</span>
+                                    </br>
+                                    <span class="m3_span" id="m3_surety1">_________</span> <span class="m3_unpri"> (担保人)：</span>
                                 </div>
                                 <p id="m3_content_section1">
-                                    借款人
-                                    <span id="borrower2"> _________ </span>于
-                                    <span id="borrowYear"> _________ </span>年
-                                    <span id="borrowMonth"> _________ </span>月
-                                    <span id="borrowDay"> _________ 日向我司借款
-                                    <span id="money"> _________</span>元，用于
-                                    <span id="application">_________</span>， 由担保人
-                                    <span id="surety2"> _________</span>提供担保，承担担保责任。此贷款已于
-                                    <span id="dueYear">_________</span>年
-                                    <span id="dueMonth">_________</span>月
-                                    <span id="dueDay">_________</span>日到期，现尚欠贷款本金
-                                    <span id="capital">_________</span>元，利息
-                                    <span id="interest">_________</span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
+                                    <span class="m3_unpri">借款人</span>
+                                    <span class="m3_span" id="m3_borrower2">_________</span> <span class="m3_unpri">于</span>
+                                    <span class="m3_span" id="m3_borrowYear">_________</span> <span class="m3_unpri">年</span>
+                                    <span class="m3_span" id="m3_borrowMonth">_________</span> <span class="m3_unpri">月</span>
+                                    <span class="m3_span" id="m3_borrowDay">_________</span> <span class="m3_unpri">日向我司借款</span>
+                                    <span class="m3_span" id="m3_money">_________</span> <span class="m3_unpri">元，用于</span>
+                                    <span class="m3_span" id="m3_application">_________</span> <span class="m3_unpri">，由担保人</span>
+                                    <span class="m3_span" id="m3_surety2">_________</span> <span class="m3_unpri">提供担保，承担担保责任。此贷款已于</span>
+                                    <span class="m3_span" id="m3_dueYear">_________</span> <span class="m3_unpri">年</span>
+                                    <span class="m3_span" id="m3_dueMonth">_________</span> <span class="m3_unpri">月</span>
+                                    <span class="m3_span" id="m3_dueDay">_________</span> <span class="m3_unpri">日到期，现尚欠贷款本金</span>
+                                    <span class="m3_span" id="m3_capital">_________</span> <span class="m3_unpri">元，利息</span>
+                                    <span class="m3_span" id="m3_interest">_________</span> <span class="m3_unpri">元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。</span>
                                 </p>
-                                <p id="m3_content_section1">特此通知。</p>
-                                <p id="m3_content_section2">(公章)</p>
+                                <p class="m3_content_section1" id="m3_content_section1">特此通知。</p>
+                                <p class="m3_content_section2" id="m3_content_section2">(公章)</p>
                                 <p></p>
-                                <div id="m3_content_sign">
-                                    <span id="companyYear"> _______</span>年
-                                    <span id="companyMonth">_______</span>月
-                                    <span id="companyDay"> _______</span>日
+                                <div class="m3_content_sign" id="m3_content_sign">
+                                    <span id="m3_companyYear">  &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                    <span id="m3_companyMonth"> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                    <span id="m3_companyDay">  &nbsp; &nbsp; &nbsp; &nbsp; </span>日
                                 </div>
                             </td>
                         </tr>
-                        <tr id="m3_content_tr2">
+                        <tr class="m3_content_tr2" id="m3_content_tr2">
                             <td>
-                                <p id="m3_content_section3">
-                                    以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
+                                <p class="m3_content_section3" id="m3_content_section3">
+                                    以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息,并愿承担合同约定和法律规定的责任。
+
                                 </p>
-                                <p id="m3_content_section3">借款人签章:</p>
+                                <p class="m3_content_section4" id="m3_content_section4">借款人签章:</p>
                                 <div id="m3_content_sign">
-                                    <span id="borrowerYear"> ______ </span>年
-                                    <span id="borrowerMonth"> ______ </span>月
-                                    <span id="borrowerDay"> ______ </span>日
+                                    <span id="m3_borrowerYear">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>年
+                                    <span id="m3_borrowerMonth">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>月
+                                    <span id="m3_borrowerDay">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>日
                                 </div>
                             </td>
                             <td>
                                 <p id="m3_content_section3">
                                     以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
                                 </p>
-                                <p id="m3_content_section3">担保人签章：</p>
+                                <p id="m3_content_section4">担保人签章：</p>
                                 <div id="m3_content_sign">
-                                    <span id="suretyYear">______</span>年
-                                    <span id="suretyMonth">______</span>月
-                                    <span id="suretyDay">______</span>日
+                                    <span id="m3_suretyYear"> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                    <span id="m3_suretyMonth"> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                    <span id="m3_suretyDay"> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
                                 </div>
                             </td>
                         </tr>
@@ -330,6 +331,7 @@
 
                 <!--按钮区START-->
                 <div class="m3_button">
+                    <input type="button" value="打印数据" class="btn btn-primary btn-lg" onclick="m3_printdata();" />
                     <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m3_print();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
                     />
@@ -495,10 +497,6 @@
             console.log($("#model_maturity").val());
             console.log($("#memo_number").val());
             $("#m1_noticenum_span").text($("#memo_number").val());
-        }
-
-        function m3_confirmAndPreview() {
-            console.log("m3_confirmAndPreview");
         }
     </script>
 
