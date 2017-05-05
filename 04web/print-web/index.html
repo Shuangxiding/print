@@ -51,7 +51,7 @@
                 <div class="m1_notice" id="m1_notice">
                     <p class="m1_noticenum" id="m1_noticenum">
                         <span class="" id="m1_noticenum_span1">通知单编号：</span>
-                        <span class="m1_noticenum_span" id="m1_noticenum_span">________________________</span>
+                        <span class="m1_noticenum_span" id="m1_noticenum_span">____________________</span>
                     </p>
                 </div>
                 <!--通知单编号END-->
@@ -267,7 +267,7 @@
                 <!--通知单编号START-->
                 <div class="m3_order" id="m3_order">
                     <p class="m3_ordernum" id="m3_ordernum">
-                        <span class="" id="m3_ordernum_span1">通知单编号：</span>
+                        <span class="m3_ordernum_span1" id="m3_ordernum_span1">通知单编号：</span>
                         <span class="m3_span" id="m3_ordernum_span">____________________</span>
                     </p>
                 </div>
@@ -275,7 +275,7 @@
 
                 <!--标题START-->
                 <div class="m3_title" id="m3_title">
-                    <span class="" id="m3_title_span"><b><u>贷 款 催 收 通 知 单</u></b></span>
+                    <span class="m3_title_span" id="m3_title_span"><b><u>贷 款 催 收 通 知 单</u></b></span>
                 </div>
                 <!--标题END-->
 
@@ -304,10 +304,10 @@
                                     <span class="m3_span" id="m3_capital">_________</span> <span class="m3_unpri">元，利息</span>
                                     <span class="m3_span" id="m3_interest">_________</span> <span class="m3_unpri">元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。</span>
                                 </p>
-                                <p class="m3_content_section1" id="m3_content_section1">特此通知。</p>
-                                <p class="m3_content_section2" id="m3_content_section2">(公章)</p>
+                                <p class="m3_content_section1" id="m3_content_notice">特此通知。</p>
+                                <p class="m3_content_section2" id="m3_content_cachet1">(公章)</p>
                                 <p></p>
-                                <div class="m3_content_sign" id="m3_content_sign">
+                                <div class="m3_content_sign" id="m3_content_sign1">
                                     <span id="m3_companyYear">  &nbsp; &nbsp; &nbsp; &nbsp; </span>年
                                     <span id="m3_companyMonth"> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
                                     <span id="m3_companyDay">  &nbsp; &nbsp; &nbsp; &nbsp; </span>日
@@ -316,23 +316,23 @@
                         </tr>
                         <tr>
                             <td>
-                                <p class="m3_content_section1" id="m3_content_section1">
+                                <p class="m3_content_section1" id="m3_content_text1">
                                     以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息,并愿承担合同约定和法律规定的责任。
 
                                 </p>
-                                <p class="m3_content_section3" id="m3_content_section3">借款人签章:</p>
-                                <div class="m3_content_sign" id="m3_content_sign">
+                                <p class="m3_content_section3" id="m3_content_cachet2">借款人签章:</p>
+                                <div class="m3_content_sign" id="m3_content_sign2">
                                     <span id="m3_borrowerYear">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>年
                                     <span id="m3_borrowerMonth">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>月
                                     <span id="m3_borrowerDay">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>日
                                 </div>
                             </td>
                             <td>
-                                <p class="m3_content_section1" id="m3_content_section1">
+                                <p class="m3_content_section1" id="m3_content_text2">
                                     以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
                                 </p>
-                                <p class="m3_content_section3" id="m3_content_section3">担保人签章：</p>
-                                <div class="m3_content_sign" id="m3_content_sign">
+                                <p class="m3_content_section3" id="m3_content_cachet3">担保人签章：</p>
+                                <div class="m3_content_sign" id="m3_content_sign3">
                                     <span id="m3_suretyYear"> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
                                     <span id="m3_suretyMonth"> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
                                     <span id="m3_suretyDay"> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
@@ -351,10 +351,11 @@
 
                 <!--按钮区START-->
                 <div class="m3_button">
-                    <input type="button" value="打印数据" class="btn btn-primary btn-lg" onclick="m3_printdata();" />
-                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m3_print();" />
-                    <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_3');"
-                    />
+                    <input type="button" value="打&emsp;&emsp;印" class="btn btn-primary btn-lg m3_noprint_button" onclick="m3_print();" />
+                    <input type="button" value="填写数据" class="btn btn-primary btn-lg m3_noprint_button" data-toggle="modal" data-target="#myModal"
+                        onclick="model_input_data('model_3');" />
+                    <input id="m3_printdata_button" type="button" value="打印数据" class="btn btn-primary btn-lg m3_noprint_button m3_button_hide"
+                        onclick="m3_print_data();" />
                 </div>
                 <!--按钮区END-->
             </div>
