@@ -1,76 +1,97 @@
-.m3 {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.m3_ordernum_span {
-    text-align: right;
-}
-
-table {
-    border-collapse: collapse;
-    margin: auto;
-    width: 80%;
-    table-layout: fixed;
-}
-
-table tr td {
-    padding: 20px;
-}
-
-.m3_table_topic {
+.model_model_3 {
+    align-content: center;
     text-align: center;
 }
 
-.m3_content_named {
-    line-height: 300%;
-    font-size: 18px;
-    text-align: left;
+.m3_content {
+    margin: 0 auto;
 }
 
-.m3_content_tr1 {
-    font-size: 18px;
-    width: 40%;
-    margin: 10px;
-}
-
-#m3_content_section1 {
-    text-indent: 2em;
-    font-size: 18px;
-    text-align: justify;
-    line-height: 260%;
-    word-wrap: break-word;
-}
-
-#m3_content_section2 {
-    padding-left: 50%;
-    line-height: 350%;
-}
-
-#m3_content_section3 {
+.m3 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 16px;
-    text-indent: 2em;
-    text-align: justify;
+}
+
+
+/*标题*/
+
+.m3_title {
+    font-size: 24px;
     line-height: 200%;
 }
 
-#m3_content_sign {
+
+/*编号*/
+
+.m3_order {
+    width: 100%;
+    line-height: 200%;
     text-align: right;
 }
 
-.m3_content_tr2 {
-    font-size: 16px;
-    width: 40%;
-    margin: 10px;
+.m3_table {
+    margin: auto;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.m3_table tr td {
+    padding: 20px;
+}
+
+.m3_content_named {
+    line-height: 230%;
+    text-align: left;
+}
+
+
+/*文本*/
+
+.m3_content_section1 {
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 230%;
+    word-wrap: break-word;
+}
+
+
+/*公章*/
+
+.m3_content_section2 {
+    padding-left: 75%;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+
+/*签章*/
+
+.m3_content_section3 {
+    padding-top: 20px;
+    padding-left: 45%;
+    line-height: 240%;
+    padding-bottom: 70px;
+}
+
+
+/*年月日*/
+
+.m3_content_sign {
+    padding-right: 20px;
+    text-align: right;
 }
 
 .m3_end {
-    font-size: 14px;
     padding-left: 20px;
-    text-align: left;
     padding-top: 10px;
     padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.m3_button_hide {
+    display: none;
 }
 
 @media print {
