@@ -17,12 +17,16 @@
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery-ui.min.js"></script>
     <script src="lib/js/jquery.PrintArea.js"></script>
+    <!--引入数据录入表单数据验证事件-->
+    <script src="src/js/index.js"></script>
     <!--引入预览事件-->
     <script src="src/js/input/model_1_input.js"></script>
     <script src="src/js/input/model_2_input.js"></script>
     <script src="src/js/input/model_3_input.js"></script>
     <!--引入打印事件-->
     <script src="src/js/model/model_2.js"></script>
+
+
     <script>
         $(function () {
             $("#model").tabs();
@@ -392,52 +396,52 @@
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="firstname" class="col-sm-3 control-label">通知单编号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="memo_number" placeholder="请输入催收通知单编号">
+                                <input type="text" class="form-control" id="memo_number" placeholder="请输入催收通知单编号" onblur="check_memo_number(this);">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">借款单位/个人名称</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_borrower" placeholder="借款单位/个人名称">
+                                <input type="text" class="form-control" id="model_borrower" placeholder="借款单位/个人名称" onblur="check_model_pname(this);">
                             </div>
                         </div>
                         <div class="form-group model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">担保单位/个人名称</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_guarantor" placeholder="担保单位/个人名称">
+                                <input type="text" class="form-control" id="model_guarantor" placeholder="担保单位/个人名称" onblur="check_model_pname(this);">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款日期</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_loandate" readonly="readonly" placeholder="请输入贷款日期">
+                                <input type="text" class="form-control" id="model_loandate" readonly="readonly" placeholder="请输入贷款日期" onblur="check_model_date(this);">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款金额</label>
                             <div class="col-sm-9 input-group">
                                 <span class="input-group-addon">￥</span>
-                                <input type="text" class="form-control" id="model_loadamount" placeholder="请输入贷款金额">
+                                <input type="text" class="form-control" id="model_loadamount" placeholder="请输入贷款金额" onblur="check_model_amount(this);">
                                 <span class="input-group-addon">元</span>
                             </div>
                         </div>
                         <div class="form-group model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款用途</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_loaduse" placeholder="请输入贷款用途">
+                                <input type="text" class="form-control" id="model_loaduse" placeholder="请输入贷款用途" onblur="check_model_loaduse(this);">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款到期日期</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_maturity" readonly="readonly" placeholder="请输入贷款到期日期">
+                                <input type="text" class="form-control" id="model_maturity" readonly="readonly" placeholder="请输入贷款到期日期" onblur="check_model_date(this);">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">至今欠款本金</label>
                             <div class="col-sm-9 input-group">
                                 <span class="input-group-addon">￥</span>
-                                <input type="text" class="form-control" id="model_principal" placeholder="请输入欠款本金">
+                                <input type="text" class="form-control" id="model_principal" placeholder="请输入欠款本金" onblur="check_model_amount(this);">
                                 <span class="input-group-addon">元</span>
                             </div>
                         </div>
@@ -445,52 +449,52 @@
                             <label for="lastname" class="col-sm-3 control-label">至今欠款利息</label>
                             <div class="col-sm-9 input-group">
                                 <span class="input-group-addon">￥</span>
-                                <input type="text" class="form-control" id="model_interest" placeholder="请输入至今欠款利息">
+                                <input type="text" class="form-control" id="model_interest" placeholder="请输入至今欠款利息" onblur="check_model_amount(this);">
                                 <span class="input-group-addon">元</span>
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">案件编号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_casenum" placeholder="请输入案件编号">
+                                <input type="text" class="form-control" id="model_casenum" placeholder="请输入案件编号" onblur="check_model_casenum(this);">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">催收原由</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_reason" placeholder="请输入催收原由">
+                                <input type="text" class="form-control" id="model_reason" placeholder="请输入催收原由" onblur="check_model_reason(this);">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">债务人</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model2_borrower" placeholder="请输入债务人">
+                                <input type="text" class="form-control" id="model2_borrower" placeholder="请输入债务人" onblur="check_model_pname(this);">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">工作单位或地址</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_address" placeholder="请输入工作单位或地址">
+                                <input type="text" class="form-control" id="model_address" placeholder="请输入工作单位或地址" onblur="check_model_address(this);">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">应还金额</label>
                             <div class="col-sm-9 input-group">
                                 <span class="input-group-addon">￥</span>
-                                <input type="text" class="form-control" id="model_money" placeholder="请输入应还金额">
+                                <input type="text" class="form-control" id="model_money" placeholder="请输入应还金额" onblur="check_model_amount(this);">
                                 <span class="input-group-addon">元</span>
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">联系人</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_contrat" placeholder="请输入联系人">
+                                <input type="text" class="form-control" id="model_contrat" placeholder="请输入联系人" onblur="check_model_pname(this);">
                             </div>
                         </div>
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">联系电话</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_phone" placeholder="请输入联系电话">
+                                <input type="text" class="form-control" id="model_phone" placeholder="请输入联系电话" onblur="check_model_phone(this);">
                             </div>
                         </div>
                     </form>

@@ -24,33 +24,35 @@ function m1_confirmAndPreview() {
     var model_interest = $("#model_interest").val(); // 至今欠款利息
     var model_interest_yuan = $("#model_interest").next().text(); // 贷款金额“元”
 
-    if (memo_number != null || memo_number != '') {
-        $("#m1_noticenum_span").text(memo_number);
+    if (memo_number === null || memo_number === '' ||
+        model_borrower === null || model_borrower === '' ||
+        model_loandate === null || model_loandate === '' ||
+        model_loadamount === null || model_loadamount === '' ||
+        model_maturity === null || model_maturity === '' ||
+        model_principal === null || model_principal === '' ||
+        model_interest === null || model_interest === '') {
+        alert("录入信息不能存在空值！");
+
     }
-    if (model_borrower != null || model_borrower != '') {
-        $("#m1_name").text(model_borrower);
-    }
-    if (model_loandate != null || model_loandate != '') {
-        var date = model_loandate.split("/");
-        $("#m1_byear").text(date[2]);
-        $("#m1_bmonth").text(date[1]);
-        $("#m1_bday").text(date[0]);
-    }
-    if (model_loadamount != null || model_loadamount != '') {
-        $("#m1_bmoney").text(model_loadamount_symbol + model_loadamount + model_loadamount_yuan);
-    }
-    if (model_maturity != null || model_maturity != '') {
-        var date = model_maturity.split("/");
-        $("#m1_cyear").text(date[2]);
-        $("#m1_cmonth").text(date[1]);
-        $("#m1_cday").text(date[0]);
-    }
-    if (model_principal != null || model_principal != '') {
-        $("#m1_omoney").text(model_principal_symbol + model_principal + model_principal_yuan);
-    }
-    if (model_interest != null || model_interest != '') {
-        $("#m1_ointerest").text(model_interest_symbol + model_interest + model_interest_yuan);
-    }
+    $("#m1_noticenum_span").text(memo_number);
+
+    $("#m1_name").text(model_borrower);
+
+    var date = model_loandate.split("/");
+    $("#m1_byear").text(date[2]);
+    $("#m1_bmonth").text(date[1]);
+    $("#m1_bday").text(date[0]);
+
+    $("#m1_bmoney").text(model_loadamount_symbol + model_loadamount + model_loadamount_yuan);
+
+    var date1 = model_maturity.split("/");
+    $("#m1_cyear").text(date1[2]);
+    $("#m1_cmonth").text(date1[1]);
+    $("#m1_cday").text(date1[0]);
+
+    $("#m1_omoney").text(model_principal_symbol + model_principal + model_principal_yuan);
+
+    $("#m1_ointerest").text(model_interest_symbol + model_interest + model_interest_yuan);
 
     // 显示打印数据按钮
     $("#m1_printdata_button").removeClass("m1_bttton_hide");
