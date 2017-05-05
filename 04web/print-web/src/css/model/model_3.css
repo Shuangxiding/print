@@ -22,10 +22,10 @@
 }
 
 
-/*编号*/
+/*通知单编号*/
 
 .m3_order {
-    width: 100%;
+    font-size: 16px;
     line-height: 200%;
     text-align: right;
 }
@@ -86,7 +86,6 @@
 .m3_end {
     text-align: left;
     padding-left: 20px;
-    padding-top: 10px;
     padding-bottom: 20px;
     font-size: 14px;
 }
