@@ -9,8 +9,6 @@ function preview1() {
     localStorage["arrivalsMonth"] = $("#arrivalsMonth").val();
     localStorage["arrivalsDay"] = $("#arrivalsDay").val();
     localStorage["sum"] = $("#sum").val();
-    localStorage["sum"] = $("#sum").val();
-    localStorage["sum"] = $("#m2_m_m2").val();
     localStorage["contrat"] = $("#contrat").val();
     localStorage["phone"] = $("#phone").val();
     localStorage["callYear"] = $("#callYear").val();
@@ -27,6 +25,9 @@ function m2_preview() {
     $("#m2_person").addClass("opa");
     $("#m2_place").addClass("opa");
     $("#m2_load").addClass("opa");
+    $("#year1").addClass("opa");
+    $("#month1").addClass("opa");
+    $("#day1").addClass("opa");
     $("#m2_money").addClass("opa");
     $("#m2_search").addClass("opa");
     $("#m2_people").addClass("opa");
@@ -34,8 +35,9 @@ function m2_preview() {
     $("#m2_date").addClass("opa");
     $("#m2_seal_data").addClass("opa");
     $("#m2_sea_content").addClass("opa");
-    $("#m2_tab").addClass("opa");
+    $("#m2_tab").addClass("opata");
     $("#m2_bottom_remark").addClass("opa");
+    $("#m2_noticenum_span").addClass("datas");
     $("#m2_caseNumber_span").addClass("datas");
     $("#m2_caseReason_span").addClass("datas");
     $("#m2_borrower_span").addClass("datas");
@@ -46,7 +48,7 @@ function m2_preview() {
     $("#m2_sum_span").addClass("datas");
     $("#m2_contrat_span").addClass("datas");
     $("#m2_phone_span").addClass("datas");
-    $("#m2_sum_span").addClass("datas");
+    $("#m2_noticenum_span").removeClass("m2_noticenum_span");
     $(".m2").printArea();
 }
 // 点击打印按钮打印模板

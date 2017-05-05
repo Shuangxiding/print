@@ -125,20 +125,23 @@
      .opa {
          opacity: 0.0;
      }
-     /*.m2_table {
+     .opata {
          border-color: transparent;
      }
-     .m2_table tr td {
-         border-color: transparent;
-     }*/
      .datas {
          opacity: 1.0;
          color: black;
      }
      .m2_noticenum_span {
+         display: inline-block;
          text-align: right;
          padding-right: 60px;
+         /*border-bottom: 0px;*/
+         /*border-bottom: hidden;*/
      }
+     /*.lineBot {
+         opacity: 0.0;
+     }*/
  }
  /*没填写数据前将打印数据按钮隐藏*/
 
@@ -146,11 +149,14 @@
      display: none;
  }
 
- .m2_noticenum_span1 {
+ .m2_noticenum_span {
+     display: inline-block;
      margin: 0;
      padding-top: 5px;
      border-bottom: 1px solid #000000;
-     clear: both;
+     width: 180px;
+     text-align: center;
+     /*clear: both;*/
  }
  /*表格中文字与边框的间距*/
  /*文本居左*/
