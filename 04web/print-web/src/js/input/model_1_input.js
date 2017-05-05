@@ -86,5 +86,19 @@ function m1_print_data() {
     $("#m1_date3").addClass("m1_opacity");
     $("#m1_remark").addClass("m1_opacity");
     $("#m1_table").addClass("m1_table_opacity");
+
+    // 控制不显示块下边框
+    $("#m1_noticenum_span").removeClass("m1_show_");
+    $("#m1_name").removeClass("m1_show_");
+    $("#m1_byear").removeClass("m1_show_");
+    $("#m1_bmonth").removeClass("m1_show_");
+    $("#m1_bday").removeClass("m1_show_");
+    $("#m1_bmoney").removeClass("m1_show_");
+    $("#m1_cyear").removeClass("m1_show_");
+    $("#m1_cmonth").removeClass("m1_show_");
+    $("#m1_cday").removeClass("m1_show_");
+    $("#m1_omoney").removeClass("m1_show_");
+    $("#m1_ointerest").removeClass("m1_show_");
+    // 打印
     $(".m1").printArea();
 }
