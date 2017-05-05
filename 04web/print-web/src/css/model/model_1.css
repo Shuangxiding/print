@@ -21,6 +21,39 @@
 }
 
 
+/*填入内容的区域变为行内块，并设置此区域文字居左，宽度一定*/
+
+.m1_show_noticenum_,
+.m1_show_name_,
+.m1_show_date_,
+.m1_show_money_ {
+    display: inline-block;
+    text-align: left;
+    line-height: 16px;
+}
+
+.m1_show_noticenum_,
+.m1_show_name_ {
+    width: 180px;
+}
+
+.m1_show_date_ {
+    width: 60px;
+}
+
+.m1_show_money_ {
+    width: 150px;
+}
+
+
+/*显示块下边框，并设置框宽*/
+
+.m1_show_ {
+    border-width: 1px;
+    border-bottom-style: solid;
+}
+
+
 /*通知标题*/
 
 .m1_title {
