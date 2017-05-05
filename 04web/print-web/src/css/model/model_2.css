@@ -148,13 +148,13 @@
  .m2_btn {
      display: none;
  }
-
+/*通知单编号样式设置*/
  .m2_noticenum_span {
      display: inline-block;
      margin: 0;
-     padding-top: 5px;
      border-bottom: 1px solid #000000;
      width: 180px;
+	 line-height:16px;
      text-align: center;
      /*clear: both;*/
  }
