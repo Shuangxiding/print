@@ -21,8 +21,9 @@
     <script src="src/js/input/model_1_input.js"></script>
     <script src="src/js/input/model_2_input.js"></script>
     <script src="src/js/input/model_3_input.js"></script>
-<!--引入打印事件-->
-    <script src="src/js/model/model_2.js"></script>    <script>
+    <!--引入打印事件-->
+    <script src="src/js/model/model_2.js"></script>
+    <script>
         $(function () {
             $("#model").tabs();
             $("#model_loandate").datepicker();
@@ -150,7 +151,8 @@
                     <input type="button" value="打&emsp;&emsp;印" class="btn btn-primary btn-lg m1_noprint_button" onclick="m1_print();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg m1_noprint_button" data-toggle="modal" data-target="#myModal"
                         onclick="model_input_data('model_1');" />
-                    <input id="m1_printdata_button" type="button" value="打印数据" class="btn btn-primary btn-lg m1_noprint_button m1_bttton_hide" onclick="m1_print_data();" />
+                    <input id="m1_printdata_button" type="button" value="打印数据" class="btn btn-primary btn-lg m1_noprint_button m1_bttton_hide"
+                        onclick="m1_print_data();" />
                 </div>
                 <!--按钮区END-->
             </div>
@@ -235,15 +237,15 @@
                 <!--内容END-->
 
                 <!--备注区START-->
-                <div class="m2_remark opa" id="m2_bottom_remark">
-                    本联送到债务人
+                <div class="m2_remark" id="m2_bottom_remark">
+                    注：本联送到债务人
                 </div>
                 <!--备注区END-->
 
                 <!--按钮区START-->
                 <div class="m2_button">
-                    <input type="button" value="套打数据" class="btn btn-primary btn-lg" onclick="m2_preview_all();" />
-                    <input type="button" value="打印模板" class="btn btn-primary btn-lg" onclick="m2_preview();" />
+                    <input type="button" value="打印" class="btn btn-primary btn-lg" onclick="m2_preview_all();" />
+                    <input type="button" value="打印数据" id="m2_button_bt" class="btn btn-primary btn-lg m2_btn" onclick="m2_preview();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
                     />
                 </div>

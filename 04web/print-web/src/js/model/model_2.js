@@ -16,7 +16,7 @@ function preview1() {
     localStorage["callDay"] = $("#callDay").val();
     window.location.href = "../model/model_2.html";
 }
-
+// 点击打印数据，实现套打
 function m2_preview() {
     $("#m2_num").addClass("opa");
     $("#m2_tle").addClass("opa");
@@ -33,6 +33,7 @@ function m2_preview() {
     $("#m2_seal_data").addClass("opa");
     $("#m2_sea_content").addClass("opa");
     $("#m2_tab").addClass("opa");
+    $("#m2_bottom_remark").addClass("opa");
     $("#m2_caseNumber_span").addClass("datas");
     $("#m2_caseReason_span").addClass("datas");
     $("#m2_borrower_span").addClass("datas");
@@ -46,13 +47,8 @@ function m2_preview() {
     $("#m2_sum_span").addClass("datas");
     $(".m2").printArea();
 }
-
+// 点击打印按钮打印模板
 function m2_preview_all() {
-    // $("#m2_tle").addClass("real");
-    // $("#m2_not").addClass("real");
-    // $("#m2_num").addClass("real");
-    // $("#m2_con").addClass("real");
-    // $("#m2_tab tr td").addClass("real");
     $(".m2").printArea();
 
 }

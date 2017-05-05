@@ -106,10 +106,10 @@
  /*备注区*/
 
  .m2_remark {
-     font-size: 15px;
-     padding-bottom: 30px;
+     font-size: 14px;
+     padding-bottom: 20px;
      text-align: left;
-     padding-left: 30px;
+     padding-left: 20px;
  }
 
  @media print {
@@ -139,11 +139,11 @@
          text-align: right;
          padding-right: 60px;
      }
-     /*.real {
-         opacity: 1.0;
-         color: black;
-         border-color: black;
-     }*/
+ }
+ /*没填写数据前将打印数据按钮隐藏*/
+
+ .m2_btn {
+     display: none;
  }
 
  .m2_noticenum_span1 {

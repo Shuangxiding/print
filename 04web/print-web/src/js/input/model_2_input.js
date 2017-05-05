@@ -11,4 +11,5 @@
        $("#m2_arrivalsYear_span").text($("#model_maturity").val().split("/")[2]);
        $("#m2_arrivalsMonth_span").text($("#model_maturity").val().split("/")[0]);
        $("#m2_arrivalsDay_span").text($("#model_maturity").val().split("/")[1]);
+       $("#m2_button_bt").removeClass("m2_btn");
    }
