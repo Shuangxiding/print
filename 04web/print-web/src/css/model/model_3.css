@@ -94,6 +94,33 @@
     display: none;
 }
 
+
+/*打印显示下划线*/
+
+.m3_span {
+    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid black;
+    line-height: 16px;
+}
+
+.line1,
+.line4 {
+    width: 180px;
+}
+
+.line2 {
+    width: 120px;
+}
+
+.line3 {
+    width: 80px;
+}
+
+.line5 {
+    width: 300px;
+}
+
 @media print {
     .m3 {
         width: 100%;
@@ -112,6 +139,9 @@
     }
     .m3_opacity {
         opacity: 0.0;
+    }
+    .m3_unline {
+        border-bottom: 0px;
     }
     /*.m3_ordernum,
     .m3_table_topic,

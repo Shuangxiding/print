@@ -41,6 +41,21 @@ function m3_print_data() {
     $(".m3_content_section2").addClass("m3_opacity");
     $(".m3_content_section3").addClass("m3_opacity");
     $(".m3_content_sign").addClass("m3_opacity");
-    $(".m3_end").addClass("m3_opacity")
+    $(".m3_end").addClass("m3_opacity");
+    $("#m3_ordernum_span").addClass("m3_unline");
+    $("#m3_borrower1").addClass("m3_unline");
+    $("#m3_surety1").addClass("m3_unline");
+    $("#m3_borrower2").addClass("m3_unline");
+    $("#m3_borrowYear").addClass("m3_unline");
+    $("#m3_borrowMonth").addClass("m3_unline");
+    $("#m3_borrowDay").addClass("m3_unline");
+    $("#m3_money").addClass("m3_unline");
+    $("#m3_application").addClass("m3_unline");
+    $("#m3_surety2").addClass("m3_unline");
+    $("#m3_dueYear").addClass("m3_unline");
+    $("#m3_dueMonth").addClass("m3_unline");
+    $("#m3_dueDay").addClass("m3_unline");
+    $("#m3_capital").addClass("m3_unline");
+    $("#m3_interest").addClass("m3_unline");
     $(".m3").printArea();
 }
