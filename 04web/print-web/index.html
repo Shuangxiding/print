@@ -248,7 +248,7 @@
                     <input type="button" value="打&emsp;&emsp;印" class="btn btn-primary btn-lg" onclick="m2_preview_all();" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
                     />
-              
+
                 </div>
                 <!--按钮区END-->
             </div>
@@ -424,7 +424,7 @@
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="lastname" class="col-sm-3 control-label">贷款到期日期</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="model_maturity" placeholder="请输入贷款到期日期" value="年月日">
+                                <input type="text" class="form-control" id="model_maturity" placeholder="请输入贷款到期日期">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
@@ -468,9 +468,9 @@
                         <div class="form-group model_2_input">
                             <label for="lastname" class="col-sm-3 control-label">应还金额</label>
                             <div class="col-sm-9 input-group">
-                                <span class="input-group-addon">￥</span>
-                                <input type="text" class="form-control" id="model_money" placeholder="请输入应还金额" value="&yen;元">
-                                <span class="input-group-addon">元</span>
+                                <span class="input-group-addon" id="m2_m_m1">￥</span>
+                                <input type="text" class="form-control" id="model_money" placeholder="请输入应还金额">
+                                <span class="input-group-addon" id="m2_m_m2">元</span>
                             </div>
                         </div>
                         <div class="form-group model_2_input">

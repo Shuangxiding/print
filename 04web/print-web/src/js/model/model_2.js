@@ -9,6 +9,8 @@ function preview1() {
     localStorage["arrivalsMonth"] = $("#arrivalsMonth").val();
     localStorage["arrivalsDay"] = $("#arrivalsDay").val();
     localStorage["sum"] = $("#sum").val();
+    localStorage["sum"] = $("#sum").val();
+    localStorage["sum"] = $("#m2_m_m2").val();
     localStorage["contrat"] = $("#contrat").val();
     localStorage["phone"] = $("#phone").val();
     localStorage["callYear"] = $("#callYear").val();
