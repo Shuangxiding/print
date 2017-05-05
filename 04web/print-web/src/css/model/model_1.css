@@ -137,6 +137,21 @@
 }
 
 
+/*按钮区的位置*/
+
+.m1_button {
+    padding-top: 20px;
+}
+
+
+/*备注区的位置*/
+
+.m1_remark {
+    text-align: left;
+    padding-left: 20px;
+}
+
+
 /*打印样式设置*/
 
 @media print {
