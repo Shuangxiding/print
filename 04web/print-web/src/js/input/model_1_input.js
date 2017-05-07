@@ -1,6 +1,50 @@
 // 点击打印模板事件
 function m1_print() {
     console.log("m1_print()");
+
+    // 取消透明度
+    $("#m1_noticenum_span1").removeClass("m1_opacity");
+    $("#m1_title_span").removeClass("m1_opacity");
+    $("#m1_loader_span2").removeClass("m1_opacity");
+    $("#m1_p1_span1").removeClass("m1_opacity");
+    $("#m1_p1_span3").removeClass("m1_opacity");
+    $("#m1_p1_span5").removeClass("m1_opacity");
+    $("#m1_p1_span7").removeClass("m1_opacity");
+    $("#m1_p1_span9").removeClass("m1_opacity");
+    $("#m1_p1_span11").removeClass("m1_opacity");
+    $("#m1_p1_span13").removeClass("m1_opacity");
+    $("#m1_p1_span15").removeClass("m1_opacity");
+    $("#m1_p1_span17").removeClass("m1_opacity");
+    $("#m1_p1_span19").removeClass("m1_opacity");
+    $("#m1_p2").removeClass("m1_opacity");
+    $("#m1_p3").removeClass("m1_opacity");
+    $("#m1_lender").removeClass("m1_opacity");
+    $("#m1_legal").removeClass("m1_opacity");
+    $("#m1_date1").removeClass("m1_opacity");
+    $("#m1_confirmtext1").removeClass("m1_opacity");
+    $("#m1_borrower").removeClass("m1_opacity");
+    $("#m1_signer1").removeClass("m1_opacity");
+    $("#m1_date2").removeClass("m1_opacity");
+    $("#m1_confirmtext2").removeClass("m1_opacity");
+    $("#m1_guarantor").removeClass("m1_opacity");
+    $("#m1_signer2").removeClass("m1_opacity");
+    $("#m1_date3").removeClass("m1_opacity");
+    $("#m1_remark").removeClass("m1_opacity");
+    $("#m1_table").removeClass("m1_table_opacity");
+
+    // 显示下划线
+    $("#m1_noticenum_span").addClass("m1_show_");
+    $("#m1_name").addClass("m1_show_");
+    $("#m1_byear").addClass("m1_show_");
+    $("#m1_bmonth").addClass("m1_show_");
+    $("#m1_bday").addClass("m1_show_");
+    $("#m1_bmoney").addClass("m1_show_");
+    $("#m1_cyear").addClass("m1_show_");
+    $("#m1_cmonth").addClass("m1_show_");
+    $("#m1_cday").addClass("m1_show_");
+    $("#m1_omoney").addClass("m1_show_");
+    $("#m1_ointerest").addClass("m1_show_");
+    // 打印
     $(".m1").printArea();
 }
 
@@ -32,8 +76,12 @@ function m1_confirmAndPreview() {
         model_principal === null || model_principal === '' ||
         model_interest === null || model_interest === '') {
         alert("录入信息不能存在空值！");
+        return;
 
     }
+    // 添加关闭此窗口属性
+    $("#m1_button_preview").attr("data-dismiss", "modal");
+
     $("#m1_noticenum_span").text(memo_number);
 
     $("#m1_name").text(model_borrower);

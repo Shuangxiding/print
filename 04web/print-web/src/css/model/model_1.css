@@ -28,8 +28,9 @@
 .m1_show_date_,
 .m1_show_money_ {
     display: inline-block;
-    text-align: left;
+    text-align: center;
     line-height: 16px;
+    clear: both;
 }
 
 .m1_show_noticenum_,
@@ -42,7 +43,7 @@
 }
 
 .m1_show_money_ {
-    width: 150px;
+    width: 180px;
 }
 
 
@@ -188,15 +189,18 @@
 /*打印样式设置*/
 
 @media print {
+    /*打印表格大小*/
     .m1 {
         width: 100%;
     }
     .m1_table {
         width: 100%;
     }
+    /*不打印按钮*/
     .m1_noprint_button {
         display: none;
     }
+    /*只打印数据时其他透明化*/
     .m1_opacity {
         opacity: 0.0;
     }
