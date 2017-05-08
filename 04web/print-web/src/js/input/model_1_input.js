@@ -3,47 +3,11 @@ function m1_print() {
     console.log("m1_print()");
 
     // 取消透明度
-    $("#m1_noticenum_span1").removeClass("m1_opacity");
-    $("#m1_title_span").removeClass("m1_opacity");
-    $("#m1_loader_span2").removeClass("m1_opacity");
-    $("#m1_p1_span1").removeClass("m1_opacity");
-    $("#m1_p1_span3").removeClass("m1_opacity");
-    $("#m1_p1_span5").removeClass("m1_opacity");
-    $("#m1_p1_span7").removeClass("m1_opacity");
-    $("#m1_p1_span9").removeClass("m1_opacity");
-    $("#m1_p1_span11").removeClass("m1_opacity");
-    $("#m1_p1_span13").removeClass("m1_opacity");
-    $("#m1_p1_span15").removeClass("m1_opacity");
-    $("#m1_p1_span17").removeClass("m1_opacity");
-    $("#m1_p1_span19").removeClass("m1_opacity");
-    $("#m1_p2").removeClass("m1_opacity");
-    $("#m1_p3").removeClass("m1_opacity");
-    $("#m1_lender").removeClass("m1_opacity");
-    $("#m1_legal").removeClass("m1_opacity");
-    $("#m1_date1").removeClass("m1_opacity");
-    $("#m1_confirmtext1").removeClass("m1_opacity");
-    $("#m1_borrower").removeClass("m1_opacity");
-    $("#m1_signer1").removeClass("m1_opacity");
-    $("#m1_date2").removeClass("m1_opacity");
-    $("#m1_confirmtext2").removeClass("m1_opacity");
-    $("#m1_guarantor").removeClass("m1_opacity");
-    $("#m1_signer2").removeClass("m1_opacity");
-    $("#m1_date3").removeClass("m1_opacity");
-    $("#m1_remark").removeClass("m1_opacity");
+    $(".m1_ra").removeClass("m1_opacity")
     $("#m1_table").removeClass("m1_table_opacity");
 
     // 显示下划线
-    $("#m1_noticenum_span").addClass("m1_show_");
-    $("#m1_name").addClass("m1_show_");
-    $("#m1_byear").addClass("m1_show_");
-    $("#m1_bmonth").addClass("m1_show_");
-    $("#m1_bday").addClass("m1_show_");
-    $("#m1_bmoney").addClass("m1_show_");
-    $("#m1_cyear").addClass("m1_show_");
-    $("#m1_cmonth").addClass("m1_show_");
-    $("#m1_cday").addClass("m1_show_");
-    $("#m1_omoney").addClass("m1_show_");
-    $("#m1_ointerest").addClass("m1_show_");
+    $(".m1_line_ra").addClass("m1_show_")
     // 打印
     $(".m1").printArea();
 }
@@ -106,49 +70,14 @@ function m1_confirmAndPreview() {
     $("#m1_printdata_button").removeClass("m1_bttton_hide");
 }
 
+// 点击打印数据按钮事件
 function m1_print_data() {
     // 打印数据时添加class，用此class控制透明样式
-    $("#m1_noticenum_span1").addClass("m1_opacity");
-    $("#m1_title_span").addClass("m1_opacity");
-    $("#m1_loader_span2").addClass("m1_opacity");
-    $("#m1_p1_span1").addClass("m1_opacity");
-    $("#m1_p1_span3").addClass("m1_opacity");
-    $("#m1_p1_span5").addClass("m1_opacity");
-    $("#m1_p1_span7").addClass("m1_opacity");
-    $("#m1_p1_span9").addClass("m1_opacity");
-    $("#m1_p1_span11").addClass("m1_opacity");
-    $("#m1_p1_span13").addClass("m1_opacity");
-    $("#m1_p1_span15").addClass("m1_opacity");
-    $("#m1_p1_span17").addClass("m1_opacity");
-    $("#m1_p1_span19").addClass("m1_opacity");
-    $("#m1_p2").addClass("m1_opacity");
-    $("#m1_p3").addClass("m1_opacity");
-    $("#m1_lender").addClass("m1_opacity");
-    $("#m1_legal").addClass("m1_opacity");
-    $("#m1_date1").addClass("m1_opacity");
-    $("#m1_confirmtext1").addClass("m1_opacity");
-    $("#m1_borrower").addClass("m1_opacity");
-    $("#m1_signer1").addClass("m1_opacity");
-    $("#m1_date2").addClass("m1_opacity");
-    $("#m1_confirmtext2").addClass("m1_opacity");
-    $("#m1_guarantor").addClass("m1_opacity");
-    $("#m1_signer2").addClass("m1_opacity");
-    $("#m1_date3").addClass("m1_opacity");
-    $("#m1_remark").addClass("m1_opacity");
+    $(".m1_ra").addClass("m1_opacity")
     $("#m1_table").addClass("m1_table_opacity");
 
     // 控制不显示块下边框
-    $("#m1_noticenum_span").removeClass("m1_show_");
-    $("#m1_name").removeClass("m1_show_");
-    $("#m1_byear").removeClass("m1_show_");
-    $("#m1_bmonth").removeClass("m1_show_");
-    $("#m1_bday").removeClass("m1_show_");
-    $("#m1_bmoney").removeClass("m1_show_");
-    $("#m1_cyear").removeClass("m1_show_");
-    $("#m1_cmonth").removeClass("m1_show_");
-    $("#m1_cday").removeClass("m1_show_");
-    $("#m1_omoney").removeClass("m1_show_");
-    $("#m1_ointerest").removeClass("m1_show_");
+    $(".m1_line_ra").removeClass("m1_show_")
     // 打印
     $(".m1").printArea();
 }
