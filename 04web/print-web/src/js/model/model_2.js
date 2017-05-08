@@ -52,7 +52,38 @@ function m2_preview() {
     $(".m2").printArea();
 }
 // 点击打印按钮打印模板
-function m2_preview_all() {
+function m2_print_all() {
+    // 将隐藏的显示出来
+    $("#m2_num").removeClass("opa");
+    $("#m2_tle").removeClass("opa");
+    $("#m2_count").removeClass("opa");
+    $("#m2_why").removeClass("opa");
+    $("#m2_person").removeClass("opa");
+    $("#m2_place").removeClass("opa");
+    $("#m2_load").removeClass("opa");
+    $("#year1").removeClass("opa");
+    $("#month1").removeClass("opa");
+    $("#day1").removeClass("opa");
+    $("#m2_money").removeClass("opa");
+    $("#m2_search").removeClass("opa");
+    $("#m2_people").removeClass("opa");
+    $("#m2_mobail").removeClass("opa");
+    $("#m2_date").removeClass("opa");
+    $("#m2_seal_data").removeClass("opa");
+    $("#m2_sea_content").removeClass("opa");
+    $("#m2_tab").removeClass("opata");
+    $("#m2_bottom_remark").removeClass("opa");
+    $("#m2_noticenum_span").removeClass("datas");
+    $("#m2_caseNumber_span").removeClass("datas");
+    $("#m2_caseReason_span").removeClass("datas");
+    $("#m2_borrower_span").removeClass("datas");
+    $("#m2_address_span").removeClass("datas");
+    $("#m2_arrivalsYear_span").removeClass("datas");
+    $("#m2_arrivalsMonth_span").removeClass("datas");
+    $("#m2_arrivalsDay_span").removeClass("datas");
+    $("#m2_sum_span").removeClass("datas");
+    $("#m2_contrat_span").removeClass("datas");
+    $("#m2_phone_span").removeClass("datas");
+    $("#m2_noticenum_span").removeClass("m2_noticenum_span");
     $(".m2").printArea();
-
 }

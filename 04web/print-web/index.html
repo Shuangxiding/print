@@ -252,8 +252,7 @@
 
                 <!--按钮区START-->
                 <div class="m2_button">
-
-                    <input type="button" value="打&emsp;&emsp;印" class="btn btn-primary btn-lg" onclick="m2_preview_all();" />
+                    <input type="button" value="打&emsp;&emsp;印" class="btn btn-primary btn-lg" onclick="m2_print_all()" />
                     <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
                     />
                     <input type="button" value="打印数据" id="m2_button_bt" class="btn btn-primary btn-lg m2_btn" onclick="m2_preview();" />
@@ -396,7 +395,7 @@
                         <div class="form-group model_1_input model_2_input model_3_input">
                             <label for="firstname" class="col-sm-3 control-label">通知单编号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="memo_number" placeholder="请输入催收通知单编号" onblur="check_memo_number(this);">
+                                <input type="text" class="form-control" id="memo_number" placeholder="请输入催收通知单编号" onblur="check_memo_number(this);" required="required">
                             </div>
                         </div>
                         <div class="form-group model_1_input model_3_input">
