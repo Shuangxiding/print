@@ -1,5 +1,32 @@
 // 点击打印模板事件
 function m3_print() {
+    $(".m3_ordernum_span1").removeClass("m3_opacity");
+    $(".m3_title_span").removeClass("m3_opacity");
+    $(".m3_table").removeClass("m3_table_opacity");
+    $(".m3_unpri").removeClass("m3_opacity");
+    $("#m3_content_notice").removeClass("m3_opacity");
+    $("#m3_content_text1").removeClass("m3_opacity");
+    $("#m3_content_text2").removeClass("m3_opacity");
+    $(".m3_content_section2").removeClass("m3_opacity");
+    $(".m3_content_section3").removeClass("m3_opacity");
+    $(".m3_content_sign").removeClass("m3_opacity");
+    $(".m3_end").removeClass("m3_opacity");
+    $("#m3_ordernum_span").removeClass("m3_unline");
+    $("#m3_borrower1").removeClass("m3_unline");
+    $("#m3_surety1").removeClass("m3_unline");
+    $("#m3_borrower2").removeClass("m3_unline");
+    $("#m3_borrowYear").removeClass("m3_unline");
+    $("#m3_borrowMonth").removeClass("m3_unline");
+    $("#m3_borrowDay").removeClass("m3_unline");
+    $("#m3_money").removeClass("m3_unline");
+    $("#m3_application").removeClass("m3_unline");
+    $("#m3_surety2").removeClass("m3_unline");
+    $("#m3_dueYear").removeClass("m3_unline");
+    $("#m3_dueMonth").removeClass("m3_unline");
+    $("#m3_dueDay").removeClass("m3_unline");
+    $("#m3_capital").removeClass("m3_unline");
+    $("#m3_interest").removeClass("m3_unline");
+
     $(".m3").printArea();
 }
 
