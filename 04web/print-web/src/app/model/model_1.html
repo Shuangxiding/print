@@ -3,243 +3,152 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>传票页面</title>
+    <title>贷后催收通知单模板一</title>
 
     <!--引入样式-->
-    <link rel="stylesheet" href="../../../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-    <style>
-        #model_1 {
-            align-content: center;
-            text-align: center;
-        }
-
-        #model_1_content {
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .model_1_1 {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #model_1_number {
-            text-align: right;
-        }
-
-        #model_1_headline {
-            font-size: 30px;
-        }
-
-        #model_1_content {
-            font-size: 18px;
-        }
-
-        .model_1_table_1 {
-            text-align: left;
-            line-height: 200%;
-        }
-
-        .model_1_table_2 {
-            text-align: left;
-            padding: 20px 0px 80px 0px;
-        }
-
-        #officer {
-            padding-left: 30%;
-        }
-
-        #model_1_notic {
-            padding: 30px 0px 0px 300px;
-        }
-
-        #model_1_time1 {
-            padding: 0px 0px 0px 400px;
-        }
-
-        .seal {
-            padding-left: 120px;
-        }
-
-        .model_1_time2 {
-            padding: 0px 0px 0px 100px;
-        }
-
-        .span_unline {
-            text-decoration: underline;
-        }
-
-        #model_1_num {
-            margin-right: 0px;
-        }
-    </style>
-    <!--<link href="../css/model.css" rel="stylesheet" type="text/css" />-->
-
     <!--引入js-->
     <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
+    <script language="javascript" src="../../../lib/js/LodopFuncs.js"></script>
+    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+    </object>
 
-    <script type="text/javascript" src="../../js/model.js"></script>
-
-    <script>
-        window.addEventListener('message', function (e) {
-            if (e.source != window.parent) return;
-            console.log(e);
-            window.parent.postMessage(color, '*');
-        }, false);
-    </script>
 </head>
 
 <body>
-    <div class="model_1" id="model_1">
+    <button onclick="m1_print_design();">打印设计</button>
+
+    <!--要打印的内容-->
+    <div class="" id="m1-print-area" style="">
         <!--通知单编号START-->
-        <div class="model_1_noticenum" id="model_1_num">
-            <p id="model_1_number">通知单编号：<span id="model_1_noticenum">________________________</span></p>
-        </div>
+        <!--<p class="" id="" style="padding-left:455px;">
+            <span class="" id="">通知单编号：</span>
+            <span class="" id="">____________________</span>
+        </p>-->
         <!--通知单编号END-->
 
         <!--标题START-->
-        <div class="model_1_1" id="model_1_headline">
-            <p><b><u>贷 后 催 收 通 知 单</u></b></p>
-        </div>
+        <!--<h2 class="" id="" style="padding-left:455px;">
+            <u>贷 后 催 收 通 知 单</u>
+        </h2>-->
         <!--标题END-->
 
-        <!--内容START-->
-        <div class="model_1_1" id="model_1_content">
-            <table id="model_1_table" border="1" cellpadding="10px" cellspacing="0">
-                <tr>
-                    <td colspan="2">
-                        <p class="model_1_table_1"><span class="span_unline" id="model_1_name">__________________________</span>:</p>
-                        <p class="model_1_table_1">
-                            &nbsp; &nbsp; &nbsp; &nbsp; 你（单位）于
-                            <span class="span_unline" id="model_1_byear">________</span>年
-                            <span class="span_unline" id="model_1_bmonth">________</span>月
-                            <span class="span_unline" id="model_1_bday">________</span>日在我机构贷款
-                            <span class="span_unline" id="model_1_bmoney">________________________</span>（大写）元，该笔贷款于
-                            <span class="span_unline" id="model_1_cyear">________</span>年
-                            <span class="span_unline" id="model_1_cmonth">________</span>月
-                            <span class="span_unline" id="model_1_cday">________</span>日到期，截止目前仍欠贷款本金
-                            <span class="span_unline" id="model_1_omoney">________________________</span>（大写）元，利息
-                            <span class="span_unline" id="model_1_ointerest">__________________</span>元。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。
-                        </p>
-                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 上述贷款本息，由担保人继续承担连带还款责任。</p>
-                        <p id="model_1_notic"> 特此通知！</p>
-                        <p class="model_1_table_2">&nbsp; &nbsp; &nbsp; &nbsp; 贷款人（公章）:<span id="model_1_lender"></span></p>
-                        <p class="model_1_table_2">
-                            &nbsp; &nbsp; &nbsp; &nbsp; 法人代表（签章）:<span id="model_1_rep"></span>
-                            <span id="officer"> 信贷员:</span><span id="model_1_officer"></span>
-                        </p>
-                        <p id="model_1_time1">
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
-                        <p class="model_1_table_2">
-                            <span>借款人: <span></span></span>
-                            <span class="seal">（公）章</span>
-                        </p>
-                        <p class="model_1_table_1">签收人:<span></span></p>
-                        <p class="model_1_time2">
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-                        </p>
-                    </td>
-                    <td>
-                        <p class="model_1_table_1">&nbsp; &nbsp; &nbsp; &nbsp; 本通知我已接到。</p>
-                        <p class="model_1_table_2">
-                            <span>担保人: <span></span></span>
-                            <span class="seal">（公）章</span>
-                        </p>
-                        <p class="model_1_table_1">签收人:<span></span></p>
-                        <p class="model_1_time2">
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                            <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <!--表格内容START-->
+        <table class="" id="" style="border-collapse:collapse;width:700px;">
+            <tr>
+                <td colspan="2" style="width:700px;border: 0px solid #000;text-align:right">
+                    <p class="" id="" style="font-size: 14px;line-height:100%;">
+                        通知单编号:____________________
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width:700px;border: 0px solid #000;height:20px;text-align:center;">
+                    <h2 class="" id="" style="margin-top:0px;">
+                        <u>贷 后 催 收 通 知 单</u>
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width:700px;border: 1px solid #000;height:600px;vertical-align:top; padding: 10px">
+                    <p class="" style="font-size: 16px;line-height: 200%;">
+                        <span class="" id="">____________________</span>
+                        <span class="" id="">:</span>
+                    </p>
+                    <p class="" style="text-indent:2em;font-size: 16px;line-height: 200%;text-align: justify;">
+                        你（单位）于________年________月________日在我机构贷款__________________，该笔贷款于________年________月________日到期，截止目前仍欠贷款本金___________________，利息___________________。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。
+                    </p>
+                    <p class="" id="" style="text-indent:2em;">上述贷款本息，由担保人继续承担连带还款责任。</p>
+                    <p class="" id="" style="text-align:right; padding-right:180px;font-size: 16px;line-height: 200%;">特此通知！</p>
+                    <p class="" id="" style="text-indent:2em; padding-bottom:80px;font-size: 16px;line-height: 200%;">
+                        贷款人（公章）:
+                    </p>
+                    <p class="" id="" style="text-indent:2em; padding-bottom:80px;">
+                        <span>法人代表（签章）:</span>
+                        <span class="" style="padding-left:200px;"> 信贷员:</span>
+                    </p>
+                    <p class="" id="" style="text-align:right; padding-right:120px;">
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:350px;border: 1px solid #000;height:250px;vertical-align:top; padding: 10px">
+                    <p class="" id="" style="text-indent:2em;"> 本通知我已接到。</p>
+                    <p class="" id="" style="text-indent:2em;padding-bottom:80px;">
+                        <span>借款人: <span>
+                        <span class="" style="padding-left:100px;">（公）章</span>
+                    </p>
+                    <p class="" id="" style="text-indent:2em;">签收人:</p>
+                    <p class="" id="" style="text-align:right;padding-right:40px;">
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                    </p>
+                </td>
+                <td style="width:350px;border: 1px solid #000;height:250px;vertical-align:top; padding: 10px">
+                    <p class="" id="" style="text-indent:2em;">本通知我已接到。</p>
+                    <p class="" id="" style="text-indent:2em;padding-bottom:80px;">
+                        <span>担保人: <span>
+                        <span class="" style="padding-left:100px;">（公）章</span>
+                    </p>
+                    <p class="" id="" style="text-indent:2em;">签收人:</p>
+                    <p class="" id="" style="text-align:right;padding-right:40px;">
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                        <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                    </p>
+                </td>
+            </tr>
+        </table>
         <!--内容END-->
 
         <!--备注区START-->
-        <div class="model_1_remark">
-            <p>注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
+        <div class="" id="" style="text-indent:2em;font-size: 14px">
+            注：本通知书一式三份，借款人、担保人、贷款方各留一份。
         </div>
         <!--备注区END-->
-
-        <!--按钮区START-->
-        <div class="model_1_button">
-            <input type="button" value="打印模板" class="btn btn-primary" onclick="model_1_print();" />
-            <input type="button" value="填写数据" class="btn btn-primary" onclick="model_1_inputData('model_1');" />
-        </div>
-        <!--按钮区END-->
     </div>
 
-
-
-    <!--<script>
-        $(function () {
-            if (localStorage.model_1_noticenum != null) {
-                $("#model_1_noticenum").text(localStorage.model_1_noticenum);
-            }
-            if (localStorage.model_1_name != null) {
-                $("#model_1_name").text(localStorage.model_1_name);
-            }
-            if (localStorage.model_1_byear != null) {
-                $("#model_1_byear").text(localStorage.model_1_byear);
-            }
-            if (localStorage.model_1_bmonth != null) {
-                $("#model_1_bmonth").text(localStorage.model_1_bmonth);
-            }
-            if (localStorage.model_1_bday != null) {
-                $("#model_1_bday").text(localStorage.model_1_bday);
-            }
-            if (localStorage.model_1_bmoney != null) {
-                $("#model_1_bmoney").text(localStorage.model_1_bmoney);
-            }
-            if (localStorage.model_1_cyear != null) {
-                $("#model_1_cyear").text(localStorage.model_1_cyear);
-            }
-            if (localStorage.model_1_cmonth != null) {
-                $("#model_1_cmonth").text(localStorage.model_1_cmonth);
-            }
-            if (localStorage.model_1_cday != null) {
-                $("#model_1_cday").text(localStorage.model_1_cday);
-            }
-            if (localStorage.model_1_omoney != null) {
-                $("#model_1_omoney").text(localStorage.model_1_omoney);
-            }
-            if (localStorage.model_1_ointerest != null) {
-                $("#model_1_ointerest").text(localStorage.model_1_ointerest);
-            }
-            if (localStorage.model_1_lender != null) {
-                $("#model_1_lender").text(localStorage.model_1_lender != null);
-            }
-            if (localStorage.model_1_rep != null) {
-                $("#model_1_rep").text(localStorage.model_1_rep);
-            }
-            if (localStorage.model_1_officer != null) {
-                $("#model_1_officer").text(localStorage.model_1_officer);
-            }
-            if (localStorage.model_1_dyear != null) {
-                $("#model_1_dyear").text(localStorage.model_1_dyear);
-            }
-            if (localStorage.model_1_dmonth != null) {
-                $("#model_1_dmonth").text(localStorage.model_1_dmonth);
-            }
-            if (localStorage.model_1_dday != null) {
-                $("#model_1_dday").text(localStorage.model_1_dday);
-            }
-        })
-    </script>-->
 </body>
+<script>
+    var FONT_SIZE = "11";
+    var LODOP = getLodop();
+
+
+    function m1_print_design() {
+        m1_model_init();
+        LODOP.PRINT_DESIGN();
+    }
+
+    function m1_model_init() {
+        LODOP.PRINT_INITA(0, 0, 1085, 996, "");
+        LODOP.ADD_PRINT_HTM(40, 12, 700, 1080, document.getElementById("m1-print-area").innerHTML);
+        LODOP.ADD_PRINT_TEXT(37, 588, 131, 20, "NO.201705051234");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(122, 58, 100, 23, "李先生");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(173, 162, 49, 20, "2000");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(174, 250, 31, 20, "05");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(174, 336, 28, 20, "05");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(173, 490, 142, 20, "￥100000000.00元");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(207, 71, 44, 20, "2015");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(207, 155, 31, 20, "05");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(206, 234, 34, 20, "05");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(207, 513, 126, 20, "￥100000000.00元");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        LODOP.ADD_PRINT_TEXT(237, 67, 125, 20, "￥100000000.00元");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+    }
+</script>
 
 </html>
