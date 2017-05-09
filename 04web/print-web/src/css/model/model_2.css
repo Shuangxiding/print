@@ -148,117 +148,14 @@
  .m2_btn {
      display: none;
  }
-/*通知单编号样式设置*/
+ /*通知单编号样式设置*/
+
  .m2_noticenum_span {
      display: inline-block;
      margin: 0;
      border-bottom: 1px solid #000000;
      width: 180px;
-	 line-height:16px;
+     line-height: 16px;
      text-align: center;
      /*clear: both;*/
  }
- /*表格中文字与边框的间距*/
- /*文本居左*/
- /*.m2_loader,
- .m2_p1,
- .m2_p2,
- .m2_lender,
- .m2_legal,
- .m2_confirmtext,
- .m2_borrower,
- .m2_guarantor,
- .m2_signer {
-     text-align: left;
- }*/
- /*#model_1 {
-    text-align: center;
-    font-size: 16px;
-}
-
-.td1 {
-    width: 150px;
-    text-align: center;
-    text-align: justify;
-    text-justify: distribute-all-lines;
-    text-align-last: justify;
-}
-
-.td2 {
-    width: 350px;
-}
-
-.p123 {
-    text-align: left;
-    padding-left: 100px;
-}
-
-.p1234 {
-    text-align: left;
-    padding-left: 220px;
-    padding-top: 8px;
-}
-
-#tle {
-    font-size: 22px;
-    text-align: center;
-    padding-top: 20px
-}
-
-#num {
-    padding-left: 150px
-}
-
-#care {
-    text-align: left;
-    padding-left: 50px
-}
-
-#date {
-    text-align: left;
-    padding-left: 300px
-}
-
-#seal {
-    text-align: left;
-    padding-left: 330px
-}
-
-#orderNumber {
-    height: 30px
-}
-
-#caseReason,
-#caseNumber {
-    height: 20px
-}
-
-#borrower {
-    height: 25px;
-    width: 100px
-}
-
-#address {
-    height: 25px;
-    width: 300px
-}
-
-#arrivalsYear,
-#arrivalsMonth,
-#arrivalsDay {
-    height: 20px;
-    width: 50px
-}
-
-#contrat,
-#phone {
-    height: 25px;
-    width: 200px
-}
-
-#callYear,
-#callMonth,
-#callDay {
-    height: 20px;
-    width: 40px
-}*/
