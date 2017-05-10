@@ -2,134 +2,180 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>贷款催收通知单model_3</title>
-
-    <!--引入样式-->
-    <style type="text/css">
-        @import "../../css/model/model_3.css";
-    </style>
+    <title>model_3_lodop</title>
+    <meta charset="utf-8">
 
     <!--引入js-->
-    <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-        function printpage() {
-            var tit = document.title;
-            document.title = "";
-            var print = document.getElementById("print");
-            print.style.display = "none";
-            window.print();
-            document.title = tit;
-            print.style.display = "";
-        }
-    </script>
+    <script language="javascript" src="../../../lib/js/LodopFuncs.js"></script>
+    <script src="../../../lib/js/jquery.js"></script>
+    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+	       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+	</object>
+
 </head>
 
 <body>
-    <div id="model_3_html">
-        <table id="number">
-            <tr>
-                <td>
-                    通知单编号：<span id="numberLine">_________</span>
-                </td>
-            </tr>
-        </table>
-        <table id="tb" cellpadding="10px">
-            <caption id="topic">
-                <h3>
-                    <u>贷款催收通知单</u>
-                </h3>
-            </caption>
-            <tr id="tr1">
-                <td colspan="2">
-                    <div id="named">
-                        <p id="borrower1"> _________ <span>(借款人)：</span></p>
-                        <p id="surety1"> _________ <span>(担保人)：</span></p>
-                    </div>
-                    <p id="section1">
-                        借款人
-                        <span id="borrower2"> _________ </span>于
-                        <span id="borrowYear"> _________ </span>年
-                        <span id="borrowMonth"> _________ </span>月
-                        <span id="borrowDay"> _________ 日向我司借款
-                    <span id="money"> _________</span>元，用于
-                        <span id="application">_________</span>， 由担保人
-                        <span id="surety2"> _________</span>提供担保，承担担保责任。此贷款已于
-                        <span id="dueYear">_________</span>年
-                        <span id="dueMonth">_________</span>月
-                        <span id="dueDay">_________</span>日到期，现尚欠贷款本金
-                        <span id="capital">_________</span>元，利息
-                        <span id="interest">_________</span> 元，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
-                    </p>
-                    <p id="section1">特此通知。</p>
-                    <p id="section2">(公章)</p>
-                    <p></p>
-                    <div id="sign">
-                        <span id="companyYear"> _________</span>年
-                        <span id="companyMonth">_________</span>月
-                        <span id="companyDay"> _________</span>日
-                    </div>
-                </td>
-            </tr>
-            <tr id="tr2">
-                <td>
-                    <p id="section1">
-                        以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息。
-                    </p>
-                    <p id="section3">借款人签章:</p>
-                    <div id="sign">
-                        <span id="borrowerYear"> _________ </span>年
-                        <span id="borrowerMonth"> _________ </span>月
-                        <span id="borrowerDay"> _________ </span>日
-                    </div>
-                </td>
-                <td>
-                    <p id="section1">
-                        以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
-                    </p>
-                    <p id="section3">担保人签章：</p>
-                    <div id="sign">
-                        <span id="suretyYear">_________</span>年
-                        <span id="suretyMonth">_________</span>月
-                        <span id="suretyDay">_________</span>日
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <p id="end">注：本通知书一式三份，借款人、担保人、贷款方各留一份。</p>
-        <div id="print" align="center">
-            <input type="button" value="打印" onclick="printpage()" />
-            <input type="button" value="转为PDF版本" onclick="HtmlToPdf()" />
-        </div>
+    <div style="text-align:center;">
+        <input type="button" value="打印全部" class="" onclick="javascript:CreatePagePrint();LODOP.PRINT_DESIGN();" />
+        <input type="button" value="打印模板" class="" onclick="javascript:CreateModelPrint();LODOP.PRINT_DESIGN();" />
+        <input type="button" value="套打预览" class="" onclick="javascript:CreateDataPrint();LODOP.PRINT_DESIGN();" />
+        <input type="button" value="其他设计" class="" onclick="javascript:LODOP.PRINT_DESIGN();" />
     </div>
-    <script>
-        $(function () {
-            $("#numberLine").text(localStorage.numberLine)
-            $("#borrower1").text(localStorage.borrower1);
-            $("#surety1").text(localStorage.surety);
-            $("#borrower2").text(localStorage.borrower2);
-            $("#borrowYear").text(localStorage.borrowYear);
-            $("#borrowMonth").text(localStorage.borrowMonth);
-            $("#borrowDay").text(localStorage.borrowDay);
-            $("#money").text(localStorage.money);
-            $("#application").text(localStorage.application);
-            $("#surety2").text(localStorage.surety2);
-            $("#dueYear").text(localStorage.dueYear);
-            $("#dueMonth").text(localStorage.dueMonth);
-            $("#dueDay").text(localStorage.dueDay);
-            $("#capital").text(localStorage.capital);
-            $("#interest").text(localStorage.interest);
-            $("#companyYear").text(localStorage.companyYear);
-            $("#companyMonth").text(localStorage.companyMonth);
-            $("#companyDay").text(localStorage.companyDay);
-            $("#borrowerYear").text(localStorage.borrowerYear);
-            $("#borrowerMonth").text(localStorage.borrowerMonth);
-            $("#borrowerDay").text(localStorage.borrowerDay);
-            $("#suretyYear").text(localStorage.suretyYear);
-            $("#suretyMonth").text(localStorage.suretyMonth);
-            $("#suretyDay").text(localStorage.suretyDay);
-        })
-    </script>
+
+    <!-- 以下为具体需要打印的内容 -->
+    <div class="model_model_3" id="model_model_3" style="text-align:center;width:750px;display:none;">
+        <div class="m3" id="m3" style="width:100%;margin:0;font-size: 16px;margin-left: auto;margin-right: auto;">
+
+            <!--通知单编号START-->
+            <div class="" id="" style="width: 100%;line-height: 200%;text-align: right;">
+                <p class="" id="">
+                    通知单编号：_______________________
+                </p>
+            </div>
+            <!--通知单编号END-->
+
+            <!--标题START-->
+            <div class="" id="" style="font-size: 24px;line-height: 200%;text-align:center;">
+                <span class="" id=""><b><u>贷 款 催 收 通 知 单</u></b></span>
+            </div>
+            <!--标题END-->
+
+            <!--内容START-->
+            <div class="" id="" style="margin:0,auto;width:100%;">
+                <table class="" id="" cellpadding="10px" border="1" cellspacing="0" style="margin: auto;width: 100%;table-layout: fixed;">
+                    <tr>
+                        <td colspan="2" style="padding: 20px;">
+                            <div class="" id="" style="line-height: 230%;text-align: left;">
+                                <p class="" id=""> ____________ (借款人)：</p>
+
+                                <p class="" id=""> ____________ (担保人)：</p>
+                            </div>
+                            <p class="" id="" style="text-indent: 2em;text-align: justify;line-height: 230%;word-wrap: break-word;">
+                                借款人 ____________ 于 ________ 年 _____ 月 _____ 日向我司借款 _________________ ，用于 _________________________________，由担保人 ____________
+                                提供担保，承担担保责任。此贷款已于 ________ 年 _____ 月 _____ 日到期，现尚欠贷款本金 _________________，利息 _________________，请抓紧筹集资金及时归还贷款本息，否则，我司将按合同约定和法律规定追究违约责任。
+                            </p>
+                            <p class="" id="" style="text-align: left;text-indent:2em;line-height:230%;">特此通知。</p>
+                            <p class="" id="" style="padding-left: 75%;padding-bottom: 80px;padding-top: 50px;">(公章)</p>
+                            <p></p>
+                            <div class="" id="" style="padding-right: 20px;text-align: right;">
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <p class="" id="" style="text-indent: 2em;text-align: justify;line-height: 230%;word-wrap: break-word;">
+                                以上通知已收悉，经核对无误。本人保证积极筹措资金，尽快偿还贷款本息,并愿承担合同约定和法律规定的责任。
+                            </p>
+                            <p class="" id="" style="padding-top: 20px;padding-left: 45%;line-height: 240%;padding-bottom: 70px;">借款人签章:</p>
+                            <div class="" id="" style="padding-right: 20px;text-align: right;">
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>年
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>月
+                                <span id="">  &nbsp; &nbsp; &nbsp; &nbsp;  </span>日
+                            </div>
+                        </td>
+                        <td style="padding: 20px;">
+                            <p class="" id="" style="text-indent: 2em;text-align: justify;line-height: 230%;word-wrap: break-word;">
+                                以上通知已收悉，经核实无误。本人将积极督促借款人及时归还贷款，并愿承担按合同约定和法律规定的担保责任。
+                            </p>
+                            <p class="" id="" style="padding-top: 20px;padding-left: 45%;line-height: 240%;padding-bottom: 70px;">担保人签章：</p>
+                            <div class="" id="" style="padding-right: 20px;text-align: right;">
+                                <span id=""> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+                                <span id=""> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+                                <span id=""> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--内容END-->
+
+            <!--备注区START-->
+            <div class="m3_end" style="text-align: left;padding-left: 20px;padding-bottom: 20px;font-size: 14px;">
+                注：本通知书一式三份，借款人、担保人、贷款方各留一份。
+            </div>
+            <!--备注区END-->
+
+            <script language="javascript">
+                function CreatePagePrint() {
+                    var printHtml = document.getElementById("model_model_3").innerHTML;
+                    LODOP.PRINT_INIT("");
+                    LODOP.ADD_PRINT_HTM(4, 4, "100%", "100%", "");
+                    LODOP.ADD_PRINT_HTM("4px", "4px", "100%", "100%", printHtml);
+                    LODOP.ADD_PRINT_TEXT(12, 622, 134, 20, "NO.201705100920");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(112, 42, 71, 25, "王二小");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(169, 41, 69, 25, "张  三");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(226, 134, 61, 25, "王二小");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(230, 255, 47, 20, "2016");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(230, 352, 21, 20, "6");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(229, 429, 17, 20, "6");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(227, 581, 115, 20, "￥88888.88元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(259, 72, 137, 25, "筹钱买房子啦啦啦");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(261, 397, 67, 26, "张  三");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(296, 36, 45, 25, "2017");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(302, 132, 20, 20, "5");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(302, 202, 19, 20, "5");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(298, 431, 115, 26, "￥66666.66元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(297, 628, 100, 25, "￥6666.00元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                }
+
+                function CreateModelPrint() {
+                    var printHtml = document.getElementById("model_model_3").innerHTML;
+                    LODOP.ADD_PRINT_HTM("4px", "4px", "100%", "100%", printHtml);
+                }
+
+                function CreateDataPrint() {
+                    LODOP.PRINT_INIT("");
+                    LODOP.ADD_PRINT_HTM(4, 4, "100%", "100%", "");
+                    LODOP.ADD_PRINT_TEXT(12, 622, 134, 20, "NO.201705100920");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(112, 42, 71, 25, "王二小");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(169, 41, 69, 25, "张  三");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(226, 134, 61, 25, "王二小");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(230, 255, 47, 20, "2016");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(230, 352, 21, 20, "6");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(229, 429, 17, 20, "6");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(227, 581, 115, 20, "￥88888.88元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(259, 72, 137, 25, "筹钱买房子啦啦啦");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(261, 397, 67, 26, "张  三");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(296, 36, 45, 25, "2017");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(302, 132, 20, 20, "5");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(302, 202, 19, 20, "5");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(298, 431, 115, 26, "￥66666.66元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                    LODOP.ADD_PRINT_TEXT(297, 628, 100, 25, "￥6666.00元");
+                    LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
+                }
+            </script>
 </body>
 
 </html>
