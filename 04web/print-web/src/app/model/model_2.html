@@ -15,123 +15,148 @@
     <script type="text/javascript" src="../../../lib/js/LodopFuncs.js"></script>
     <script type="text/javascript" src="../../js/data.js"></script>
     <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
-	<embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0 pluginspage="install_lodop64.exe"></embed>
+	<embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0 pluginspage="install_lodop32.exe"></embed>
 </object>
-    <!--<script type="text/javascript">
-        function printpage() {
-            var tit = document.title;
-            document.title = "";
-            var print = document.getElementById("print");
-            print.style.display = "none";
-            window.print();
-            document.title = tit;
-            print.style.display = "";
-        }
-    </script>-->
 </head>
 
 <body>
-    <div class="model_model_2" id="model_model_2" style="text-align: center">
-        <div class="m2" id="m2" style="width: 700px ;margin-left: auto;margin-right: auto">
-
-            <!--通知单编号START-->
-            <div class="m2_notice" id="m2_not">
-                <p class="m2_noticenum" id="m2_noticenum" style="text-align: right;font-size: 16px;line-height: 200%">
-                    <span class="" id="m2_num"> 通知单编号：</span>
-                    <span class="m2_noticenum_span" id="m2_noticenum_span" style="display: inline-block;margin: 0; border-bottom: 1px solid #000000;width: 180px; line-height: 16px;text-align: center;"></span>
-                </p>
-            </div>
-            <!--通知单编号END-->
-
-            <!--标题START-->
-            <div class="m2_title" id="m2_tle" style="font-size: 24px;line-height:50px;text-align: center">
-                <b><u>催 收 贷 款 通 知 单</b></u>
-            </div>
-            <!--标题END-->
-            <!--内容START-->
-            <div class="m2_content" id="m2_con" style="text-align: center">
-                <table class="m2_table" id="m2_tab" border="1" cellpadding="10px" cellspacing="0" style="font-size: 16px">
-                    <tr>
-                        <td style="text-align:center;text-align: justify;text-align-last: justify;border: 1px solid #000;">案件编号</td>
-                        <td class="m2_td2" style="width:300px;height: 30px;"><span id="m2_caseNumber_span"></span></td>
-                    </tr>
-                    <tr>
-                        <td class="m2_table_td2" id="m2_why" style="text-align:center;text-align: justify;text-align-last: justify;border:1px solid #000;">催收原由</td>
-                        <td class="m2_td2" style="width:300px;height: 30px;border:1px solid #000;"><span id="m2_caseReason_span" class=""></span></td>
-                    </tr>
-                    <tr>
-                        <td class="m2_table_td3" id="m2_person" style="text-align:center;text-align: justify;text-align-last: justify;border:1px solid #000;">债务人</td>
-                        <td class="m2_td2" style="width:300px;height: 30px;border:1px solid #000;"><span id="m2_borrower_span"></span></td>
-                    </tr>
-                    <tr>
-                        <td class="m2_table_td4" id="m2_place" style="text-align:center;text-align: justify;text-align-last: justify;border:1px solid #000;">工作单位或地址</td>
-                        <td class="m2_td2" style="border:1px solid #000;height: 30px;"><span id="m2_address_span" class="" </span></td>
-                    </tr>
-                    <tr>
-                        <td class="m2_table_td5" id="m2_load" style="text-align:center;text-align: justify;text-align-last: justify;border:1px solid #000;">贷款到期日期</td>
-                        <td class="m2_td2" style="border:1px solid #000;height: 30px;">
-                            <span id="m2_arrivalsYear_span" class="">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="" id="year1">年</span>
-                            <span id="m2_arrivalsMonth_span" class="">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="" id="month1">月</span>
-                            <span id="m2_arrivalsDay_span" class="">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="" id="day1">日</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="m2_table_td6" id="m2_money" style="width:30%;text-align:center;text-align: justify;text-align-last: justify;padding: 5px 10px 5px 10px">应还金额</td>
-                        <td class="m2_td2" style="border:1px solid #000;height: 30px;"><span id="m2_sum_span" class=""></span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2 " class="m2_td3" style="height: 500px;border:1px solid #000;">
-                            <p class="m2_care" id="m2_search" style="text-align: left;padding: 30px 0px 10px 40px;">注意事项: </p>
-                            <div class="m2_care123" id="m2_sea_content" style="text-align: left; padding: 0px 0px 0px 40px; text-indent: 2em;">
-                                <p>1.请在收到此通知单后无条件按照合同约定时间履行所承担的还款/担保责任，清偿所欠本金、利息和罚息。</p>
-                                <p>2.如不能按期支付，我公司将寻求法律途径催收解决，届时可能对您/贵公司造成不良影响；</p>
-                                <p>3.债务人在收到催收单后，应在送达回执上签名或盖章。</p>
-                            </div>
-                            <br/>
-                            <div class="m2_link" style="padding-top: 80px">
-                                <p class="m2_contrat"><span class="" id="m2_people" style="text-align: left;padding-left: 400px;">联 系 人：</span>
-                                    <span id="m2_contrat_span" class=""></span>
-                                </p>
-                                <p class="m2_phone"><span class="" id="m2_mobail" style=" text-align: left;padding-left: 400px;">联系电话：</span>
-                                    <span id="m2_phone_span" class=""></span>
-                                </p>
-                            </div>
-                            <p class="m2_date" id="m2_date" style="text-align: right; padding-right: 50px;padding-top: 5px;">
-                                <span id="callYear"></span> &nbsp; &nbsp; &nbsp; &nbsp; 年
-                                <span id="callMonth"></span> &nbsp; &nbsp; &nbsp; &nbsp; 月
-                                <span id="callDay"></span> &nbsp; &nbsp; &nbsp; &nbsp; 日
+    <!--打印区-->
+    <div id="model_model_2" style="text-align: center;width: 700px ;margin-left: auto;margin-right: auto;">
+        <!--内容START-->
+        <div class="m2_content" id="m2_con" style="text-align: center">
+            <table class="m2_table" id="m2_tab" style="border-collapse:collapse;width:700px;font-size: 16px">
+                <tr>
+                <td colspan="2" style="width:700px;border: 0px solid #000;text-align:right">
+                    <p class="" id="" style="font-size: 14px;line-height:100%;">
+                        通知单编号:____________________
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width:700px;border: 0px solid #000;height:20px;text-align:center;">
+                    <h2 class="" id="" style="margin-top:0px;">
+                        <u>催 收 贷 款 通 知 单</u>
+                    </h2>
+                </td>
+            </tr>
+                <tr>
+                    <td style="text-align:center;border: 1px solid #000;width: 220px;">案件编号</td>
+                    <td class="m2_td2" style="width:480px;height: 40px;border:1px solid #000; text-align: center"><span id="m2_caseNumber_span"></span></td>
+                </tr>
+                <tr>
+                    <td class="m2_table_td2" id="m2_why" style="text-align:center;border:1px solid #000;">催收原由</td>
+                    <td class="m2_td2" style="height: 40px;border:1px solid #000;text-align: center"><span id="m2_caseReason_span" class=""></span></td>
+                </tr>
+                <tr>
+                    <td class="m2_table_td3" id="m2_person" style="text-align:center;border:1px solid #000;">债务人</td>
+                    <td class="m2_td2" style="height: 40px;border:1px solid #000;text-align: center"><span id="m2_borrower_span"></span></td>
+                </tr>
+                <tr>
+                    <td class="m2_table_td4" id="m2_place" style="text-align:center;border:1px solid #000;">工作单位或地址</td>
+                    <td class="m2_td2" style="border:1px solid #000;height: 40px;text-align: center"><span id="m2_address_span" class="" </span></td>
+                </tr>
+                <tr>
+                    <td class="m2_table_td5" id="m2_load" style="text-align:center;border:1px solid #000;">贷款到期日期</td>
+                    <td class="m2_td2" style="border:1px solid #000;height: 40px;">
+                        <p style="text-align:center">
+                            <span id="m2_arrivalsYear_span" class="">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  </span>
+                            <span class="" id="year1">年</span>
+                            <span id="m2_arrivalsMonth_span" class="">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  </span>
+                            <span class="" id="month1">月</span>
+                            <span id="m2_arrivalsDay_span" class="">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>
+                            <span class="" id="day1">日</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="m2_table_td6" id="m2_money" style="text-align:center;border:1px solid #000;">应还金额</td>
+                    <td class="m2_td2" style="border:1px solid #000;height: 40px;text-align: center"></td>
+                </tr>
+                <tr>
+                    <td colspan="2 " class="m2_td3" style="height: 500px;border:1px solid #000;">
+                        <p class="m2_care" id="m2_search" style="text-align: left;padding: 30px 0px 10px 40px;">注意事项: </p>
+                        <div class="m2_care123" id="m2_sea_content" style="text-align: left; padding: 0px 0px 0px 40px; text-indent: 2em;">
+                            <p>1.请在收到此通知单后无条件按照合同约定时间履行所承担的还款/担保责任，清偿所欠本金、利息和罚息。</p>
+                            <p>2.如不能按期支付，我公司将寻求法律途径催收解决，届时可能对您/贵公司造成不良影响；</p>
+                            <p>3.债务人在收到催收单后，应在送达回执上签名或盖章。</p>
+                        </div>
+                        <br/>
+                        <div class="m2_link" style="padding-top: 80px">
+                            <p class="m2_contrat"><span class="" id="m2_people" style="text-align: left;padding-left: 400px;">联 系 人：</span>
+                                <span id="m2_contrat_span" class=""></span>
                             </p>
-                            <p class="m2_seal" id="m2_seal_data" style="text-align: right; padding-right: 70px;padding-bottom: 80px;">（印章）</p>
+                            <p class="m2_phone"><span class="" id="m2_mobail" style=" text-align: left;padding-left: 400px;">联系电话：</span>
+                                <span id="m2_phone_span" class=""></span>
+                            </p>
+                        </div>
+                        <p class="m2_date" id="m2_date" style="text-align: right; padding-right: 50px;padding-top: 5px;">
+                            <span id="callYear"></span> &nbsp; &nbsp; &nbsp; &nbsp; 年
+                            <span id="callMonth"></span> &nbsp; &nbsp; &nbsp; &nbsp; 月
+                            <span id="callDay"></span> &nbsp; &nbsp; &nbsp; &nbsp; 日
+                        </p>
+                        <p class="m2_seal" id="m2_seal_data" style="text-align: right; padding-right: 70px;padding-bottom: 80px;">（印章）</p>
 
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <!--内容END-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--内容END-->
 
-            <!--备注区START-->
-            <div class="m2_remark" id="m2_bottom_remark" style="font-size: 14px;  padding-bottom: 20px;text-align: left; padding-left: 20px;">
-                注：本联送到债务人
-            </div>
-            <!--备注区END-->
-
-            <!--按钮区START-->
-            <div class="m2_button">
-                <input type="button" value="打印预览" class="btn btn-primary btn-lg" onclick="Design1()" />
-                <input type="button" value="填写数据" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="model_input_data('model_2');"
-                />
-                <input type="button" value="打印数据" id="m2_button_bt" class="btn btn-primary btn-lg m2_btn" onclick="m2_preview();" />
-            </div>
-            <!--按钮区END-->
-            <script language="javascript" type="text/javascript">
-                var LODOP; //声明为全局变量
-                // 点击打印设计按钮
-                function Design1() {
-                    // CreateFullBill();
-                    LODOP.PRINT_DESIGN();
-                    LODOP.ADD_PRINT_HTM(10, 30, 700, 1080, document.getElementById("model_model_2").innerHTML);
-                };
-            </script>
+        <!--备注区START-->
+        <div class="m2_remark" id="m2_bottom_remark" style="font-size: 14px;  padding-bottom: 20px;text-align: left; padding-left: 20px;">
+            注：本联送到债务人
+        </div>
+        <!--备注区END-->
+    </div>
+    <!--按钮区START-->
+    <p style="text-align: center">
+        <input type="button" value="打印预览" class="btn btn-primary btn-lg" onclick="Preview()" />
+        <input type="button" value="打印设计" onclick="Design1()"/>
+    </p>
+    <!--按钮区END-->
+    <script language="javascript" type="text/javascript">
+        var LODOP; //声明为全局变量
+        // 打印预览
+        function Preview(){
+            Init();
+            LODOP.PREVIEW();
+           
+        }
+        // 点击打印设计按钮
+        function Design1() {
+            Init();
+            LODOP.PRINT_DESIGN();
+            // LODOP.ADD_PRINT_HTM(40, 12, 700, 1080, document.getElementById("model_model_2").innerHTML);
+        };
+        // 公共
+        function Init(){
+            LODOP.PRINT_INITA(0, 0, 1085, 996, "");
+            LODOP.ADD_PRINT_HTM(37,22,738,1080, document.getElementById("model_model_2").innerHTML);
+            LODOP.ADD_PRINT_TEXT(34,616,100,20,"NO12312341");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(120,408,175,20,"20000895656456453");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(159,424,130,20,"逾期3天未还款");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(196,451,59,25,"张鹏");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(241,388,201,20,"西安市莲湖区丰镐东路1号");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(276,472,34,20,"02");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(274,548,26,20,"15");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(276,408,42,20,"2017");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(318,435,100,25,"20000.00元");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+            LODOP.ADD_PRINT_TEXT(691,520,100,20,"胡开甲");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+            LODOP.ADD_PRINT_TEXT(729,520,100,20,"18745623547");
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+        }
+    </script>
 </body>
 
 </html>
