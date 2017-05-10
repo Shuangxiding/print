@@ -84,6 +84,6 @@ function m2_print_all() {
     $("#m2_sum_span").removeClass("datas");
     $("#m2_contrat_span").removeClass("datas");
     $("#m2_phone_span").removeClass("datas");
-    $("#m2_noticenum_span").removeClass("m2_noticenum_span");
+    $("#m2_noticenum_span").addClass("m2_noticenum_span");
     $(".m2").printArea();
 }

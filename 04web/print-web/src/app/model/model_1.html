@@ -17,9 +17,10 @@
 
 <body>
     <button onclick="m1_print_design();">打印设计</button>
+    <button onclick="m1_print_preview();">打印预览</button>
 
     <!--要打印的内容-->
-    <div class="" id="m1-print-area" style="">
+    <div class="" id="m1-print-area">
         <!--通知单编号START-->
         <!--<p class="" id="" style="padding-left:455px;">
             <span class="" id="">通知单编号：</span>
@@ -114,9 +115,13 @@
 
 </body>
 <script>
+    // 录入数据大小
     var FONT_SIZE = "11";
-    var LODOP = getLodop();
 
+    function m1_print_preview() {
+        m1_model_init();
+        LODOP.PREVIEW();
+    }
 
     function m1_print_design() {
         m1_model_init();
