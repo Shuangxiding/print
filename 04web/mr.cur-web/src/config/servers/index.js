@@ -10,6 +10,7 @@ import CustomerManage from '@/config/servers/customer-manage'
 import RepairManage from '@/config/servers/repair-manage'
 import SystemManage from '@/config/servers/system-manage'
 import AccManage from '@/config/servers/acc-manage'
+import NoticeManage from '@/config/servers/notice-manage'
 // 服务目录
 // acc-service 催收服务
 // common-service 公共服务
@@ -31,5 +32,6 @@ export default {
   CustomerManage, // 客户管理服务
   RepairManage, // 修复管理服务
   SystemManage, // 系统管理服务
-  AccManage
+  AccManage,
+  NoticeManage
 }

@@ -15,6 +15,7 @@ import ApprovalManage from '@/config/router/menu/approval-manage'
 import CustomerManage from '@/config/router/menu/customer-manage'
 import ConfigManage from '@/config/router/menu/config-manage'
 import SystemManage from '@/config/router/menu/system-manage'
+import NoticeManage from '@/config/router/menu/notice-manage'
 
 export default [
   // {
@@ -129,5 +130,12 @@ export default [
     code: '09FFFF',
     iconCls: 'icon-xitongguanli',
     children: SystemManage
+  }, {
+    path: '/',
+    component: Home,
+    title: '通知管理',
+    code: '09FFFF',
+    iconCls: 'icon-xitongguanli',
+    children: NoticeManage
   }
 ]

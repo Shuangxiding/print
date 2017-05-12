@@ -72,6 +72,10 @@
       <loaded-notice ref="LoadedNotice"></loaded-notice>
     </el-dialog>
 
+    <el-dialog title="通知单数据录入" v-model="showDataFillFormDialog" size="small">
+      <data-fill-form ref="DataFillForm"></data-fill-form>
+    </el-dialog>
+
     <!--弹出框：跟进记录START-->
     <el-dialog title="跟进记录" @open="custFollowOpen" v-model="followUpRecordClickHandle" size="large" :show-close="true" :close-on-click-modal="false" :close-on-press-escape="false">
       <cost-follow ref="costFollow"></cost-follow>
@@ -118,6 +122,7 @@
   import AttachInform from '@/views/case-manage/AttachInform'
 
   import LoadedNotice from '@/views/customer-manage/LoadedNotice'
+  import DataFillForm from '@/views/customer-manage/DataFillForm'
 
   export default {
     name: 'customer_query',
@@ -283,7 +288,8 @@
       CustInform,
       PayInform,
       AttachInform,
-      LoadedNotice
+      LoadedNotice,
+      DataFillForm
     },
     mounted() {
       net.send({

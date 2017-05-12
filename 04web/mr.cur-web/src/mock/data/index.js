@@ -6,6 +6,7 @@ import SmartAcc from '@/mock/data/smart-acc'
 import CaseManage from '@/mock/data/case-manage'
 import CustomerManage from '@/config/servers/customer-manage'
 import SystemManage from '@/mock/data/system-manage'
+import NoticeManage from '@/mock/data/notice-manage'
 
 // 服务目录
 // acc-service 催收服务
@@ -24,5 +25,6 @@ export default {
   SmartAcc,
   CaseManage,
   CustomerManage,
-  SystemManage
+  SystemManage,
+  NoticeManage
 }
