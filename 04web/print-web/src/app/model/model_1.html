@@ -9,9 +9,9 @@
     <!--引入js-->
     <script type="text/javascript" src="../../../lib/js/jquery-3.2.1.min.js"></script>
     <script language="javascript" src="../../../lib/js/LodopFuncs.js"></script>
-    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+    <!--<object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
        <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
-    </object>
+    </object>-->
 
 </head>
 
@@ -117,42 +117,43 @@
 <script>
     // 录入数据大小
     var FONT_SIZE = "11";
+    var LODOP = getLodop();
 
     function m1_print_preview() {
         m1_model_init();
-        LODOP.PREVIEW();
+        this.LODOP.PREVIEW();
     }
 
     function m1_print_design() {
         m1_model_init();
-        LODOP.PRINT_DESIGN();
+        this.LODOP.PRINT_DESIGN();
     }
 
     function m1_model_init() {
-        LODOP.PRINT_INITA(0, 0, 1085, 996, "");
-        LODOP.ADD_PRINT_HTM(40, 12, 700, 1080, document.getElementById("m1-print-area").innerHTML);
-        LODOP.ADD_PRINT_TEXT(37, 588, 131, 20, "NO.201705051234");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(122, 58, 100, 23, "李先生");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(173, 162, 49, 20, "2000");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(174, 250, 31, 20, "05");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(174, 336, 28, 20, "05");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(173, 490, 142, 20, "￥100000000.00元");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(207, 71, 44, 20, "2015");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(207, 155, 31, 20, "05");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(206, 234, 34, 20, "05");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(207, 513, 126, 20, "￥100000000.00元");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
-        LODOP.ADD_PRINT_TEXT(237, 67, 125, 20, "￥100000000.00元");
-        LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        this.LODOP.PRINT_INITA(0, 0, 1085, 996, "");
+        this.LODOP.ADD_PRINT_HTM(40, 12, 700, 1080, document.getElementById("m1-print-area").innerHTML);
+        // LODOP.ADD_PRINT_TEXT(37, 588, 131, 20, "NO.201705051234");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(122, 58, 100, 23, "李先生");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(173, 162, 49, 20, "2000");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(174, 250, 31, 20, "05");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(174, 336, 28, 20, "05");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(173, 490, 142, 20, "￥100000000.00元");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(207, 71, 44, 20, "2015");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(207, 155, 31, 20, "05");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(206, 234, 34, 20, "05");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(207, 513, 126, 20, "￥100000000.00元");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
+        // LODOP.ADD_PRINT_TEXT(237, 67, 125, 20, "￥100000000.00元");
+        // LODOP.SET_PRINT_STYLEA(0, "FontSize", FONT_SIZE);
     }
 </script>
 
