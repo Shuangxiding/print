@@ -1,0 +1,34 @@
+{
+  "title": "催大人-前端文档",
+  "author": "朱晨通",
+  "language": "zh-hans",
+  "description": "这就是一个前端项目的文档",
+  "plugins": [
+    "atoc",
+    "-search",
+    "-highlight",
+    "prism",
+    "search-pro",
+    "tbfed-pagefooter"
+  ],
+  "pluginsConfig": {
+    "atoc": {
+      "addClass": true,
+      "className": "atoc"
+    },
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord": ["Gitbook Use"]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "此处无银三百两",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    }
+  }
+}
