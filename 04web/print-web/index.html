@@ -25,6 +25,10 @@
     <script src="src/js/input/model_3_input.js"></script>
     <!--引入打印事件-->
     <script src="src/js/model/model_2.js"></script>
+    <script language="javascript" src="lib/js/LodopFuncs.js"></script>
+    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+    </object>
 
 
     <script>
@@ -173,7 +177,6 @@
                 <div class="m2_notice" id="m2_not">
                     <p class="m2_noticenum" id="m2_noticenum">
                         <span class="" id="m2_num"> 通知单编号：</span>
-                        <!--<span class="m2_noticenum_span"></span>-->
                         <span class="m2_noticenum_span" id="m2_noticenum_span"></span>
                     </p>
                 </div>
@@ -366,6 +369,7 @@
                         onclick="model_input_data('model_3');" />
                     <input id="m3_printdata_button" type="button" value="打印数据" class="btn btn-primary btn-lg m3_noprint_button m3_button_hide"
                         onclick="m3_print_data();" />
+                    <input type="button" value="lodoop套打" class="btn btn-primary btn-lg m3_noprint_button" onclick="javascript:doprint();" />
                 </div>
                 <!--按钮区END-->
             </div>
