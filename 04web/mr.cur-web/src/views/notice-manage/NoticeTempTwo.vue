@@ -5,19 +5,19 @@
       <table class="m2_tm2">
         <tr>
           <td class="m2_t1">案件编号</td>
-          <td class="m2_t2"></td>
+          <td class="m2_t2">{{PrintInfo.cupoCasenum}}</td>
         </tr>
         <tr>
           <td class="m2_t1">逾期天数</td>
-          <td class="m2_t2"></td>
+          <td class="m2_t2">{{PrintInfo.cupoOverday}}天</td>
         </tr>
         <tr>
           <td class="m2_t1">债务人</td>
-          <td class="m2_t2"></td>
+          <td class="m2_t2">{{PrintInfo.custName}}</td>
         </tr>
         <tr>
           <td class="m2_t1">应还金额</td>
-          <td class="m2_t2"></td>
+          <td class="m2_t2">￥{{PrintInfo.cupoAmt}}元</td>
         </tr>
         <tr class="m2_t3">
           <td colspan="2">
@@ -38,6 +38,30 @@
     </div>
   </div>
 </template>
+<script>
+  import { mapState, mapMutations } from 'vuex'
+
+  export default {
+    name: 'notice-temp-two',
+    data() {
+      return {
+
+      }
+    },
+    computed: {
+      ...mapState({
+        PrintInfo: state => state.noticeManage.Print_info
+      })
+    },
+    methods: {
+      // 添加Actions
+      ...mapMutations([
+        'updatePrintInfo'
+      ])
+    }
+  }
+
+</script>
 <style>
   /*设置全局字体大小和颜色*/
 
@@ -105,6 +129,7 @@
   .m2_last {
     text-align: left;
     padding-left: 20px;
+    font-size: 14px;
   }
 
 </style>
