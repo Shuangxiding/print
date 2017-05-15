@@ -45,16 +45,22 @@
         <el-table-column prop="cupoName" label="催收员" min-width="90"></el-table-column>
         <el-table-column label="操作" min-width="90">
           <template scope="scope">
-            <el-button type="text" size="small">打印催收通知单</el-button>
+            <el-button type="text" size="small" @click="printNoticeClick">打印催收通知单</el-button>
           </template>
         </el-table-column>
       </template>
       <!--数据列区域-END-->
     </data-box>
+
+    <el-dialog title="贷后催收通知单打印" v-model="printNoticeClickHandle" size="small">
+      <notice-print ref="NoticePrint"></notice-print>
+    </el-dialog>
+
   </div>
 </template>
 <script>
   import DataBox from '@/components/DataBox'
+  import NoticePrint from '@/views/notice-manage/NoticePrint'
   import server from '@/config/servers'
   import { validateMin, validateMax } from '@/util/common'
   import net from '@/util/net'
@@ -83,14 +89,15 @@
           validateMin,
           validateMax
         },
-        dataName: []
+        dataName: [],
+        printNoticeClickHandle: false
       }
     },
-    components: {
-      DataBox
-    },
     methods: {
-
+      printNoticeClick() {
+        console.log('printNoticeClick')
+        this.printNoticeClickHandle = true
+      }
     },
     mounted() {
       net.send({
@@ -102,6 +109,10 @@
       }, err => {
         console.log(err)
       })
+    },
+    components: {
+      DataBox,
+      NoticePrint
     }
   }
 
