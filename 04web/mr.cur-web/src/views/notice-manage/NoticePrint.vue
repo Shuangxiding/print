@@ -2,10 +2,10 @@
   <div class="page">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="通知单模板一" name="first">
-        <notice-temp-one id="notice-one" ref="notice"></notice-temp-one>
+        <notice-temp-one id="notice-one" ref="notice-one"></notice-temp-one>
         <div class="btns">
           <el-button @click="m1PrintClick">打印</el-button>
-          <el-button>打印数据</el-button>
+          <el-button @click="m1PrintDataClick">打印数据</el-button>
         </div>
       </el-tab-pane>
       <el-tab-pane label="通知单模板二" name="second">
@@ -29,9 +29,6 @@
   import NoticeTempOne from '@/views/notice-manage/NoticeTempOne'
   import NoticeTempTwo from '@/views/notice-manage/NoticeTempTwo'
   import NoticeTempThree from '@/views/notice-manage/NoticeTempThree'
-
-  import printJS from 'print.js/src/index.js'
-
   export default {
     name: 'notice-print',
     data() {
@@ -40,9 +37,12 @@
       }
     },
     methods: {
+      m1PrintDataClick() {
+        console.log('m1PrintDataClick')
+        this.$refs['notice-one'].changeStyle()
+      },
       m1PrintClick() {
-        this.$refs['notice'].changeStyle()
-        printJS('notice-one', 'html')
+
       },
       handleClick(tab, event) {
         console.log(tab, event)

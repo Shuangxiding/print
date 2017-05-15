@@ -1,31 +1,31 @@
 <template>
   <div class="page">
     <div id="m1-print-area">
-      <p class="m1-title">贷 后 催 收 通 知 单</p>
+      <div style="margin:0 200px;" class="m1-title" :class="{'m1-display-none':m1display}">贷 后 催 收 通 知 单</div>
       <div>
         <p class="m1-indent2m-left">
           <span class="m1-name-unline"></span>
-          <span>:</span>
+          <span class="" :class="{'m1-display-none':m1display}">:</span>
         </p>
         <p class="m1-indent2m-left m1-align-both m1-line-height">
-          <span>你案件编号为</span>
+          <span class="" :class="{'m1-display-none':m1display}">你案件编号为</span>
           <span class="m1-casenum-unline"></span>
-          <span>的借款合同本期应还款额</span>
+          <span class="" :class="{'m1-display-none':m1display}">的借款合同本期应还款额</span>
           <span class="m1-money-unline"></span>
-          <span>元，已还款额</span>
+          <span class="" :class="{'m1-display-none':m1display}">元，已还款额</span>
           <span class="m1-money-unline"></span>
-          <span>元，现已逾期</span>
+          <span class="" :class="{'m1-display-none':m1display}">元，现已逾期</span>
           <span class="m1-day-unline"></span>
-          <span>天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
+          <span class="" :class="{'m1-display-none':m1display}">天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
         </p>
-        <p class="m1-hereby">
+        <p class="m1-hereby m1-display-none">
           特此通知！
         </p>
-        <p class="m1-indent2m-left m1-sign">
+        <p class="m1-indent2m-left m1-sign" :class="{'m1-display-none':m1display}">
           <span>贷款人（单位）:</span>
           <span class="m1-officer"> 催收员:</span>
         </p>
-        <p class="m1-date1-pos">
+        <p class="m1-date1-pos" :class="{'m1-display-none':m1display}">
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
@@ -33,18 +33,18 @@
       </div>
       <hr style="border:1px dashed">
       <div>
-        <p class="m1-indent2m-left"> 本通知我已接到。</p>
-        <p class="m1-indent2m-left m1-sign">
+        <p class="m1-indent2m-left" :class="{'m1-display-none':m1display}"> 本通知我已接到。</p>
+        <p class="m1-indent2m-left m1-sign" :class="{'m1-display-none':m1display}">
           <span>借款人: </span>
           <span class="m1-real">签收人：</span>
         </p>
-        <p class="m1-date2-pos">
+        <p class="m1-date2-pos" :class="{'m1-display-none':m1display}">
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
           <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
         </p>
       </div>
-      <p class="m1-remark" :class="{'m1-indent2m-left':flag}">
+      <p class="m1-remark m1-indent2m-left" :class="{'m1-display-none':m1display}">
         注：本通知书一式两份，借款人、贷款方各留一份。
       </p>
     </div>
@@ -55,13 +55,13 @@
     name: 'notice-temp-one',
     data() {
       return {
-        flag: true
+        m1display: false
       }
     },
     methods: {
       // 测试在另一页面修改此组件样式
       changeStyle() {
-        this.flag = false
+        this.m1display = true
       }
     }
   }
@@ -69,6 +69,9 @@
 </script>
 
 <style>
+  #notice-one {
+    font-size: 80px!important;
+  }
   /*全局字体大小、颜色*/
 
   #m1-print-area {
@@ -172,6 +175,10 @@
   .m1-remark {
     font-size: 14px;
     margin: 0px;
+  }
+
+  .m1-display-none {
+    display: none;
   }
 
   @media print {
