@@ -1,14 +1,14 @@
 <template>
   <div class="page">
     <div id="m3_print_area" class="m3_print_area">
-      <p class="m3_topic" align="center"><b>催 收 贷 款 通 知 单</b></p>
+      <p class="m3_topic"><b>催 收 贷 款 通 知 单</b></p>
       <p class="m3_borrow">借款人：
-        <span class="m3 unline bor"></span>
+        <span class="m3 unline bor">{{PrintInfo.custName}}</span>
       </p>
       <p class="m3_mainbody">根据编号为
-        <span class="m3 unline cod"></span> 的案件所示，您向我司借款
-        <span class="m3 unline mon"></span> 元。由于此笔贷款现处于逾期还款状态，截止目前已逾期
-        <span class="m3 unline day"></span> 天，并对我司的正常经营活动造成较大影响。为避免更加不利的局面发生，也为维系您与我司的合作关系，我司特此就有关事宜致函于您。请您抓紧落实还款资金，于接到本通知之日起 7个工作日内清偿所欠本息，否则我司将按合同约定和法律规定追究违约责任。 </p>
+        <span class="m3 unline cod">{{PrintInfo.cupoCasenum}}</span> 的案件所示，您向我司借款
+        <span class="m3 unline mon">{{PrintInfo.cupoContnum}}元</span> 。由于此笔贷款现处于逾期还款状态，截止目前已逾期
+        <span class="m3 unline day">{{PrintInfo.cupoOverday}}天</span>，并对我司的正常经营活动造成较大影响。为避免更加不利的局面发生，也为维系您与我司的合作关系，我司特此就有关事宜致函于您。请您抓紧落实还款资金，于接到本通知之日起 7个工作日内清偿所欠本息，否则我司将按合同约定和法律规定追究违约责任。 </p>
       <p class="m3_inform" style="padding-left: 2em;">特此通知</p>
       <p class="m3_cachet">（公章）</p>
       <p class="m3_time"> &nbsp;&nbsp;&nbsp;&nbsp; 年 &nbsp;&nbsp;&nbsp;&nbsp; 月 &nbsp;&nbsp;&nbsp;&nbsp; 日</p>
@@ -18,15 +18,21 @@
 </template>
 
 <script>
+  import { mapState, mapMutations } from 'vuex'
   export default {
-    name: '',
+    name: 'notice-temp-three',
     data: {
-      return: {
-        printThree: ''
-      }
+      return: {}
+    },
+    computed: {
+      ...mapState({
+        PrintInfo: state => state.noticeManage.Print_info
+      })
     },
     methods: {
-
+      ...mapMutations([
+        'updatePrintInfo'
+      ])
     }
   }
 

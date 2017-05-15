@@ -11,7 +11,7 @@
       <el-tab-pane label="通知单模板二" name="second">
         <notice-temp-two></notice-temp-two>
         <div class="btns">
-          <el-button>打印</el-button>
+          <el-button @click="m2PrintClick">打印</el-button>
           <el-button>打印数据</el-button>
         </div>
       </el-tab-pane>
@@ -51,7 +51,8 @@
       },
       m3PrintClick() {
         printJS('notice-three', 'html')
-      }
+      },
+      m2PrintClick() {}
     },
     components: {
       NoticeTempOne,

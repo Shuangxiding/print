@@ -16,6 +16,7 @@ import systemManage from '@/store/modules/system-manage'
 import accManage from '@/store/modules/acc-manage'
 import caseManage from '@/store/modules/case-manage'
 import app from '@/store/modules/app'
+import noticeManage from '@/store/modules/notice-manage'
 
 Vue.use(Vuex)
 
@@ -48,6 +49,7 @@ export default new Vuex.Store({
     systemManage,
     accManage,
     caseManage,
-    app
+    app,
+    noticeManage
   }
 })
