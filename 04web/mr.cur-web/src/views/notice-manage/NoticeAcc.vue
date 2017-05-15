@@ -45,7 +45,7 @@
         <el-table-column prop="cupoName" label="催收员" min-width="90"></el-table-column>
         <el-table-column label="操作" min-width="90">
           <template scope="scope">
-            <el-button type="text" size="small" @click="printNoticeClick">打印催收通知单</el-button>
+            <el-button type="text" size="small" @click="printNoticeClick()">打印催收通知单</el-button>
           </template>
         </el-table-column>
       </template>
@@ -95,7 +95,6 @@
     },
     methods: {
       printNoticeClick() {
-        console.log('printNoticeClick')
         this.printNoticeClickHandle = true
       }
     },

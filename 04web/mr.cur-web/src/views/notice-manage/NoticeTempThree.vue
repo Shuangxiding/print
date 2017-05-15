@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div id="m3_print_area" class="m3_print_area">
-      <p class="m3_topic">催收贷款通知单</p>
+      <p class="m3_topic" align="center"><b>催 收 贷 款 通 知 单</b></p>
       <p class="m3_borrow">借款人：
         <span class="m3 unline bor"></span>
       </p>
@@ -9,7 +9,7 @@
         <span class="m3 unline cod"></span> 的案件所示，您向我司借款
         <span class="m3 unline mon"></span> 元。由于此笔贷款现处于逾期还款状态，截止目前已逾期
         <span class="m3 unline day"></span> 天，并对我司的正常经营活动造成较大影响。为避免更加不利的局面发生，也为维系您与我司的合作关系，我司特此就有关事宜致函于您。请您抓紧落实还款资金，于接到本通知之日起 7个工作日内清偿所欠本息，否则我司将按合同约定和法律规定追究违约责任。 </p>
-      <p class="m3_inform">特此通知</p>
+      <p class="m3_inform" style="padding-left: 2em;">特此通知</p>
       <p class="m3_cachet">（公章）</p>
       <p class="m3_time"> &nbsp;&nbsp;&nbsp;&nbsp; 年 &nbsp;&nbsp;&nbsp;&nbsp; 月 &nbsp;&nbsp;&nbsp;&nbsp; 日</p>
       <p>-----------------------------------------------------------------------------------------------------</p>
@@ -17,6 +17,20 @@
   </div>
 </template>
 
+<script>
+  export default {
+    name: '',
+    data: {
+      return: {
+        printThree: ''
+      }
+    },
+    methods: {
+
+    }
+  }
+
+</script>
 <style scoped>
   /*全局设置*/
 
@@ -32,7 +46,7 @@
 
   .m3_topic {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
   }
   /*借款人*/
 
@@ -93,8 +107,6 @@
   }
 
 
-  @media print {
-    .m3_print_area {}
-  }
+  @media print {}
 
 </style>

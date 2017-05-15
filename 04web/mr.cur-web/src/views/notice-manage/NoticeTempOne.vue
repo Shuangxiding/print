@@ -2,87 +2,73 @@
   <div class="page">
     <div id="m1-print-area">
       <p class="m1-title">贷 后 催 收 通 知 单</p>
-      <table class="m1-table">
-        <tr>
-          <td colspan="2">
-            <div>
-              <p class="m1-indent2m-left">
-                <span class="m1-name-unline">李先生</span>
-                <span>:</span>
-              </p>
-              <p class="m1-indent2m-left m1-align-both">
-                <span>你案件编号为</span>
-                <span class="m1-date-unline">2000</span>
-                <span>的借款合同本期应还款额</span>
-                <span class="m1-date-unline">03</span>
-                <span>元，已还款额</span>
-                <span class="m1-date-unline">04</span>
-                <span>元，现已逾期</span>
-                <span class="m1-money-unline">1000000元</span>
-                <span>天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
-
-              </p>
-              <p class="m1-indent2m-left">
-                上述贷款本息，由担保人继续承担连带还款责任。
-              </p>
-              <p class="m1-hereby">
-                特此通知！
-              </p>
-              <p class="m1-indent2m-left m1-chapter">
-                贷款人（公章）:
-              </p>
-              <p class="m1-indent2m-left m1-chapter">
-                <span>法人代表（签章）:</span>
-                <span class="m1-officer"> 信贷员:</span>
-              </p>
-              <p class="m1-date1-pos">
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-              </p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <p class="m1-indent2m-left"> 本通知我已接到。</p>
-              <p class="m1-indent2m-left m1-chapter">
-                <span>借款人: </span>
-                <span class="m1-real">（公）章</span>
-              </p>
-              <p class="m1-indent2m-left">签收人:</p>
-              <p class="m1-date2-pos">
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-              </p>
-            </div>
-          </td>
-          <td>
-            <div>
-              <p class="m1-indent2m-left"> 本通知我已接到。</p>
-              <p class="m1-indent2m-left m1-chapter">
-                <span>担保人: </span>
-                <span class="m1-real">（公）章</span>
-              </p>
-              <p class="m1-indent2m-left">签收人:</p>
-              <p class="m1-date2-pos">
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
-                <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
-              </p>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <p class="m1-indent2m-left m1-remark">
-        注：本通知书一式三份，借款人、担保人、贷款方各留一份。
+      <div>
+        <p class="m1-indent2m-left">
+          <span class="m1-name-unline"></span>
+          <span>:</span>
+        </p>
+        <p class="m1-indent2m-left m1-align-both m1-line-height">
+          <span>你案件编号为</span>
+          <span class="m1-casenum-unline"></span>
+          <span>的借款合同本期应还款额</span>
+          <span class="m1-money-unline"></span>
+          <span>元，已还款额</span>
+          <span class="m1-money-unline"></span>
+          <span>元，现已逾期</span>
+          <span class="m1-day-unline"></span>
+          <span>天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
+        </p>
+        <p class="m1-hereby">
+          特此通知！
+        </p>
+        <p class="m1-indent2m-left m1-sign">
+          <span>贷款人（单位）:</span>
+          <span class="m1-officer"> 催收员:</span>
+        </p>
+        <p class="m1-date1-pos">
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+        </p>
+      </div>
+      <hr style="border:1px dashed">
+      <div>
+        <p class="m1-indent2m-left"> 本通知我已接到。</p>
+        <p class="m1-indent2m-left m1-sign">
+          <span>借款人: </span>
+          <span class="m1-real">签收人：</span>
+        </p>
+        <p class="m1-date2-pos">
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>年
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>月
+          <span> &nbsp; &nbsp; &nbsp; &nbsp; </span>日
+        </p>
+      </div>
+      <p class="m1-remark" :class="{'m1-indent2m-left':flag}">
+        注：本通知书一式两份，借款人、贷款方各留一份。
       </p>
     </div>
   </div>
 </template>
-<style scoped>
+<script>
+  export default {
+    name: 'notice-temp-one',
+    data() {
+      return {
+        flag: true
+      }
+    },
+    methods: {
+      // 测试在另一页面修改此组件样式
+      changeStyle() {
+        this.flag = false
+      }
+    }
+  }
+
+</script>
+
+<style>
   /*全局字体大小、颜色*/
 
   #m1-print-area {
@@ -91,34 +77,12 @@
     font-size: 16px;
     color: black;
   }
-  /*通知单编号*/
-
-  .m1-noticenum {
-    font-size: 14px;
-    text-align: right;
-  }
   /*标题*/
 
   .m1-title {
+    text-align: center;
     font-size: 22px;
     font-weight: bold;
-  }
-  /*table tr td 实现、黑色、大小*/
-
-  .m1-table {
-    line-height: 180%;
-    border: 0px;
-    width: 700px;
-    margin: 0 auto;
-  }
-
-  .m1-table td {
-    border: 1px solid black;
-  }
-  /*table内文字和table间距*/
-
-  .m1-table td {
-    padding: 10px
   }
   /*段落居左并缩进2个字符*/
 
@@ -133,22 +97,13 @@
   }
   /*下划线设置*/
 
-  .m1-noticenum-unline {
+  .m1-casenum-unline {
     display: inline-block;
     text-align: left;
     line-height: 16px;
     border-width: 1px;
     border-bottom-style: solid;
     width: 180px;
-  }
-
-  .m1-date-unline {
-    display: inline-block;
-    text-align: left;
-    line-height: 16px;
-    border-width: 1px;
-    border-bottom-style: solid;
-    width: 60px;
   }
 
   .m1-money-unline {
@@ -157,7 +112,16 @@
     line-height: 16px;
     border-width: 1px;
     border-bottom-style: solid;
-    width: 180px;
+    width: 150px;
+  }
+
+  .m1-day-unline {
+    display: inline-block;
+    text-align: left;
+    line-height: 16px;
+    border-width: 1px;
+    border-bottom-style: solid;
+    width: 60px;
   }
 
   .m1-name-unline {
@@ -172,22 +136,21 @@
 
   .m1-hereby {
     text-align: right;
-    padding-top: 20px;
-    padding-right: 100px;
+    padding: 20px 100px 0px 0px;
   }
-  /*需要公章的地方*/
 
-  .m1-chapter {
-    margin-bottom: 80px;
+  .m1-sign {
+    padding: 20px 0px 80px 0px;
+  }
+
+  .m1-officer {
+    padding-left: 220px;
+    padding-bottom: 80px;
   }
 
   .m1-real {
-    padding-left: 80px;
-  }
-  /*信贷员位置*/
-
-  .m1-officer {
-    padding-left: 200px;
+    padding-left: 280px;
+    padding-bottom: 80px;
   }
   /*时间的位置*/
 
@@ -198,7 +161,11 @@
 
   .m1-date2-pos {
     text-align: right;
-    padding-right: 40px;
+    padding-right: 80px;
+  }
+
+  .m1-line-height {
+    line-height: 32px;
   }
   /*备注*/
 
@@ -206,16 +173,11 @@
     font-size: 14px;
     margin: 0px;
   }
-  /*按钮*/
-
-  .m1-button {
-    margin-top: 15px;
-  }
 
   @media print {
-    .m1-noticenum {
-      font-size: 14px;
-      text-align: right;
+    .m1-title {
+      font-size: 32px!important;
+      font-weight: bold;
     }
   }
 
