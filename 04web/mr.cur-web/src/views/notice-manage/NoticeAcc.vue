@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <!--<data-box ref="databox" :params="params" :server="servers.customerCollection">-->
+    <!--<data-box ref="databox" :params="params" :server="servers.sendNoticeInfo">-->
     <data-box ref="databox" :params="params" :data="data">
       <!--搜索区-->
       <template slot="input">
@@ -43,11 +43,21 @@
 <script>
   import DataBox from '@/components/DataBox'
   import server from '@/config/servers'
+  import net from '@/util/net'
   export default {
     name: 'notice-acc',
     data() {
       return {
-        // data: [{ custName: '孙艳平' }],
+        data: [{
+          cupoCasenum: '201705151040',
+          custName: '孙艳平',
+          cupoAmt: 50000,
+          cupoOverday: 80,
+          cupoBatch: '12456789000',
+          cupoPrincipal: '中资联',
+          cupoPaystatus: 'M6',
+          cupoName: '张三'
+        }],
         // 服务接口列表
         servers: {
           sendNoticeInfo: server.NoticeManage.send_notice_info
@@ -66,6 +76,17 @@
           sort: 'createTime,desc'
         }
       }
+    },
+    mounted() {
+      net.send({
+        server: server.NoticeManage.send_notice_info
+      }).then((data) => {
+        // 接口返回的数据
+        this.dataName = data
+        console.log(data)
+      }, err => {
+        console.log(err)
+      })
     },
     components: {
       DataBox
