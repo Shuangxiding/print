@@ -1,11 +1,21 @@
 <template>
+  <!--通知管理-->
   <div class="page">
-    <!--<data-box ref="databox" :params="params" :server="servers.sendNoticeInfo">-->
-    <data-box ref="databox" :params="params" :data="data">
-      <!--搜索区-->
+    <data-box ref="databox" :params="params" :server="servers.sendNoticeInfo" row-key="noticeAcc" autoSearch>
+      <!--搜索区-START-->
       <template slot="input">
         <el-form-item label="客户名称:" v-role="0x070103">
           <el-input v-model="params.custName"></el-input>
+        </el-form-item>
+        <el-form-item label="逾期天数" prop="cupoOverdayStart" :rules="[
+            { validator: validate.validateMin(params.cupoOverdayEnd), trigger: 'blur' }
+          ]" v-role="0x050108">
+          <el-input v-model.number="params.cupoOverdayStart" type="number"></el-input>
+        </el-form-item>
+        <el-form-item label="-" prop="cupoOverdayEnd" :rules="[
+            { validator: validate.validateMax(params.cupoOverdayStart), trigger: 'blur' }
+          ]" v-role="0x050108">
+          <el-input v-model.number="params.cupoOverdayEnd" type="number"></el-input>
         </el-form-item>
         <el-form-item label="批次号" v-role="0x060103">
           <el-input v-model="params.cupoBatch"></el-input>
@@ -20,7 +30,9 @@
           <el-input v-model="params.cupoName"></el-input>
         </el-form-item>
       </template>
-      <!--数据区-->
+      <!--搜索区-END-->
+
+      <!--数据区-STAR-->
       <template slot="column">
         <el-table-column type="index" label="序号" width="30"></el-table-column>
         <el-table-column prop="cupoCasenum" label="案件编号" min-width="100"></el-table-column>
@@ -37,28 +49,19 @@
           </template>
         </el-table-column>
       </template>
+      <!--数据列区域-END-->
     </data-box>
   </div>
 </template>
 <script>
   import DataBox from '@/components/DataBox'
   import server from '@/config/servers'
-  import net from '@/util/net'
+  import { validateMin, validateMax } from '@/util/common'
+  // import net from '@/util/net'
   export default {
     name: 'notice-acc',
     data() {
       return {
-        data: [{
-          cupoCasenum: '201705151040',
-          custName: '孙艳平',
-          cupoAmt: 50000,
-          cupoOverday: 80,
-          cupoBatch: '12456789000',
-          cupoPrincipal: '中资联',
-          cupoPaystatus: 'M6',
-          cupoName: '张三'
-        }],
-        // 服务接口列表
         servers: {
           sendNoticeInfo: server.NoticeManage.send_notice_info
         },
@@ -69,24 +72,18 @@
           cupoName: '',
           cupoCasenum: '',
           cupoAmt: '',
-          cupoOverday: '',
+          cupoOverdayStart: '',
+          cupoOverdayEnd: '',
           cupoPrincipal: '',
           cupoPaystatus: '',
           createTime: '',
           sort: 'createTime,desc'
+        },
+        validate: {
+          validateMin,
+          validateMax
         }
       }
-    },
-    mounted() {
-      net.send({
-        server: server.NoticeManage.send_notice_info
-      }).then((data) => {
-        // 接口返回的数据
-        this.dataName = data
-        console.log(data)
-      }, err => {
-        console.log(err)
-      })
     },
     components: {
       DataBox
