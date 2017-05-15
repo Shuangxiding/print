@@ -7,18 +7,18 @@
         <el-form-item label="客户名称:" v-role="0x070103">
           <el-input v-model="params.custName"></el-input>
         </el-form-item>
-        <el-form-item label="逾期天数" prop="cupoOverdayStart" :rules="[
-            { validator: validate.validateMin(params.cupoOverdayEnd), trigger: 'blur' }
+        <el-form-item label="逾期天数" prop="overDayMin" :rules="[
+            { validator: validate.validateMin(params.overDayMax), trigger: 'blur' }
           ]" v-role="0x050108">
-          <el-input v-model.number="params.cupoOverdayStart" type="number"></el-input>
+          <el-input v-model.number="params.overDayMin" type="number"></el-input>
         </el-form-item>
-        <el-form-item label="-" prop="cupoOverdayEnd" :rules="[
-            { validator: validate.validateMax(params.cupoOverdayStart), trigger: 'blur' }
+        <el-form-item label="-" prop="overDayMax" :rules="[
+            { validator: validate.validateMax(params.overDayMin), trigger: 'blur' }
           ]" v-role="0x050108">
-          <el-input v-model.number="params.cupoOverdayEnd" type="number"></el-input>
+          <el-input v-model.number="params.overDayMax" type="number"></el-input>
         </el-form-item>
         <el-form-item label="批次号" v-role="0x060103">
-          <el-input v-model="params.cupoOverday"></el-input>
+          <el-input v-model="params.cupoBatch"></el-input>
         </el-form-item>
         <el-form-item label="委托方" v-role="0x060104">
           <el-select v-model="params.prinId" placeholder="请选择" clearable>
@@ -72,8 +72,8 @@
           cupoName: '',
           cupoCasenum: '',
           cupoAmt: '',
-          cupoOverdayStart: '',
-          cupoOverdayEnd: '',
+          overDayMin: '',
+          overDayMax: '',
           cupoPrincipal: '',
           cupoPaystatus: '',
           createTime: '',
@@ -83,7 +83,7 @@
           validateMin,
           validateMax
         },
-        dataName: [] // 委托方列表
+        dataName: []
       }
     },
     components: {
@@ -93,7 +93,6 @@
 
     },
     mounted() {
-      // 获取委托方列表
       net.send({
         server: server.NoticeManage.get_all_pricipal
       }).then((data) => {
