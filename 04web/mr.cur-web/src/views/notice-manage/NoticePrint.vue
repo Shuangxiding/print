@@ -26,3 +26,14 @@
     </div>
   </el-col>
 </template>
+<script>
+  export default {
+    name: 'notice-print',
+    data() {
+      return {
+
+      }
+    }
+  }
+
+</script>

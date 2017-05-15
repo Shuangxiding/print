@@ -36,15 +36,21 @@
         <el-table-column prop="cupoName" label="催收员" min-width="90"></el-table-column>
         <el-table-column label="操作" min-width="90">
           <template scope="scope">
-            <el-button type="text" size="small">打印催收通知单</el-button>
+            <el-button type="text" size="small" @click="printNoticeClick">打印催收通知单</el-button>
           </template>
         </el-table-column>
       </template>
     </data-box>
+
+    <el-dialog title="贷后催收通知单打印" v-model="printNoticeClickHandle" size="small">
+      <notice-print ref="NoticePrint"></notice-print>
+    </el-dialog>
+
   </div>
 </template>
 <script>
   import DataBox from '@/components/DataBox'
+  import NoticePrint from '@/views/notice-manage/NoticePrint'
   import server from '@/config/servers'
   import net from '@/util/net'
   export default {
@@ -77,7 +83,15 @@
           cupoPaystatus: '',
           createTime: '',
           sort: 'createTime,desc'
-        }
+        },
+        dataName: [],
+        printNoticeClickHandle: false
+      }
+    },
+    methods: {
+      printNoticeClick() {
+        console.log('printNoticeClick')
+        this.printNoticeClickHandle = true
       }
     },
     mounted() {
@@ -92,7 +106,8 @@
       })
     },
     components: {
-      DataBox
+      DataBox,
+      NoticePrint
     }
   }
 
