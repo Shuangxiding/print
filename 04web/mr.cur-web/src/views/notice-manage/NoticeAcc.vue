@@ -45,7 +45,7 @@
         <el-table-column prop="cupoName" label="催收员" min-width="90"></el-table-column>
         <el-table-column label="操作" min-width="90">
           <template scope="scope">
-            <el-button type="text" size="small" @click="printNoticeClick">打印催收通知单</el-button>
+            <el-button type="text" size="small" @click="printNoticeClick(scope)">打印催收通知单</el-button>
           </template>
         </el-table-column>
       </template>
@@ -53,7 +53,7 @@
     </data-box>
 
     <el-dialog title="贷后催收通知单打印" v-model="printNoticeClickHandle" size="small">
-      <notice-print ref="NoticePrint"></notice-print>
+      <notice-print ref="NoticePrint" :printData="printData"></notice-print>
     </el-dialog>
 
   </div>
@@ -89,13 +89,15 @@
           validateMin,
           validateMax
         },
+        printData: '',
         dataName: [],
         printNoticeClickHandle: false
       }
     },
     methods: {
-      printNoticeClick() {
-        console.log('printNoticeClick')
+      printNoticeClick(scope) {
+        // this.printData = scope.row
+        this.$store.commit('updatePrintInfo', scope.row)
         this.printNoticeClickHandle = true
       }
     },
