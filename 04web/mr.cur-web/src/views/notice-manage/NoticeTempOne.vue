@@ -11,25 +11,16 @@
                 <span>:</span>
               </p>
               <p class="m1-indent2m-left m1-align-both">
-                <span>你（单位）于</span>
+                <span>你案件编号为</span>
                 <span class="m1-date-unline">2000</span>
-                <span>年</span>
+                <span>的借款合同本期应还款额</span>
                 <span class="m1-date-unline">03</span>
-                <span>月</span>
+                <span>元，已还款额</span>
                 <span class="m1-date-unline">04</span>
-                <span>日在我机构贷款</span>
+                <span>元，现已逾期</span>
                 <span class="m1-money-unline">1000000元</span>
-                <span>，该笔贷款于</span>
-                <span class="m1-date-unline">2005</span>
-                <span>年</span>
-                <span class="m1-date-unline">09</span>
-                <span>月</span>
-                <span class="m1-date-unline">08</span>
-                <span>日到期，截止目前仍欠贷款本金</span>
-                <span class="m1-money-unline">1000000元</span>
-                <span>，利息</span>
-                <span class="m1-money-unline">13455.00元</span>
-                <span>。请你（单位）积极组织资金，按合同约定，到期偿还全部贷款本息。</span>
+                <span>天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
+
               </p>
               <p class="m1-indent2m-left">
                 上述贷款本息，由担保人继续承担连带还款责任。
