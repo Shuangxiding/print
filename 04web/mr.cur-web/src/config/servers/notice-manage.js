@@ -18,5 +18,11 @@ export default {
     controller: 'accIntelligentController',
     action: 'page',
     type: RTYPE.GET
+  },
+  get_all_pricipal: {
+    service: 'acc-service',
+    controller: 'accPrincipalController',
+    action: 'getAllPricipal',
+    type: RTYPE.GET
   }
 }

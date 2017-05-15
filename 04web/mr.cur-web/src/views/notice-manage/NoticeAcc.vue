@@ -20,9 +20,6 @@
         <el-form-item label="批次号" v-role="0x060103">
           <el-input v-model="params.cupoOverday"></el-input>
         </el-form-item>
-        <el-form-item label="逾期天数" v-role="0x060103">
-          <el-input v-model="params.cupoBatch"></el-input>
-        </el-form-item>
         <el-form-item label="委托方" v-role="0x060104">
           <el-select v-model="params.prinId" placeholder="请选择" clearable>
             <el-option v-for="{index,prinId,prinName} in this.dataName" :key="index" :label="prinName" :value="prinId">
@@ -60,7 +57,7 @@
   import DataBox from '@/components/DataBox'
   import server from '@/config/servers'
   import { validateMin, validateMax } from '@/util/common'
-  // import net from '@/util/net'
+  import net from '@/util/net'
   export default {
     name: 'notice-acc',
     data() {
@@ -85,11 +82,27 @@
         validate: {
           validateMin,
           validateMax
-        }
+        },
+        dataName: [] // 委托方列表
       }
     },
     components: {
       DataBox
+    },
+    methods: {
+
+    },
+    mounted() {
+      // 获取委托方列表
+      net.send({
+        server: server.NoticeManage.get_all_pricipal
+      }).then((data) => {
+        // 接口返回的数据
+        this.dataName = data
+        console.log(data)
+      }, err => {
+        console.log(err)
+      })
     }
   }
 
