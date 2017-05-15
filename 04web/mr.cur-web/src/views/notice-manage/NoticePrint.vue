@@ -21,7 +21,7 @@
         <notice-temp-three></notice-temp-three>
         <div class="btns">
           <el-button>预览</el-button>
-          <el-button>打印</el-button>
+          <el-button @click="print_m3">打印</el-button>
           <el-button>打印数据</el-button>
         </div>
       </el-tab-pane>
@@ -42,6 +42,9 @@
     methods: {
       handleClick(tab, event) {
         console.log(tab, event)
+      },
+      print_m3() {
+        window.print()
       }
     },
     components: {

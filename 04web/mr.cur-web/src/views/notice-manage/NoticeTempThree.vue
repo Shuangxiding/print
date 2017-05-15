@@ -92,4 +92,9 @@
     width: 80px;
   }
 
+
+  @media print {
+    .m3_print_area {}
+  }
+
 </style>
