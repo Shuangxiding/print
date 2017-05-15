@@ -18,6 +18,9 @@
           <el-input v-model.number="params.cupoOverdayEnd" type="number"></el-input>
         </el-form-item>
         <el-form-item label="批次号" v-role="0x060103">
+          <el-input v-model="params.cupoOverday"></el-input>
+        </el-form-item>
+        <el-form-item label="逾期天数" v-role="0x060103">
           <el-input v-model="params.cupoBatch"></el-input>
         </el-form-item>
         <el-form-item label="委托方" v-role="0x060104">
@@ -45,7 +48,7 @@
         <el-table-column prop="cupoName" label="催收员" min-width="90"></el-table-column>
         <el-table-column label="操作" min-width="90">
           <template scope="scope">
-            <el-button type="text" size="small">打印</el-button>
+            <el-button type="text" size="small">打印催收通知单</el-button>
           </template>
         </el-table-column>
       </template>
