@@ -4,18 +4,18 @@
       <div style="margin:0 200px;" class="m1-title" :class="{'m1-display-none':m1display}">贷 后 催 收 通 知 单</div>
       <div>
         <p class="m1-indent2m-left">
-          <span class="m1-name-unline"></span>
+          <span class="m1-name-unline">{{PrintInfo.custName}}</span>
           <span class="" :class="{'m1-display-none':m1display}">:</span>
         </p>
         <p class="m1-indent2m-left m1-align-both m1-line-height">
           <span class="" :class="{'m1-display-none':m1display}">你案件编号为</span>
-          <span class="m1-casenum-unline"></span>
+          <span class="m1-casenum-unline">{{PrintInfo.cupoCasenum}}</span>
           <span class="" :class="{'m1-display-none':m1display}">的借款合同本期应还款额</span>
-          <span class="m1-money-unline"></span>
+          <span class="m1-money-unline">￥{{PrintInfo.cupoAmt}}元</span>
           <span class="" :class="{'m1-display-none':m1display}">元，已还款额</span>
-          <span class="m1-money-unline"></span>
+          <span class="m1-money-unline">￥{{PrintInfo.cupoPaysum}}元</span>
           <span class="" :class="{'m1-display-none':m1display}">元，现已逾期</span>
-          <span class="m1-day-unline"></span>
+          <span class="m1-day-unline">{{PrintInfo.cupoOverday}}</span>
           <span class="" :class="{'m1-display-none':m1display}">天。请你务必积极筹措资金，按照合约约定，进行本息还款。</span>
         </p>
         <p class="m1-hereby m1-display-none">
@@ -51,6 +51,7 @@
   </div>
 </template>
 <script>
+  import { mapState, mapMutations } from 'vuex'
   export default {
     name: 'notice-temp-one',
     data() {
@@ -62,7 +63,15 @@
       // 测试在另一页面修改此组件样式
       changeStyle() {
         this.m1display = true
-      }
+      },
+      ...mapMutations([
+        'updatePrintInfo'
+      ])
+    },
+    computed: {
+      ...mapState({
+        PrintInfo: state => state.noticeManage.Print_info
+      })
     }
   }
 
