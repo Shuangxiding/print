@@ -14,9 +14,9 @@ import { RTYPE } from '@/util/common'
 export default {
   // 逾期需要发贷后通知单信息查询
   send_notice_info: {
-    service: 'notice-service',
-    controller: 'NoticeController',
-    action: 'getSendNoticeInfo',
+    service: 'acc-service',
+    controller: 'accIntelligentController',
+    action: 'page',
     type: RTYPE.GET
   }
 }
