@@ -1,6 +1,0 @@
-#!/bin/bash
-
-git checkout .
-git pull origin master
-npm run build:test
-yes|cp -rf ./dist/* /usr/local/nginx/html/
